@@ -1,0 +1,36 @@
+.nav {
+  // Styles
+
+  // Elements
+  &__list {
+    // Styles
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    // Modifiers
+    &--horizontal {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  &__item {
+    // Styles
+
+    // Modifiers
+    &--top {
+      color: $white;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 20px;
+    }
+  }
+
+  // Modifiers
+  &--top {
+    float: left;
+  }
+}

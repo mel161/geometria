@@ -1,0 +1,18 @@
+.link {
+  // Styles
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+
+  // States
+  &:link {}
+  &:visited {}
+  &:hover {}
+  &:active {}
+
+  // Modifiers
+  &--nav {
+
+  }
+}

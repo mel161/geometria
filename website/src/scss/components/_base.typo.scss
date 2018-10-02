@@ -53,6 +53,11 @@ body {
 
   &--normal {
     font-size: 16px;
+
+    &.location {
+      display: inline-block;
+      width: 150px;
+    }
   }
 
   &--medium {
@@ -65,6 +70,15 @@ body {
 
   &--xlarge {
     font-size: 22px;
+  }
+  &--big {
+    font-size: 36px;
+
+    &.time {
+      display: inline-block;
+      width: 139px;
+      margin-left: 2px;
+    }
   }
   // Styled
   &--underline {

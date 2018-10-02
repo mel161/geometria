@@ -8,6 +8,8 @@
     // Modifiers
     &--border-bottom {
       border-bottom: 1px solid $brand;
+      padding-bottom: 21px;
+      margin-bottom: 33px;
 
       &:last-of-type {
         border: 0;

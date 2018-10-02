@@ -1,0 +1,77 @@
+body {
+  -webkit-font-smoothing: antialiased;
+  font-family           : $font-sans;
+  font-feature-settings : "liga", 'clig';
+  font-size             : 16px;
+  font-weight           : 300;
+  line-height           : 1.2;
+  text-rendering        : optimizeLegibility;
+  // Selection
+  *::-moz-selection {
+    background-color: rgba($brand, 0.3);
+    text-shadow     : none;
+  }
+  //
+  *::selection {
+    background-color: rgba($brand, 0.3);
+    text-shadow     : none;
+  }
+}
+
+.text {
+  // Styles
+  // // Modifiers
+  // Colors
+  &--white {
+    color: $white;
+  }
+
+  &--black {
+    color: $black;
+  }
+  &--grey {
+    color: $grey;
+  }
+  &--grey-light {
+    color: $grey-light;
+  }
+  &--grey-dark {
+    color: $grey-dark;
+  }
+
+  &--brand {
+    color: $brand;
+  }
+  // Sizes
+  &--xsmall {
+    font-size: 12px;
+  }
+
+  &--small {
+    font-size: 14px;
+  }
+
+  &--normal {
+    font-size: 16px;
+  }
+
+  &--medium {
+    font-size: 18px;
+  }
+
+  &--large {
+    font-size: 20px;
+  }
+
+  &--xlarge {
+    font-size: 22px;
+  }
+  // Styled
+  &--underline {
+    text-decoration: underline;
+  }
+}
+
+.paragraph {
+  margin-bottom: 20px;
+}

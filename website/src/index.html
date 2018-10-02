@@ -12,40 +12,192 @@
   <div class="page">
     <!-- Top Panel -->
     <div class="top-panel">
-      <!-- Logo -->
-      <div class="logo logo-top">
-        <a href="/" class="logo__link">
-          <img src="./img/logo.png" alt="ЖК&nbsp;&laquo;Геометрия&raquo;" class="logo__image">
-        </a>
+      <div class="grid">
+        <div class="row">
+          <div class="col col--left">
+            <!-- Logo -->
+            <div class="logo logo--top">
+              <a href="/" class="logo__link">
+                <img src="./img/logo.png" alt="ЖК&nbsp;&laquo;Геометрия&raquo;" class="logo__image">
+              </a>
+            </div>
+            <!-- Logo End -->
+          </div>
+          <div class="col col--center">
+            <!-- Nav Top Panel -->
+            <nav class="nav nav--top">
+              <ul class="nav__list nav__list--horizontal">
+                <li class="nav__item nav__item--top"><a href="#" class="link link--nav">Выбрать квартиру</a></li>
+                <li class="nav__item nav__item--top"><a href="#" class="link link--nav">Подобрать паркинг</a></li>
+              </ul>
+            </nav>
+            <!-- Nav Top Panel End -->
+          </div>
+          <div class="col col--right">
+            <!-- Button SideBar Trigger -->
+            <button type="button" name="js-sidebar-trigger" id="js-sidebar-trigger" class="btn btn--transparent" onclick="this.classList.toggle('btn--active')">
+              <svg class="icon icon--hamburger icon--cross" viewBox="0 0 100 100">
+                <path class="line top" d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
+                <path class="line middle" d="m 70,50 h -40" />
+                <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
+              </svg>
+            </button>
+            <!-- Button Nav SideBar End -->
+          </div>
+        </div>
       </div>
-      <!-- Logo End -->
-
-      <!-- Nav Top Panel -->
-      <nav class="nav nav--top">
-        <ul class="nav__list nav__list--horizontal">
-          <li class="nav__item nav__item--top"><a href="#" class="link link--nav">Выбрать квартиру</a></li>
-          <li class="nav__item nav__item--top"><a href="#" class="link link--nav">Подобрать паркинг</a></li>
-        </ul>
-      </nav>
-      <!-- Nav Top Panel End -->
-
-      <!-- Button SideBar Trigger -->
-      <button type="button" name="js-sidebar-trigger" id="js-sidebar-trigger" class="btn btn--transparent"></button>
-      <!-- Button Nav SideBar End -->
     </div>
     <!-- Top Panel End -->
 
     <!-- SideBar -->
     <aside class="sidebar">
+      <!-- Nav Main SideBar -->
+      <nav class="nav nav--main">
+        <ul class="nav__list nav__list--vertical">
+          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Преимущества</a></li>
+          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Как купить</a></li>
+          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Ход строительства</a></li>
+          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Документация</a></li>
+          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Контакты</a></li>
+        </ul>
+      </nav>
+      <!-- Nav Main SideBar End -->
+
+      <!--  -->
+      <div class="contacts">
+        <div class="contacts__phone"><a href="tel:+73432000000" class="link link--phone">+7 (343) 200 00 00</a></div>
+        <div class="contacts__call-me"><a href="#" class="link link--call-me">Перезвоните мне</a></div>
+      </div>
+      <!--  -->
+
+      <!-- Logo TEN -->
+      <div class="logo logo--ten">
+        <a href="/" class="logo__link">
+          <img src="./img/logo-ten.png" alt="ЖК&nbsp;&laquo;Геометрия&raquo;" class="logo__image">
+        </a>
+      </div>
+      <!-- Logo TEN End -->
+
+      <!-- Created -->
+      <div class="created">
+        <a href="http://radigital.ru" class="link link--created">
+          Создано в <span class="text text--underline">RADIGITAL</span>
+        </a>
+      </div>
+      <!-- Created End -->
+
+      <!-- Nav Socials -->
+      <nav class="nav nav--socials">
+        <ul class="nav__list nav__list--horizontal nav__list--full-width">
+          <li class="nav__item nav__item--border">
+            <a href="#" class="link link--socials">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 272.13 159.33" class="icon icon--social">
+                <path id="vk-logo" d="M226.06 78.12s35.86-50.58 39.42-67.2c1.19-5.94-1.43-9.26-7.6-9.26h-31.11c-7.12 0-9.74 3.09-11.87 7.6 0 0-16.82 35.83-37.28 58.42-6.57 7.3-9.91 9.5-13.54 9.5-2.92 0-4.27-2.44-4.27-9V10.45c0-8.07-.95-10.45-7.6-10.45h-49.87c-3.8 0-6.17 2.21-6.17 5.22 0 7.6 11.64 9.32 11.64 29.92v42.5c0 8.55-.48 11.87-4.51 11.87-10.69.01-36.1-36.79-50.3-78.59C50.1 2.38 47 0 38.94 0H7.84C3.32 0 0 3.09 0 7.6c0 8.31 9.74 46.78 48 98.31 25.64 34.67 59.36 53.43 89.76 53.43 18.52 0 23-3.09 23-10.92v-26.6c0-6.65 2.61-9.5 6.41-9.5 4.27 0 11.82 1.37 29.44 18.76 20.9 19.95 22.32 28.26 33.72 28.26h34.91c3.56 0 6.89-1.66 6.89-7.6 0-7.84-10.21-21.85-25.88-38.47-6.41-8.55-16.86-17.81-20.18-22.08-4.76-4.99-3.34-7.84-.01-13.07z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item nav__item--border">
+            <a href="#" class="link link--socials">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 117.67 226.58" class="icon icon--social">
+                <path id="fb-logo" d="M76.38 226.58V123.23h34.69l5.19-40.28H76.38V57.23c0-11.66 3.24-19.61 20-19.61h21.33v-36A285.42 285.42 0 0 0 86.59 0C55.84 0 34.78 18.77 34.78 53.24v29.71H0v40.28h34.78v103.35z"/>
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item nav__item--border">
+            <a href="#" class="link link--socials">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.17 100.17" class="icon icon--social">
+                  <path id="insta-logo" d="M12.86 0h74.45a12.89 12.89 0 0 1 12.86 12.86v74.45a12.89 12.89 0 0 1-12.86 12.85H12.86A12.89 12.89 0 0 1 0 87.31V12.86A12.9 12.9 0 0 1 12.86 0zM73 11.12a4.53 4.53 0 0 0-4.51 4.52v10.79A4.52 4.52 0 0 0 73 30.94h11.29a4.52 4.52 0 0 0 4.51-4.51V15.64a4.53 4.53 0 0 0-4.51-4.52zm15.85 31.24H80A29.33 29.33 0 0 1 81.32 51c0 16.66-13.95 30.17-31.14 30.17S19 67.62 19 51a29.4 29.4 0 0 1 1.29-8.6h-9.2v42.28a4 4 0 0 0 4 4h69.78a4 4 0 0 0 4-4zm-38.67-12c-11.11 0-20.12 8.72-20.12 19.5s9 19.49 20.12 19.49S70.3 60.63 70.3 49.87s-9.01-19.5-20.12-19.5z" data-name="Layer 1"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Nav Socials End -->
+
 
     </aside>
     <!-- SideBar End -->
 
     <!-- Main -->
     <main class="main">
+      <!-- Hero -->
       <header class="hero hero--main">
-        <h1 class="heading heading--hero">«Геометрия» — гармония от первого этажа до крыши</h1>
+        <h1 class="heading heading--hero text text--white">&laquo;Геометрия&raquo;&nbsp;&mdash; гармония&nbsp;от&nbsp;первого этажа до&nbsp;крыши</h1>
       </header>
+      <!-- Hero End -->
+
+      <!-- Section About -->
+      <section class="section">
+        <div class="grid">
+          <div class="row row--full">
+            <div class="col col--left">
+              <h2 class="heading heading--primary">О проекте</h2>
+              <ul class="list list--vertical list--unstyled">
+                <li class="list__item list__item--border-bottom">
+                  <strong>3 мин</strong>
+                  <span>до красивого парка</span>
+                </li>
+                <li class="list__item list__item--border-bottom">
+                  <strong>5 мин</strong>
+                  <span>до остановки транспорта</span>
+                </li>
+                <li class="list__item list__item--border-bottom">
+                  <strong>15 мин</strong>
+                  <span>до центра</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col col--center col--center-section">
+              <h3 class="heading heading--secondary">Геометрия вашего комфорта: ЖК,&nbsp;где есть счастье</h3>
+              <p class="paragraph text text--normal">
+                Познакомьтесь с «Геометрией»&nbsp;&mdash;&nbsp;золотой пропорцией архитектуры и&nbsp;уюта.
+                Тут&nbsp;хочется дышать полной грудью в&nbsp;большом зеленом дворе, пускать с&nbsp;детьми
+                воздушных&nbsp;змеев, согреваться горячим чаем на&nbsp;светлой и&nbsp;уютной кухне.
+                Тут&nbsp;хочется&nbsp;жить!
+              </p>
+              <p class="paragraph text text--normal">
+                Продуманные планировки с антресолями, где можно хранить нужные вещи,
+                отделка&nbsp;квартир «под ключ», паркинг в&nbsp;двух минутах от&nbsp;дома, удобная
+                транспортная&nbsp;развязка, тихий и&nbsp;спокойный район — ЖК, в&nbsp;котором хорошо.
+                ЖК, где&nbsp;начинается новый отрезок жизни: самый&nbsp;счастливый и&nbsp;добрый.
+              </p>
+            </div>
+            <div class="col col--right"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Section About End -->
+
+      <!-- Section Location -->
+      <section class="section">
+        <div class="grid">
+          <div class="row">
+            <div class="col col--left">
+              <h2 class="heading heading--primary">Расположение</h2>
+
+            </div>
+            <div class="col col--center"></div>
+            <div class="col col--right"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Section Location End -->
+
+      <!-- Section Features -->
+      <section class="section">
+        <div class="grid">
+          <div class="row">
+            <div class="col col--left">
+              <h2 class="heading heading--primary">Преимущества</h2>
+            </div>
+            <div class="col col--center">
+
+            </div>
+            <div class="col col--right"></div>
+          </div>
+        </div>
+      </section>
+      <!-- Section Features End -->
     </main>
     <!-- Main End -->
   </div>

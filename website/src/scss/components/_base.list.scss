@@ -1,0 +1,20 @@
+.list {
+  // Styles
+
+  // Elements
+  &__item {
+    // Styles
+
+    // Modifiers
+    &--border-bottom {
+      border-bottom: 1px solid $brand;
+
+      &:last-of-type {
+        border: 0;
+      }
+    }
+  }
+
+  // Modifiers
+
+}

@@ -1,22 +1,24 @@
 .logo {
   // Styles
-  float: left;
-
+  position: relative;
+  float   : left;
   // Elements
   &__link {
-
+    display: block;
   }
 
-  &__image {
-
-  }
-
+  &__image {}
   // Modifiers
   &--top {
-
+    // height: 100%;
+    @media (min-width: 1200px) {
+      // padding: 53px 0 0 150px;
+    }
   }
 
   &--ten {
-
+    width        : 100%;
+    margin-bottom: 8px;
+    margin-left  : 2px;
   }
 }

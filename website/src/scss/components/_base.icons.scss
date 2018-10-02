@@ -1,0 +1,94 @@
+.icon {
+  // Styles
+  border : 0;
+  outline: none;
+  // Modifiers
+  &--hamburger {
+    width                      : 39px;
+    height                     : 38px;
+    cursor                     : pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition                 : transform 400ms;
+    -moz-user-select           : none;
+    -webkit-user-select        : none;
+    -ms-user-select            : none;
+    user-select                : none;
+
+    &:hover {
+      transform: rotate(0deg);
+    }
+
+    .line {
+      fill          : none;
+      transition    : stroke-dasharray 400ms, stroke-dashoffset 400ms;
+      stroke        : $brand;
+      stroke-width  : 5.5;
+      stroke-linecap: round;
+    }
+
+    > .top {
+      stroke-dasharray: 40 82;
+    }
+
+    > .bottom {
+      stroke-dasharray: 40 82;
+    }
+
+    &:hover > .top {
+      stroke-dasharray : 14 82;
+      stroke-dashoffset: -72px;
+    }
+
+    &:hover > .bottom {
+      stroke-dasharray : 14 82;
+      stroke-dashoffset: -72px;
+    }
+  }
+
+  // &--cross {
+  //   width                      : 39px;
+  //   height                     : 38px;
+  //   cursor                     : pointer;
+  //   -webkit-tap-highlight-color: transparent;
+  //   transition                 : transform 400ms;
+  //   -moz-user-select           : none;
+  //   -webkit-user-select        : none;
+  //   -ms-user-select            : none;
+  //   user-select                : none;
+  //
+  //   &:hover {
+  //     transform: rotate(90deg);
+  //   }
+  //
+  //   .line {
+  //     fill          : none;
+  //     transition    : stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  //     stroke        : $brand;
+  //     stroke-width  : 5.5;
+  //     stroke-linecap: round;
+  //   }
+  //
+  //   > .top {
+  //     stroke-dasharray: 40 121;
+  //   }
+  //
+  //   > .bottom {
+  //     stroke-dasharray: 40 121;
+  //   }
+  //
+  //   &:hover > .top {
+  //     stroke-dashoffset: -68px;
+  //   }
+  //
+  //   &:hover > .bottom {
+  //     stroke-dashoffset: -68px;
+  //   }
+  // }
+
+  &--social {
+    width   : 18px;
+    height  : 18px;
+    position: relative;
+    fill    : inherit;
+  }
+}

@@ -1,18 +1,60 @@
 .link {
   // Styles
-  color: inherit;
-  font-size: inherit;
-  line-height: inherit;
+  color          : inherit;
+  font-size      : inherit;
+  line-height    : inherit;
   text-decoration: none;
-
   // States
-  &:link {}
-  &:visited {}
-  &:hover {}
-  &:active {}
+  &:link {
+    color: inherit;
+  }
 
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: inherit;
+  }
+
+  &:active {
+    color: inherit;
+  }
   // Modifiers
-  &--nav {
+  &--nav {}
 
+  &--phone {}
+
+  &--call-me {
+    text-decoration: underline;
+  }
+
+  &--socials {
+    color: $brand;
+    fill : $brand;
+    // States
+    &:link {}
+
+    &:visited {}
+
+    &:hover {
+      color: $black;
+      fill : $black;
+    }
+
+    &:active {}
+  }
+
+  &--created {
+    // font-size: 12px;
+    &:link {}
+
+    &:visited {}
+
+    &:hover {
+      color: $brand;
+    }
+
+    &:active {}
   }
 }

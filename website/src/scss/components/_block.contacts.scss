@@ -1,0 +1,17 @@
+.contacts {
+  // Styles
+  width        : 100%;
+  margin-bottom: 57px;
+  // Elements
+  &__phone {
+    font-size    : 20px;
+    margin-bottom: 7px;
+    margin-left  : 2px;
+  }
+
+  &__call-me {
+    color    : $brand;
+    font-size: 14px;
+  }
+  // Modifiers
+}

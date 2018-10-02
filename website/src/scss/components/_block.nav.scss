@@ -15,6 +15,15 @@
       align-items: center;
       justify-content: flex-start;
     }
+    &--vertical {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    &--full-width {
+      width: 100%;
+    }
   }
 
   &__item {
@@ -26,11 +35,40 @@
       font-size: 18px;
       font-weight: bold;
       line-height: 20px;
+      margin-right: 40px;
+    }
+
+    &--main {
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 25px;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+    &--border {
+      flex: 1 1 auto;
+      border-right: 1px solid $grey-light;
+      text-align: center;
+      padding-bottom: 22px;
+
+      &:last-of-type {
+        border-right: 0;
+      }
     }
   }
 
   // Modifiers
   &--top {
-    float: left;
+    
+  }
+  &--main {
+    width: 100%;
+    position: absolute;
+    top: 216px;
+  }
+  &--socials {
+    width: calc(100% + 96px);
+    margin: 0 -48px;
+    float: none;
   }
 }

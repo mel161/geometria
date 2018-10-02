@@ -1,35 +1,112 @@
 html {
-  width: 100%;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
+  // overflow: hidden;
 }
 
 body {
-  width: 100%;
-  height: 100%;
+  position  : relative;
+  width     : 100%;
+  height    : 100%;
   min-height: 100%;
-  position: relative;
 }
 
 .page {
-  width: 100%;
+  width : 100%;
   height: 100%;
 }
 
 .top-panel {
-  height: 133px;
+  z-index : 15;
   position: fixed;
-  top: 0;
-  padding: 0;
-  z-index: 10;
+  top     : 0;
+  width   : 100%;
+  height  : 133px;
+  // padding : 0 150px;
+}
+
+.sidebar {
+  z-index         : 10;
+  position        : fixed;
+  top             : 0;
+  right           : 0;
+  width           : 330px;
+  height          : 100%;
+  background-color: rgba($white, .9);
+  padding         : 0 48px;
+  display         : flex;
+  flex-direction  : row;
+  flex-wrap       : wrap;
+  align-items     : flex-start;
+  justify-content : flex-start;
+  align-content   : flex-end;
 }
 
 .main {
-  width: 100%;
-  height: 100%;
   position: absolute;
-  top: 0;
-  left: 0;
+  top     : 0;
+  left    : 0;
+  width   : 100%;
+  height  : 100%;
+}
+
+.grid {
+  width : 100%;
+  height: 100%;
+}
+
+.row {
+  display       : flex;
+  flex-direction: row;
+  align-items   : stretch;
+  width         : 100%;
+  height        : 100%;
+
+  &--full {
+    align-content: stretch;
+  }
+}
+
+.col {
+  position: relative;
+  // Styles
+  flex    : 1 1 auto;
+  // height  : 100%;
+  // Modifiers
+  &--left {
+    @media (min-width: 1200px) {
+      flex: 0 0 660px;
+      padding: 53px 0 0 150px;
+
+      &:before {
+        display         : block;
+        position        : absolute;
+        top             : 0;
+        right           : -1px;
+        width           : 1px;
+        height          : 100%;
+        background-color: $brand;
+        content         : '';
+      }
+    }
+  }
+
+  &--center {
+    flex-basis: auto;
+    padding: 79px 0 0 83px;
+  }
+
+  &--center-section {
+    flex-basis: auto;
+    padding: 66px 200px 0 86px;
+  }
+
+  &--right {
+    @media (min-width: 1200px) {
+      flex: 0 0 330px;
+    }
+  }
 }

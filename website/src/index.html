@@ -172,12 +172,19 @@
       <section class="section">
         <div class="grid">
           <div class="row">
-            <div class="col col--left">
-              <h2 class="heading heading--primary">Расположение</h2>
-
+            <div class="col col--left bg--grey-dark">
+              <h2 class="heading heading--primary text--white">Расположение</h2>
+              <nav class="nav nav--map">
+                <ul class="nav__list nav__list--vertical" id='js-map-nav'>
+                  <li class="nav__item nav__item--map nav__item--active"><a href="#" class="link link--nav" id="js-map-nav-show-all">Все объекты</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="col col--center"></div>
-            <div class="col col--right"></div>
+            <div class="col col--center col--center-full">
+              <div class="map">
+                <div id="map"></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -189,6 +196,7 @@
           <div class="row">
             <div class="col col--left">
               <h2 class="heading heading--primary">Преимущества</h2>
+              
             </div>
             <div class="col col--center">
 
@@ -201,9 +209,10 @@
     </main>
     <!-- Main End -->
   </div>
-
+  <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="./js/scripts.js"></script>
-  <script src="./js/secondary.js"></script>
+  <!-- <script src="./js/secondary.js"></script> -->
 </body>
 
 </html>

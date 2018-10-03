@@ -1,0 +1,24 @@
+.bg {
+  // Modifiers
+  &--transparent {
+    background-color: transparent;
+  }
+  &--black {
+    background-color: $black;
+  }
+  &--white {
+    background-color: $white;
+  }
+  &--brand {
+    background-color: $brand;
+  }
+  &--grey {
+    background-color: $grey;
+  }
+  &--grey-dark {
+    background-color: $grey-dark;
+  }
+  &--grey-light {
+    background-color: $grey-light;
+  }
+}

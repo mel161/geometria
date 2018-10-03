@@ -121,13 +121,13 @@
     <!-- Main -->
     <main class="main">
       <!-- Hero -->
-      <header class="hero hero--main">
+      <header class="hero hero--main slide" data-hash="welcome">
         <h1 class="heading heading--hero text text--white">&laquo;Геометрия&raquo;&nbsp;&mdash; гармония&nbsp;от&nbsp;первого этажа до&nbsp;крыши</h1>
       </header>
       <!-- Hero End -->
 
       <!-- Section About -->
-      <section class="section">
+      <section class="section slide" data-hash="about">
         <div class="grid">
           <div class="row row--full">
             <div class="col col--left">
@@ -169,10 +169,10 @@
       <!-- Section About End -->
 
       <!-- Section Location -->
-      <section class="section">
+      <section class="section slide" data-hash="location">
         <div class="grid">
           <div class="row">
-            <div class="col col--left bg--grey-dark">
+            <div class="col col--left col--left-no-border bg--grey-dark">
               <h2 class="heading heading--primary text--white">Расположение</h2>
               <nav class="nav nav--map">
                 <ul class="nav__list nav__list--vertical" id='js-map-nav'>
@@ -191,15 +191,28 @@
       <!-- Section Location End -->
 
       <!-- Section Features -->
-      <section class="section">
+      <section class="section slide" data-hash="features">
         <div class="grid">
           <div class="row">
-            <div class="col col--left">
+            <div class="col col--left col--left-no-border">
               <h2 class="heading heading--primary">Преимущества</h2>
-              
+              <h3 class="heading heading--border">Категории</h3>
+              <nav class="nav nav--tabs">
+                <ul class="nav__list nav__list--vertical">
+                  <li class="nav__item nav__item--tabs nav__item--active"><a href="#tab1" class="link link--nav link--tab">Двор</a></li>
+                  <li class="nav__item nav__item--tabs"><a href="#tab2" class="link link--nav link--tab">Квартиры</a></li>
+                  <li class="nav__item nav__item--tabs"><a href="#tab3" class="link link--nav link--tab">Паркинг</a></li>
+                  <li class="nav__item nav__item--tabs"><a href="#tab4" class="link link--nav link--tab">Комфорт</a></li>
+                </ul>
+              </nav>
             </div>
-            <div class="col col--center">
-
+            <div class="col col--center col--center-full">
+              <div class="tab">
+                <div class="tab__inner tab__inner--active" id="tab1">1</div>
+                <div class="tab__inner" id="tab2">2</div>
+                <div class="tab__inner" id="tab3">3</div>
+                <div class="tab__inner" id="tab4">4</div>
+              </div>
             </div>
             <div class="col col--right"></div>
           </div>
@@ -211,6 +224,8 @@
   </div>
   <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://d4nyll.github.io/smartscroll/EventEmitter.min.js"></script>
+  <script src="https://d4nyll.github.io/smartscroll/lethargy.min.js"></script>
   <script src="./js/scripts.js"></script>
   <!-- <script src="./js/secondary.js"></script> -->
 </body>

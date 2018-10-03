@@ -45,6 +45,7 @@
   },
   "dependencies": {
     "jquery": "^3.3.1",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "smartscroll": "^2.5.2"
   }
 }

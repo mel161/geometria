@@ -19,6 +19,10 @@
     normalize-path "^2.0.1"
     through2 "^2.0.3"
 
+"@staaky/strip@^1.6.5":
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@staaky/strip/-/strip-1.6.5.tgz#5d289ed2320ebb39d73f8198cc75cc0105788846"
+
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.5.13.tgz#81155a570bd5803a30ec31436bc2c9c0ede38f25"
@@ -7302,6 +7306,10 @@ strip-outer@^1.0.0:
   resolved "https://registry.yarnpkg.com/strip-outer/-/strip-outer-1.0.1.tgz#b2fd2abf6604b9d1e6013057195df836b8a9d631"
   dependencies:
     escape-string-regexp "^1.0.2"
+
+strip@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/strip/-/strip-3.0.0.tgz#750fc933152a7d35af0b7420e651789b914cc35e"
 
 sum-up@^1.0.1:
   version "1.0.3"

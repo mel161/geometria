@@ -22,3 +22,20 @@
     background-color: $grey-light;
   }
 }
+
+.svg {
+  //
+  &--fill-white {
+    fill: white;
+  }
+  &--fill-grey-dark {
+    fill: $grey-dark;
+  }
+
+  &--stroke-white {
+    stroke: white;
+  }
+  &--stroke-grey-dark {
+    stroke: $grey-dark;
+  }
+}

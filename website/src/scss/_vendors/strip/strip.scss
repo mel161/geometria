@@ -1,0 +1,648 @@
+//colors
+$color_shark_approx: #292929;
+$gallery: #efefef;
+$black: #000;
+$color_nobel_approx: #b3b3b3;
+$color_celeste_approx: #ccc;
+$color_gallery_approx: #eee;
+$color_woodsmoke_approx: #010010;
+$color_hunter_green_approx: #161616;
+$color_flush_mahogany_approx: #ca3434; //fonts
+$font_0: 'Lucida Sans';
+$font_1: 'Lucida Sans Unicode';
+$font_2: 'Lucida Grande';
+$font_3: 'Verdana';
+$font_4: 'Arial';
+$font_5: 'sans-serif'; //urls
+$url_0: url('../img/strip/error.svg');
+$url_1: url('../img/strip/error.png');
+$url_2: url('../img/strip/previous.svg');
+$url_3: url('../img/strip/next.svg');
+$url_4: url('../img/strip/previous-faded.png');
+$url_5: url('../img/strip/next-faded.png');
+$url_6: url('../img/strip/previous.png');
+$url_7: url('../img/strip/next.png');
+$url_8: url('../img/strip/previous-small.svg');
+$url_9: url('../img/strip/next-small.svg');
+$url_10: url('../img/strip/previous-small-faded.png');
+$url_11: url('../img/strip/next-small-faded.png');
+$url_12: url('../img/strip/previous-small.png');
+$url_13: url('../img/strip/next-small.png');
+$url_14: url('../img/strip/close.svg');
+$url_15: url('../img/strip/close.png');
+
+.strp-window {
+	position   : fixed;
+	width      : 0;
+	height     : 100%;
+	overflow   : hidden;
+	background : $color_shark_approx;
+	font       : 13px/20px $font_0, $font_1, $font_2, $font_3, $font_4, $font_5;
+	margin-left: 40px;
+	//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+	transform  : translateZ(0px);
+	z-index    : 99999;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing : border-box;
+
+	&.strp-vertical {
+		height       : 0;
+		width        : 100%;
+		margin-left  : 0;
+		margin-bottom: 40px;
+	}
+
+	[class^='strp-'] {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+}
+@media all and(max-width: 414px) and(orientation: portrait), all and(max-width: 736px) and(max-height: 414px) {
+	.strp-window.strp-horizontal {
+		min-width: 100%;
+	}
+}
+@media all and(max-height: 414px) and(orientation: landscape), all and(max-height: 736px) and(max-width: 414px) {
+	.strp-window.strp-vertical {
+		min-height: 100%;
+	}
+}
+
+.strp-spinner-move {
+	z-index   : 99999;
+	//Instead of the line below you could use @include box-sizing($bs)
+	box-sizing: border-box;
+	position  : fixed;
+	top       : 0;
+	right     : 0;
+	height    : 48px;
+	width     : 0;
+	overflow  : visible !important;
+
+	[class^='strp-'] {
+		//Instead of the line below you could use @include box-sizing($bs)
+		box-sizing: border-box;
+	}
+
+	&.strp-vertical {
+		width : 48px;
+		height: 0;
+	}
+
+	&.strp-side-top {
+		top   : 0;
+		right : 0;
+		bottom: auto;
+		left  : auto;
+
+		.strp-spinner {
+			position     : absolute;
+			bottom       : 0;
+			right        : 0;
+			margin-bottom: -48px;
+		}
+	}
+
+	&.strp-side-bottom {
+		top   : auto;
+		right : 0;
+		bottom: 0;
+		left  : auto;
+
+		.strp-spinner {
+			margin-top: -48px;
+		}
+	}
+
+	&.strp-side-right .strp-spinner {
+		margin-left: -48px;
+	}
+
+	&.strp-side-left .strp-spinner {
+		margin-right: -48px;
+		float       : right;
+	}
+}
+
+.strp-measured {
+	margin    : 0 !important;
+	min-width : 0 !important;
+	min-height: 0 !important;
+	top       : 0;
+	right     : 0;
+}
+
+.strp-pages {
+	position: absolute;
+	width   : 100%;
+	height  : 100%;
+	overflow: hidden;
+}
+
+.strp-side-right {
+	top  : 0;
+	right: 0;
+
+	.strp-pages {
+		top  : 0;
+		right: 0;
+	}
+
+	.strp-page {
+		top  : 0;
+		right: 0;
+	}
+
+	.strp-close {
+		top  : 0;
+		right: 0;
+	}
+}
+
+.strp-side-left {
+	top : 0;
+	left: 0;
+
+	.strp-pages {
+		top : 0;
+		left: 0;
+	}
+
+	.strp-page {
+		top : 0;
+		left: 0;
+	}
+
+	.strp-close {
+		top  : 0;
+		right: 0;
+	}
+}
+
+.strp-side-top {
+	top : 0;
+	left: 0;
+
+	.strp-pages {
+		top : 0;
+		left: 0;
+	}
+
+	.strp-page {
+		top : 0;
+		left: 0;
+	}
+
+	.strp-close {
+		top  : 0;
+		right: 0;
+	}
+}
+
+.strp-side-bottom {
+	bottom: 0;
+	left  : 0;
+
+	.strp-pages {
+		bottom: 0;
+		left  : 0;
+	}
+
+	.strp-page {
+		bottom: 0;
+		left  : 0;
+	}
+
+	.strp-close {
+		top  : 0;
+		right: 0;
+	}
+}
+
+.strp-page {
+	position: absolute;
+	width   : 100%;
+	height  : 100%;
+}
+
+.strp-container {
+	position   : absolute;
+	top        : 0;
+	left       : 0;
+	right      : 0;
+	bottom     : 0;
+	margin     : 0;
+	padding    : 0;
+	text-align : center;
+	background : $color_shark_approx;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+
+	img {
+		display       : inline-block;
+		vertical-align: middle;
+	}
+}
+
+.strp-no-overlap {
+	.strp-container {
+		padding: 48px 72px;
+	}
+
+	&.strp-no-sides .strp-container {
+		padding: 48px 0;
+	}
+}
+
+.strp-content-element {
+	position: absolute;
+	top     : 50%;
+	left    : 50%;
+
+	iframe {
+		float : left;
+		width : 100%;
+		height: 100%;
+	}
+}
+
+.strp-info {
+	position        : absolute;
+	bottom          : 0;
+	left            : 0;
+	width           : 100%;
+	color           : $gallery;
+	font-size       : 13px;
+	line-height     : 20px;
+	background      : $black;
+	text-size-adjust: none;
+
+	a {
+		color          : $color_celeste_approx;
+		border         : 0;
+		background     : none;
+		text-decoration: underline;
+
+		&:hover {
+			color          : $color_celeste_approx;
+			border         : 0;
+			background     : none;
+			text-decoration: underline;
+			color          : $color_gallery_approx;
+		}
+	}
+}
+
+.strp-info-padder {
+	display : block;
+	overflow: hidden;
+	padding : 12px;
+	position: relative;
+	width   : auto;
+}
+
+.strp-caption {
+	width      : auto;
+	display    : inline;
+	white-space: wrap;
+}
+
+.strp-position {
+	color      : $color_nobel_approx;
+	float      : right;
+	line-height: 21px;
+	opacity    : 0.99;
+	position   : relative;
+	text-align : right;
+	margin-left: 15px;
+	white-space: nowrap;
+}
+
+.strp-nav {
+	position   : absolute;
+	top        : 50%;
+	width      : 54px;
+	height     : 72px;
+	margin     : -36px 9px 0;
+	cursor     : pointer;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+}
+
+.strp-nav-previous {
+	left: 0;
+}
+
+.strp-nav-next {
+	right: 0;
+	left : auto;
+}
+
+.strp-nav-disabled {
+	cursor: default;
+}
+
+.strp-nav-button {
+	float  : left;
+	width  : 100%;
+	height : 100%;
+	margin : 0;
+	padding: 0;
+}
+
+.strp-nav-button-background {
+	position        : absolute;
+	top             : 0;
+	left            : 0;
+	width           : 100%;
+	height          : 100%;
+	background-color: $color_woodsmoke_approx;
+}
+
+.strp-nav-button-icon {
+	float              : left;
+	position           : relative;
+	height             : 100%;
+	width              : 100%;
+	zoom               : 1;
+	background-position: 50% 50%;
+	background-repeat  : no-repeat;
+}
+
+.strp-close {
+	position   : absolute;
+	width      : 48px;
+	height     : 48px;
+	cursor     : pointer;
+	//Instead of the line below you could use @include user-select($select)
+	user-select: none;
+
+	&:hover .strp-close-background {
+		background-color: $color_hunter_green_approx;
+	}
+}
+
+.strp-close-background {
+	position           : absolute;
+	top                : 12px;
+	left               : 12px;
+	height             : 26px;
+	width              : 26px;
+	background-position: 50% 50%;
+	background-repeat  : no-repeat;
+	filter: alpha(opacity=80);
+	opacity            : 0.8;
+	background-color   : $color_woodsmoke_approx;
+}
+
+.strp-close-icon {
+	position           : absolute;
+	top                : 12px;
+	left               : 12px;
+	height             : 26px;
+	width              : 26px;
+	background-position: 50% 50%;
+	background-repeat  : no-repeat;
+}
+
+.strp-error {
+	position           : absolute;
+	top                : 50%;
+	left               : 50%;
+	width              : 240px;
+	height             : 240px;
+	margin-left        : -120px;
+	margin-top         : -120px;
+	background-position: 50% 50%;
+	background-repeat  : no-repeat;
+	background-image   : $url_0;
+}
+
+.strp-spinner {
+	width   : 48px;
+	height  : 48px;
+	float   : left;
+	position: relative;
+}
+@-moz-keyframes strp-spinner-spin {
+	100% {}
+}
+@-webkit-keyframes strp-spinner-spin {
+	100% {}
+}
+@keyframes strp-spinner-spin {
+	100% {
+		//Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+		transform: rotate(360deg);
+	}
+}
+
+.strp-spinner-rotate {
+	position: absolute;
+	top     : 0;
+	left    : 0;
+	width   : 100%;
+	height  : 100%;
+}
+
+.strp-spinner-frame {
+	position: absolute;
+	top     : 0;
+	left    : 0;
+	width   : 100%;
+	height  : 100%;
+}
+
+.strp-spinner-line {
+	position     : absolute;
+	left         : 50%;
+	top          : 15px;
+	width        : 2px;
+	margin-left  : -1px;
+	height       : 3px;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 1px;
+	z-index      : 80;
+	color        : inherit;
+}
+
+.strp-window-skin-strip {
+	.strp-nav-button-background {
+		background-color: transparent;
+	}
+
+	&.strp-no-svg {
+		.strp-nav {
+			&.strp-nav-previous:hover .strp-nav-button-icon {
+				background-image: $url_6;
+			}
+
+			&.strp-nav-next:hover .strp-nav-button-icon {
+				background-image: $url_7;
+			}
+		}
+
+		.strp-nav-hover {
+			&.strp-nav-previous .strp-nav-button-icon {
+				background-image: $url_6;
+			}
+
+			&.strp-nav-next .strp-nav-button-icon {
+				background-image: $url_7;
+			}
+		}
+
+		.strp-nav-previous .strp-nav-button-icon {
+			background-image: $url_4;
+			opacity         : 1;
+		}
+
+		.strp-nav-next .strp-nav-button-icon {
+			background-image: $url_5;
+			opacity         : 1;
+		}
+
+		.strp-close .strp-close-icon {
+			background-image: $url_15;
+			opacity         : 1;
+		}
+	}
+
+	.strp-nav {
+		.strp-nav-button-icon {
+			opacity: 0.6;
+		}
+
+		&:hover .strp-nav-button-icon {
+			opacity: 1;
+		}
+	}
+
+	&.strp-mobile-touch {
+		.strp-close {
+			.strp-close-icon {
+				opacity: 1;
+			}
+
+			&:hover .strp-close-icon {
+				opacity: 1;
+			}
+		}
+
+		.strp-nav .strp-nav-button-icon {
+			opacity: 1;
+		}
+	}
+
+	.strp-close {
+		.strp-close-icon {
+			background-image: $url_14;
+			opacity         : 0.8;
+		}
+
+		&:hover .strp-close-icon {
+			opacity: 1;
+		}
+	}
+
+	.strp-nav-previous .strp-nav-button-icon {
+		background-image: $url_2;
+	}
+
+	.strp-nav-next .strp-nav-button-icon {
+		background-image: $url_3;
+	}
+
+	.strp-nav-hover .strp-nav-button-icon {
+		opacity: 1;
+	}
+}
+@media all and(max-width: 375px) and(orientation: portrait), all and(max-height: 375px) and(max-width: 667px) {
+	.strp-window-skin-strip {
+		.strp-nav {
+			width : 48px;
+			height: 60px;
+			margin: -30px 5px 0;
+		}
+
+		&.strp-no-svg {
+			.strp-nav {
+				&.strp-nav-previous:hover .strp-nav-button-icon {
+					background-image: $url_12;
+				}
+
+				&.strp-nav-next:hover .strp-nav-button-icon {
+					background-image: $url_13;
+				}
+			}
+
+			.strp-nav-hover {
+				&.strp-nav-previous .strp-nav-button-icon {
+					background-image: $url_12;
+				}
+
+				&.strp-nav-next .strp-nav-button-icon {
+					background-image: $url_13;
+				}
+			}
+
+			.strp-nav-previous .strp-nav-button-icon {
+				background-image: $url_10;
+			}
+
+			.strp-nav-next .strp-nav-button-icon {
+				background-image: $url_11;
+			}
+		}
+
+		.strp-nav-previous .strp-nav-button-icon {
+			background-image: $url_8;
+		}
+
+		.strp-nav-next .strp-nav-button-icon {
+			background-image: $url_9;
+		}
+	}
+
+	.strp-no-overlap {
+		.strp-container {
+			padding: 48px 58px;
+		}
+
+		&.strp-no-sides .strp-container {
+			padding: 48px 0;
+		}
+	}
+
+	.strp-vertical .strp-no-overlap {
+		.strp-container {
+			padding: 0 58px;
+		}
+
+		&.strp-no-sides .strp-container {
+			padding: 0 48px;
+		}
+	}
+}
+
+.strp-vertical .strp-no-overlap {
+	.strp-container {
+		padding: 0 72px;
+	}
+
+	&.strp-no-sides .strp-container {
+		padding: 0 48px;
+	}
+}
+
+.strp-hovering-clickable .strp-container {
+	cursor: pointer;
+}
+
+.strp-has-error .strp-container {
+	background-color: $color_flush_mahogany_approx;
+}
+
+.strp-no-svg .strp-error {
+	background-image: $url_1;
+}

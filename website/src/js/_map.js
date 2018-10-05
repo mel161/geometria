@@ -170,10 +170,11 @@ function init() {
 
 
   myMap.geoObjects.add(myPlacemark1);
-  myMap.controls.add(zoomControl);
+  // myMap.controls.add(zoomControl);
 
   // Выставляем масштаб карты чтобы были видны все группы.
   // myMap.setBounds(myMap.geoObjects.getBounds());
+  myMap.behaviors.disable(['scrollZoom']);
 
 }
 

@@ -1,8 +1,13 @@
+// import './_jquery.min.js';
+// window.$ = $;
+// window.jQuery = jQuery;
+
+// import EventEmitter from './_EventEmitter.min.js';
+// import lethargy from './_lethargy.min.js';
+
 import 'smartscroll';
 
-
-
-
+import '@staaky/strip/dist/js/strip.pkgd.js'
 
 jQuery(document).ready(function() {
 
@@ -17,13 +22,61 @@ jQuery(document).ready(function() {
 
   // Smartscroll
   var ee = new EventEmitter();
+  var scrollStartListener = function(slideNumber) {
+    console.log("Scrolling to " + slideNumber);
+    if (slideNumber === 2) {
+      $('.sidebar').removeClass('sidebar--active');
+      $('.nav__item--top').addClass('nav__item--top-scroll');
+      $('#svg-figure').attr('stroke', '#323232');
+      $('#svg-text').attr('fill', '#323232');
+    } else if (slideNumber === 3) {
+      $('.sidebar').removeClass('sidebar--active');
+      $('.nav__item--top').addClass('nav__item--top-scroll');
+      $('#svg-figure').attr('stroke', '#fff');
+      $('#svg-text').attr('fill', '#fff');
+    } else if (slideNumber === 4) {
+      $('.sidebar').removeClass('sidebar--active');
+      $('.nav__item--top').addClass('nav__item--top-scroll');
+      $('#svg-figure').attr('stroke', '#323232');
+      $('#svg-text').attr('fill', '#323232');
+    } else if (slideNumber > 4) {
+      $('.sidebar').removeClass('sidebar--active');
+      $('.nav__item--top').addClass('nav__item--top-scroll');
+    } else {
+      $('.sidebar').addClass('sidebar--active');
+      $('.nav__item--top').removeClass('nav__item--top-scroll');
+      $('#svg-figure').attr('stroke', '#fff');
+      $('#svg-text').attr('fill', '#fff');
+    }
+
+    // if (slideNumber > 1) {
+    //   $('.sidebar').removeClass('sidebar--active');
+    //   $('#svg-figure').attr('stroke', '#323232');
+    //   $('#svg-text').attr('fill', '#323232');
+    // } else if (slideNumber === 3) {
+    //   $('#svg-figure').attr('stroke', '#fff');
+    //   $('#svg-text').attr('fill', '#fff');
+    // } else {
+    //   $('.sidebar').addClass('sidebar--active');
+    //   $('#svg-figure').attr('stroke', '#fff');
+    //   $('#svg-text').attr('fill', '#fff');
+    // }
+  }
+  var scrollEndListener = function(slideNumber) {
+    console.log("Scrolling End");
+  }
+  ee.addListener('scrollStart', scrollStartListener);
+  ee.addListener('scrollEnd', scrollEndListener);
+
   $.smartscroll({
     autoHash: false,
     sectionScroll: true,
     sectionWrapperSelector: ".main",
     sectionClass: "slide",
-    eventEmitter: ee
+    eventEmitter: ee,
+    bindSwipe: true
   });
+
   // Smartscroll End
 
 });

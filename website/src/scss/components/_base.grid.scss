@@ -1,10 +1,6 @@
-html {
+html {}
 
-}
-
-body {
-
-}
+body {}
 
 .page {
   width : 100%;
@@ -21,20 +17,25 @@ body {
 }
 
 .sidebar {
+  display         : flex;
   z-index         : 10;
   position        : fixed;
   top             : 0;
-  right           : 0;
-  width           : 330px;
-  height          : 100%;
-  background-color: rgba($white, .9);
-  padding         : 0 48px;
-  display         : flex;
+  right           : -330px;
   flex-direction  : row;
   flex-wrap       : wrap;
+  align-content   : flex-end;
   align-items     : flex-start;
   justify-content : flex-start;
-  align-content   : flex-end;
+  width           : 330px;
+  height          : 100%;
+  padding         : 0 48px;
+  background-color: rgba($white, .9);
+  transition      : all 500ms ease-in-out;
+  // Modifiers
+  &--active {
+    right: 0;
+  }
 }
 
 .main {
@@ -46,14 +47,14 @@ body {
 }
 
 .slide {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
 }
 
 .grid {
   width : 100%;
-  height: auto;
+  height: 100%;
 }
 
 .row {
@@ -76,7 +77,7 @@ body {
   // Modifiers
   &--left {
     @media (min-width: 1200px) {
-      flex: 0 0 660px;
+      flex   : 0 0 660px;
       padding: 53px 0 0 150px;
 
       &:before {
@@ -100,22 +101,28 @@ body {
 
   &--center {
     flex-basis: auto;
-    padding: 79px 0 0 83px;
+    padding   : 79px 0 0 83px;
   }
 
   &--center-section {
     flex-basis: auto;
-    padding: 66px 200px 0 86px;
+    padding   : 66px 200px 0 86px;
   }
 
   &--center-full {
     flex-basis: auto;
-    padding: 0;
+    padding   : 0;
   }
 
   &--right {
     @media (min-width: 1200px) {
       flex: 0 0 330px;
     }
+  }
+
+  &--vertical-center {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
   }
 }

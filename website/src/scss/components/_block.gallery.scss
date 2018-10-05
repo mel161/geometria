@@ -1,0 +1,20 @@
+.gallery {
+  // Styles
+
+  // Elements
+  &__item {
+    // Styles
+    box-sizing: border-box;
+
+    // Modifiers
+    &--first {
+
+    }
+  }
+
+  // Modifiers
+  &--vertical {
+    display: flex;
+    flex-direction: column;
+  }
+}

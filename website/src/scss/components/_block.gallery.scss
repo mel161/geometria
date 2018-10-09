@@ -1,20 +1,58 @@
 .gallery {
   // Styles
-
+  position: relative;
   // Elements
   &__item {
     // Styles
     box-sizing: border-box;
+    position  : relative;
+    overflow  : hidden;
+    cursor    : pointer;
 
+    &:before {
+      display         : block;
+      z-index         : 1;
+      position        : absolute;
+      top             : 0;
+      left            : 0;
+      width           : 100%;
+      height          : 100%;
+      background-color: rgba($black, .5);
+      content         : '';
+      transition      : all 800ms ease-in;
+    }
+
+    &:hover {
+      &:before {
+        background-color: rgba($black, 0);
+        display         : none;
+      }
+
+    .link {
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
     // Modifiers
     &--first {
+      flex-grow: 1;
+    }
 
+    &--second {
+      flex-grow: 2;
+    }
+
+    &--third {
+      flex-grow: 1;
     }
   }
-
   // Modifiers
   &--vertical {
-    display: flex;
+    display       : flex;
     flex-direction: column;
+    height        : 100%;
   }
+}
+
+.slideGallery {
+  background-color: red;
 }

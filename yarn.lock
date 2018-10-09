@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@fancyapps/fancybox@^3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.2.tgz#d6ff4bf3bc99dd69c53bcee9397d8cf698462fe3"
+
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -18,10 +22,6 @@
   dependencies:
     normalize-path "^2.0.1"
     through2 "^2.0.3"
-
-"@staaky/strip@^1.6.5":
-  version "1.6.5"
-  resolved "https://registry.yarnpkg.com/@staaky/strip/-/strip-1.6.5.tgz#5d289ed2320ebb39d73f8198cc75cc0105788846"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
@@ -7306,10 +7306,6 @@ strip-outer@^1.0.0:
   resolved "https://registry.yarnpkg.com/strip-outer/-/strip-outer-1.0.1.tgz#b2fd2abf6604b9d1e6013057195df836b8a9d631"
   dependencies:
     escape-string-regexp "^1.0.2"
-
-strip@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/strip/-/strip-3.0.0.tgz#750fc933152a7d35af0b7420e651789b914cc35e"
 
 sum-up@^1.0.1:
   version "1.0.3"

@@ -3,7 +3,7 @@
 @import '_vendors/font-awesome/solid';
 @import '_vendors/font-awesome/brands';
 
-@import '_vendors/strip/strip';
+// @import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
 
 // Reset
 @import 'base/minireset';
@@ -41,6 +41,7 @@ $brand: #cfd11a;
 //
 @import 'components/_base.buttons';
 @import 'components/_base.icons';
+@import 'components/_base.images';
 @import 'components/_base.list';
 
 // Block
@@ -51,3 +52,9 @@ $brand: #cfd11a;
 @import 'components/_block.nav';
 @import 'components/_block.map';
 @import 'components/_block.tab';
+@import 'components/_block.gallery';
+
+
+.slideGallery  {
+  width: 550px;
+}

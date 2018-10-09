@@ -5,6 +5,8 @@
 <head>
   <meta charset="utf-8">
   <title>Главная&nbsp;&mdash; ЖК&nbsp;&laquo;Геометрия&raquo;</title>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css" /> -->
+  <link rel="stylesheet" href="http://www.stripjs.com/bower_components/strip/dist/css/strip.css" />
   <link rel="stylesheet" href="./css/styles.css">
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> -->
 </head>
@@ -173,18 +175,18 @@
             <div class="col col--right">
               <ul class="gallery gallery--vertical">
                 <li class="gallery__item gallery__item--first">
-                  <a href="./img/gallery-big-1.jpg" class="link link--gallery strip" data-strip-group="mygroup">
-                    <img src="./img/gallery-thumb-1.jpg" alt="" class="image">
+                  <a href="./img/gallery-big-1.jpg" class="link link--gallery strip" data-strip-group="mygroup" data-fancybox="gallery" data-caption="Caption #1">
+                    <img src="./img/gallery-thumb-1.jpg" alt="" class="image image--gallery">
                   </a>
                 </li>
                 <li class="gallery__item gallery__item--second">
-                  <a href="./img/gallery-big-2.jpg" class="link link--gallery strip" data-strip-group="mygroup">
-                    <img src="./img/gallery-thumb-2.jpg" alt="" class="image">
+                  <a href="./img/gallery-big-2.jpg" class="link link--gallery strip" data-strip-group="mygroup" data-fancybox="gallery" data-caption="Caption #2">
+                    <img src="./img/gallery-thumb-2.jpg" alt="" class="image image--gallery">
                   </a>
                 </li>
                 <li class="gallery__item gallery__item--third">
-                  <a href="./img/gallery-big-1.jpg" class="link link--gallery strip" data-strip-group="mygroup">
-                    <img src="./img/gallery-thumb-3.jpg" alt="" class="image">
+                  <a href="./img/gallery-big-1.jpg" class="link link--gallery strip" data-strip-group="mygroup" data-fancybox="gallery" data-caption="Caption #3">
+                    <img src="./img/gallery-thumb-3.jpg" alt="" class="image image--gallery">
                   </a>
                 </li>
               </ul>
@@ -248,12 +250,13 @@
     </main>
     <!-- Main End -->
   </div>
+  <!-- <script defer src="./js/secondary.js"></script> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script async src="https://d4nyll.github.io/smartscroll/EventEmitter.min.js"></script>
   <script async src="https://d4nyll.github.io/smartscroll/lethargy.min.js"></script>
+  <script async src="http://www.stripjs.com/bower_components/strip/dist/js/strip.pkgd.min.js"></script>
   <script type="text/javascript" src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
-  <script src="./js/scripts.js"></script>
-  <!-- <script src="./js/secondary.js"></script> -->
+  <script defer src="./js/scripts.js"></script>
 </body>
 
 </html>

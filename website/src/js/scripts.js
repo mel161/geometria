@@ -1,13 +1,21 @@
-// import './_jquery.min.js';
-// window.$ = $;
-// window.jQuery = jQuery;
-
 // import EventEmitter from './_EventEmitter.min.js';
 // import lethargy from './_lethargy.min.js';
 
+import * as jQuery from './secondary.js';
+// export for others scripts to use
+window.$ = $;
+window.jQuery = jQuery;
+
 import 'smartscroll';
 
-import '@staaky/strip/dist/js/strip.pkgd.js'
+import '@fancyapps/fancybox';
+
+// $('[data-fancybox="gallery"]').fancybox({
+// 	// Options will go here
+//   baseClass: "slideGallery"
+// });
+
+// import '@staaky/strip/dist/js/strip.pkgd.js'
 
 jQuery(document).ready(function() {
 

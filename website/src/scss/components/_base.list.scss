@@ -7,16 +7,34 @@
 
     // Modifiers
     &--border-bottom {
+      margin-bottom: 33px;
       border-bottom: 1px solid $brand;
-      padding-bottom: 21px;
       margin-bottom: 33px;
 
       &:last-of-type {
         border: 0;
       }
     }
+
+    &--card {
+      // margin-right: 14px;
+    }
   }
 
-  // Modifiers
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 
+  &--unstyled {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &--cards {
+    display: flex;
+    width: 100%;
+    // padding: 14px;
+    justify-content: space-between;
+  }
 }

@@ -30,4 +30,14 @@
   .logo__link:hover & {
     stroke: $brand;
   }
+
+  .about-features & {
+    stroke: $black;
+  }
+}
+
+#svg-text {
+  .about-features & {
+    fill: $black;
+  }
 }

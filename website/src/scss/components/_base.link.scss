@@ -68,4 +68,25 @@
     transform: translate(-50%, -50%);
     transition: all 500ms ease-out;
   }
+
+  &--card {
+    // Styles
+    font-size: 20px;
+    font-weight: 500;
+
+    // States
+    &:link {
+      background-color: $grey-dark;
+      color: $brand;
+    }
+
+    &:visited {}
+
+    &:hover {
+      background-color: $brand;
+      color: $grey-dark;
+    }
+
+    &:active {}
+  }
 }

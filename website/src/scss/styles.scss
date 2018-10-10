@@ -53,8 +53,4 @@ $brand: #cfd11a;
 @import 'components/_block.map';
 @import 'components/_block.tab';
 @import 'components/_block.gallery';
-
-
-.slideGallery  {
-  width: 550px;
-}
+@import 'components/_block.card';

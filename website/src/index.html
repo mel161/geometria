@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="page">
+  <div class="page index">
     <!-- Top Panel -->
     <div class="top-panel">
       <div class="grid">
@@ -36,8 +36,8 @@
             <!-- Nav Top Panel -->
             <nav class="nav nav--top">
               <ul class="nav__list nav__list--horizontal">
-                <li class="nav__item nav__item--top"><a href="#" class="link link--nav">Выбрать квартиру</a></li>
-                <li class="nav__item nav__item--top"><a href="#" class="link link--nav">Подобрать паркинг</a></li>
+                <li class="nav__item nav__item--top nav__item--top-scroll"><a href="#" class="link link--nav">Выбрать квартиру</a></li>
+                <li class="nav__item nav__item--top nav__item--top-scroll"><a href="#" class="link link--nav">Подобрать паркинг</a></li>
               </ul>
             </nav>
             <!-- Nav Top Panel End -->
@@ -222,27 +222,202 @@
       <section class="section slide" data-hash="features">
         <div class="grid">
           <div class="row">
-            <div class="col col--left col--left-no-border">
+            <div class="col col--left col--left-no-border col--vertical-center">
               <h2 class="heading heading--primary">Преимущества</h2>
-              <h3 class="heading heading--border">Категории</h3>
+              <h3 class="heading heading--nav-title">Категории</h3>
               <nav class="nav nav--tabs">
                 <ul class="nav__list nav__list--vertical">
-                  <li class="nav__item nav__item--tabs nav__item--active"><a href="#tab1" class="link link--nav link--tab">Двор</a></li>
-                  <li class="nav__item nav__item--tabs"><a href="#tab2" class="link link--nav link--tab">Квартиры</a></li>
-                  <li class="nav__item nav__item--tabs"><a href="#tab3" class="link link--nav link--tab">Паркинг</a></li>
-                  <li class="nav__item nav__item--tabs"><a href="#tab4" class="link link--nav link--tab">Комфорт</a></li>
+                  <li class="nav__item nav__item--tabs nav__item--active">
+                    <a href="#tab1" class="link link--nav link--tab">Двор</a>
+                  </li>
+                  <li class="nav__item nav__item--tabs">
+                    <a href="#tab2" class="link link--nav link--tab">Квартиры</a>
+                  </li>
+                  <li class="nav__item nav__item--tabs">
+                    <a href="#tab3" class="link link--nav link--tab">Паркинг</a>
+                  </li>
+                  <li class="nav__item nav__item--tabs">
+                    <a href="#tab4" class="link link--nav link--tab">Комфорт</a>
+                  </li>
                 </ul>
               </nav>
             </div>
-            <div class="col col--center col--center-full">
+            <div class="col col--center col--center-full col--vertical-center">
               <div class="tab">
-                <div class="tab__inner tab__inner--active" id="tab1">1</div>
-                <div class="tab__inner" id="tab2">2</div>
-                <div class="tab__inner" id="tab3">3</div>
-                <div class="tab__inner" id="tab4">4</div>
+                <div class="tab__inner tab__inner--active" id="tab1">
+                  <ul class="list list--unstyled list--cards">
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/1-1-playground.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Детские площадки</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/1-2-closed-area.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Закрытая территория</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/1-3-rest-zone.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Зоны для отдыха детей и взрослых</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image"></span>
+                          <img src="./img/1-4-sports-ground.jpg" alt="Детские площадки" class="image image--card">
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Спортивные площадки</h4>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab__inner" id="tab2">
+                  <ul class="list list--unstyled list--cards">
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/2-1-warm-and-cozy.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Тёплые и удобные</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/2-2-connection.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Интернет, домофон, телефония</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/2-3-overhaul.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Ремонт «под ключ»</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image"></span>
+                          <img src="./img/2-4-entresol.jpg" alt="Детские площадки" class="image image--card">
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Антресоли в каждой квартире</h4>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab__inner" id="tab3">
+                  <ul class="list list--unstyled list--cards">
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/3-1-first-floor-parking.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Первый уровень паркинга</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/3-2-second-floor-parking.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Второй уровень паркинга</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/3-3-by-the-house.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Прямо рядом с домом</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image"></span>
+                          <img src="./img/3-4-large-area.jpg" alt="Детские площадки" class="image image--card">
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Большая территория</h4>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab__inner" id="tab4">
+                  <ul class="list list--unstyled list--cards">
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/4-1-video-intercoms.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Видеодомофоны</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/4-2-bicycles-and-strollers.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Места для хранения велосипедов и колясок</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image">
+                          <img src="./img/4-3-dog-wash.jpg" alt="Детские площадки" class="image image--card">
+                        </span>
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Место, где можно вымыть лапы собакам и велосипеды</h4>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="list__item list__item--card">
+                      <a href="" class="link link--card card">
+                        <span class="card__image"></span>
+                          <img src="./img/4-4-hall.jpg" alt="Детские площадки" class="image image--card">
+                        <span class="card__title">
+                          <h4 class="heading heading--card">Просторные светлые МОПы</h4>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="col col--right"></div>
           </div>
         </div>
       </section>

@@ -7,6 +7,21 @@
     padding         : 0;
     background-color: transparent;
   }
+
+  &--base {
+    background-color: $brand;
+    color           : $grey-dark;
+    font-size       : 18px;
+    font-weight     : 400;
+    display         : block;
+    width           : auto;
+    line-height     : 1;
+    // Media Queries
+    @media (min-width: 1200px) {
+      padding: 21px 50px;
+      width: 250px;
+    }
+  }
 }
 
 #js-sidebar-trigger {

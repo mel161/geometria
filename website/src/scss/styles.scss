@@ -30,8 +30,6 @@ $brand: #cfd11a;
 // Grid
 @import 'components/_base.grid';
 
-// Helpers
-@import 'components/_base.helper';
 
 // Typography
 @import 'components/_base.typo';
@@ -54,3 +52,7 @@ $brand: #cfd11a;
 @import 'components/_block.tab';
 @import 'components/_block.gallery';
 @import 'components/_block.card';
+
+
+// Helpers
+@import 'components/_base.helper';

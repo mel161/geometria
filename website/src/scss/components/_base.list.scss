@@ -34,6 +34,23 @@
       left: 0;
       z-index: 5;
     }
+
+    &--dot {
+      position: relative;
+      padding-left: 66px;
+      margin-bottom: 19px;
+
+      &:before {
+        content: '•';
+        display: block;
+        font-size: 16px;
+        height: auto;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: auto;
+      }
+    }
   }
 
     margin: 0;
@@ -52,5 +69,9 @@
     // padding: 14px;
     // justify-content: space-between;
     position: relative;
+  }
+
+  &--dot {
+
   }
 }

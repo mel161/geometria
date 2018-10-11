@@ -1,6 +1,9 @@
 html {}
 
-body {}
+body {
+  overflow: hidden;
+  width: 100vw;
+}
 
 .page {
   width : 100%;

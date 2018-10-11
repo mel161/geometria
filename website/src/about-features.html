@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Главная&nbsp;&mdash; ЖК&nbsp;&laquo;Геометрия&raquo;</title>
+  <title>О проекте&nbsp;&mdash; ЖК&nbsp;&laquo;Геометрия&raquo;</title>
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.2/jquery.fancybox.min.css" /> -->
   <link rel="stylesheet" href="http://www.stripjs.com/bower_components/strip/dist/css/strip.css" />
   <link rel="stylesheet" href="./css/styles.css">
@@ -20,7 +20,7 @@
           <div class="col col--left">
             <!-- Logo -->
             <div class="logo logo--top">
-              <a href="/" class="logo__link">
+              <a href="./index.html" class="logo__link">
                 <!-- <img src="./img/logo.png" alt="ЖК&nbsp;&laquo;Геометрия&raquo;" class="logo__image"> -->
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 291.73 91.27" class="logo__image">
                   <g id="logo">
@@ -44,11 +44,11 @@
           </div>
           <div class="col col--right">
             <!-- Button SideBar Trigger -->
-            <button type="button" name="js-sidebar-trigger" id="js-sidebar-trigger" class="btn btn--transparent" onclick="this.classList.toggle('btn--active')">
-              <svg class="icon icon--hamburger icon--cross" viewBox="0 0 100 100">
-                <path class="line top" d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
-                <path class="line middle" d="m 70,50 h -40" />
-                <path class="line bottom" d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
+            <button type="button" name="js-sidebar-trigger" id="js-sidebar-trigger" class="btn btn--transparent">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 41" class="icon icon--hamburger">
+                <path d="M.011 3.713l.04-3.03L49.989.01l-.04 3.03z" class="cls-1" data-name="Rectangle 2 copy 32" />
+                <path d="M.011 22.851l.04-3.03 49.937-.673-.04 3.03z" class="cls-1" data-name="Rectangle 2 copy 30" />
+                <path d="M.011 40.989l.04-3.03 49.937-.673-.04 3.03z" class="cls-1" data-name="Rectangle 2 copy 29" />
               </svg>
             </button>
             <!-- Button Nav SideBar End -->
@@ -63,8 +63,8 @@
       <!-- Nav Main SideBar -->
       <nav class="nav nav--main">
         <ul class="nav__list nav__list--vertical">
-          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Преимущества</a></li>
-          <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Как купить</a></li>
+          <li class="nav__item nav__item--main"><a href="about-features.html" class="link link--nav">Преимущества</a></li>
+          <li class="nav__item nav__item--main"><a href="how-buy.html" class="link link--nav">Как купить</a></li>
           <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Ход строительства</a></li>
           <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Документация</a></li>
           <li class="nav__item nav__item--main"><a href="#" class="link link--nav">Контакты</a></li>
@@ -134,8 +134,8 @@
       <section class="section slide" data-hash="hood">
         <div class="grid">
           <div class="row row--full">
-            <div class="col col--left col--vertical-center">
-              <h2 class="heading heading--primary">Преимущества</h2>
+            <div class="col col--left col--left-no-border col--vertical-center">
+              <h2 class="heading heading--primary heading--primary-inner">Преимущества</h2>
               <nav class="nav nav--submenu">
                 <ul class="nav__list nav__list--horizontal">
                   <li class="nav__item nav__item--submenu nav__item--active">
@@ -152,8 +152,8 @@
                   </li>
                 </ul>
               </nav>
-              <h3 class="heading heading--secondary">Двор</h3>
-              <p class="paragraph text text--normal">
+              <h3 class="heading heading--secondary heading--secondary-inner">Двор</h3>
+              <p class="paragraph paragraph--inner text text--normal">
                 «Геометрия» обрамлена просторным и&nbsp;приватным двором, полным приятных уголков: тут&nbsp;есть
                 детская площадка, место для&nbsp;занятий спортом, зоны для&nbsp;отдыха и&nbsp;широкие тротуары. Во&nbsp;дворе
                 ЖК уютно, чисто и&nbsp;зелено — отличное место, где&nbsp;можно провести время с&nbsp;семьей или&nbsp;прогуляться
@@ -162,42 +162,59 @@
             </div>
             <div class="col col--center col--center-full col--vertical-center">
               <ul class="list list--unstyled list--cards">
-                <li class="list__item list__item--card">
-                  <a href="" class="link link--card card">
-                    <span class="card__image">
-                      <img src="./img/1-1-playground.jpg" alt="Детские площадки" class="image image--card">
+                <li class="list__item list__item--card list__item--card-active">
+                  <a href="" class="link link--card card card--active">
+                    <span class="card__image" style="background-image: url('./img/1-1-playground-big.jpg');">
+                      <!-- <img src="./img/1-1-playground-big.jpg" alt="Детские площадки" class="image image--card"> -->
                     </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Детские площадки</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
                   <a href="" class="link link--card card">
-                    <span class="card__image">
-                      <img src="./img/1-2-closed-area.jpg" alt="Детские площадки" class="image image--card">
+                    <span class="card__image" style="background-image: url('./img/1-2-closed-area-big.jpg');">
+                      <!-- <img src="./img/1-2-closed-area-big.jpg" alt="Детские площадки" class="image image--card"> -->
                     </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Закрытая территория</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
                   <a href="" class="link link--card card">
-                    <span class="card__image">
-                      <img src="./img/1-3-rest-zone.jpg" alt="Детские площадки" class="image image--card">
+                    <span class="card__image" style="background-image: url('./img/1-3-rest-zone-big.jpg');">
+                      <!-- <img src="./img/1-3-rest-zone-big.jpg" alt="Детские площадки" class="image image--card"> -->
                     </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Зоны для отдыха детей и взрослых</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
                   <a href="" class="link link--card card">
-                    <span class="card__image"></span>
-                      <img src="./img/1-4-sports-ground.jpg" alt="Детские площадки" class="image image--card">
+                    <span class="card__image" style="background-image: url('./img/1-4-sports-ground-big.jpg');">
+                      <!-- <img src="./img/1-4-sports-ground-big.jpg" alt="Детские площадки" class="image image--card"> -->
+                    </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Спортивные площадки</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>
@@ -212,14 +229,14 @@
       <section class="section slide" data-hash="flat">
         <div class="grid">
           <div class="row row--full">
-            <div class="col col--left col--vertical-center">
-              <h2 class="heading heading--primary">Преимущества</h2>
+            <div class="col col--left col--left-no-border col--vertical-center">
+              <h2 class="heading heading--primary heading--primary-inner">Преимущества</h2>
               <nav class="nav nav--submenu">
                 <ul class="nav__list nav__list--horizontal">
-                  <li class="nav__item nav__item--submenu nav__item--active">
+                  <li class="nav__item nav__item--submenu">
                     <a href="#" class="link link--nav">Двор</a>
                   </li>
-                  <li class="nav__item nav__item--submenu">
+                  <li class="nav__item nav__item--submenu nav__item--active">
                     <a href="#" class="link link--nav">Квартиры</a>
                   </li>
                   <li class="nav__item nav__item--submenu">
@@ -230,8 +247,8 @@
                   </li>
                 </ul>
               </nav>
-              <h3 class="heading heading--secondary">Квартиры</h3>
-              <p class="paragraph text text--normal">
+              <h3 class="heading heading--secondary heading--secondary-inner">Квартиры</h3>
+              <p class="paragraph paragraph--inner text text--normal">
                 Квартиры «Геометрии» — уютные и светлые,
                 семь раз измеренные и один раз отлично
                 отремонтированные «под ключ». Все готово —
@@ -253,6 +270,10 @@
                     <span class="card__title">
                       <h4 class="heading heading--card">Тёплые и удобные</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
@@ -262,6 +283,10 @@
                     </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Интернет, домофон, телефония</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>
@@ -273,14 +298,22 @@
                     <span class="card__title">
                       <h4 class="heading heading--card">Ремонт «под ключ»</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
                   <a href="" class="link link--card card">
                     <span class="card__image"></span>
-                      <img src="./img/2-4-entresol.jpg" alt="Детские площадки" class="image image--card">
+                    <img src="./img/2-4-entresol.jpg" alt="Детские площадки" class="image image--card">
                     <span class="card__title">
                       <h4 class="heading heading--card">Антресоли в каждой квартире</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>
@@ -295,17 +328,17 @@
       <section class="section slide" data-hash="parking">
         <div class="grid">
           <div class="row row--full">
-            <div class="col col--left col--vertical-center">
-              <h2 class="heading heading--primary">Преимущества</h2>
+            <div class="col col--left col--left-no-border col--vertical-center">
+              <h2 class="heading heading--primary heading--primary-inner">Преимущества</h2>
               <nav class="nav nav--submenu">
                 <ul class="nav__list nav__list--horizontal">
-                  <li class="nav__item nav__item--submenu nav__item--active">
+                  <li class="nav__item nav__item--submenu">
                     <a href="#" class="link link--nav">Двор</a>
                   </li>
                   <li class="nav__item nav__item--submenu">
                     <a href="#" class="link link--nav">Квартиры</a>
                   </li>
-                  <li class="nav__item nav__item--submenu">
+                  <li class="nav__item nav__item--submenu nav__item--active">
                     <a href="#" class="link link--nav">Паркинг</a>
                   </li>
                   <li class="nav__item nav__item--submenu">
@@ -313,8 +346,8 @@
                   </li>
                 </ul>
               </nav>
-              <h3 class="heading heading--secondary">Паркинг</h3>
-              <p class="paragraph text text--normal">
+              <h3 class="heading heading--secondary heading--secondary-inner">Паркинг</h3>
+              <p class="paragraph paragraph--inner text text--normal">
                 Жители «Геометрии» могут больше времени
                 проводить со своей семьей: у них нет
                 необходимости искать парковочное место
@@ -335,6 +368,10 @@
                     <span class="card__title">
                       <h4 class="heading heading--card">Первый уровень паркинга</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
@@ -344,6 +381,10 @@
                     </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Второй уровень паркинга</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>
@@ -355,14 +396,23 @@
                     <span class="card__title">
                       <h4 class="heading heading--card">Прямо рядом с домом</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
                   <a href="" class="link link--card card">
-                    <span class="card__image"></span>
+                    <span class="card__image">
                       <img src="./img/3-4-large-area.jpg" alt="Детские площадки" class="image image--card">
+                    </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Большая территория</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>
@@ -377,11 +427,11 @@
       <section class="section slide" data-hash="comfort">
         <div class="grid">
           <div class="row row--full">
-            <div class="col col--left col--vertical-center">
-              <h2 class="heading heading--primary">Преимущества</h2>
+            <div class="col col--left col--left-no-border col--vertical-center">
+              <h2 class="heading heading--primary heading--primary-inner">Преимущества</h2>
               <nav class="nav nav--submenu">
                 <ul class="nav__list nav__list--horizontal">
-                  <li class="nav__item nav__item--submenu nav__item--active">
+                  <li class="nav__item nav__item--submenu">
                     <a href="#" class="link link--nav">Двор</a>
                   </li>
                   <li class="nav__item nav__item--submenu">
@@ -390,13 +440,13 @@
                   <li class="nav__item nav__item--submenu">
                     <a href="#" class="link link--nav">Паркинг</a>
                   </li>
-                  <li class="nav__item nav__item--submenu">
+                  <li class="nav__item nav__item--submenu nav__item--active">
                     <a href="#" class="link link--nav">Комфорт</a>
                   </li>
                 </ul>
               </nav>
-              <h3 class="heading heading--secondary">Комфорт</h3>
-              <p class="paragraph text text--normal">
+              <h3 class="heading heading--secondary heading--secondary-inner">Комфорт</h3>
+              <p class="paragraph paragraph--inner text text--normal">
                 В квартирах есть все коммуникации —
                 от интернета до домофона. В ванной и коридоре
                 установлены счётчики водоснабжения
@@ -419,6 +469,10 @@
                     <span class="card__title">
                       <h4 class="heading heading--card">Видеодомофоны</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
@@ -428,6 +482,10 @@
                     </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Места для хранения велосипедов и колясок</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>
@@ -439,14 +497,23 @@
                     <span class="card__title">
                       <h4 class="heading heading--card">Место, где можно вымыть лапы собакам и велосипеды</h4>
                     </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
+                    </span>
                   </a>
                 </li>
                 <li class="list__item list__item--card">
                   <a href="" class="link link--card card">
-                    <span class="card__image"></span>
+                    <span class="card__image">
                       <img src="./img/4-4-hall.jpg" alt="Детские площадки" class="image image--card">
+                    </span>
                     <span class="card__title">
                       <h4 class="heading heading--card">Просторные светлые МОПы</h4>
+                    </span>
+                    <span class="card__text">
+                      <span class="text text--normal">Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        чемпионат по настольному теннису на спортивных площадках ЖК.</span>
                     </span>
                   </a>
                 </li>

@@ -83,7 +83,9 @@
     &--submenu {
       flex: 1 1 auto;
       border-right: 1px solid $brand;
-      padding-left: 15px;
+      padding: 0 15px;
+      font-size: 14px;
+      text-transform: uppercase;
 
       &:first-of-type {
         padding-left: 0;
@@ -114,6 +116,7 @@
   }
 
   &--submenu {
-    width: 350px;
+    width: 425px;
+    margin-bottom: 75px;
   }
 }

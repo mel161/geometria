@@ -10,7 +10,28 @@ import 'smartscroll';
 
 import '@fancyapps/fancybox';
 
+import init from './_map.js';
+
+
 jQuery(document).ready(function() {
+
+  if ($(".page").is(".about-features")) {
+    $('.card').click(function(event) {
+      event.preventDefault();
+
+      $(this)
+        .toggleClass('card--active');
+
+      $(this)
+        .parent()
+          .toggleClass('list__item--card-active')
+        .siblings()
+          .removeClass('list__item--card-active')
+          .find('.card')
+          .removeClass('card--active')
+    })
+  }
+
 
   // Tabs
   $(".link--tab").click(function(event) {
@@ -20,6 +41,14 @@ jQuery(document).ready(function() {
     $(tab).addClass("tab__inner--active").siblings().removeClass("tab__inner--active");
   });
   // Tabs End
+
+
+  //
+  $('#js-sidebar-trigger').click(function () {
+    $(this).toggleClass('btn--active')
+    $('.sidebar').toggleClass('sidebar--active');
+  })
+  //
 
   // Smartscroll
   var ee = new EventEmitter();
@@ -57,6 +86,9 @@ jQuery(document).ready(function() {
     }
     ee.addListener('scrollStart', scrollStartListener);
     ee.addListener('scrollEnd', scrollEndListener);
+
+    // Maps
+    ymaps.ready(init);
   }
 
   $.smartscroll({
@@ -71,7 +103,3 @@ jQuery(document).ready(function() {
   // Smartscroll End
 
 });
-
-// Maps
-import init from './_map.js';
-ymaps.ready(init);

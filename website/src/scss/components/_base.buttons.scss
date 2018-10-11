@@ -1,16 +1,17 @@
 .btn {
   // Styles
-  border: 0;
+  border : 0;
   outline: none;
-
-
   // Modifiers
   &--transparent {
-    padding: 0;
+    padding         : 0;
     background-color: transparent;
   }
 }
 
 #js-sidebar-trigger {
-  z-index: 15;
+  z-index : 15;
+  position: absolute;
+  top     : 67px;
+  right   : 34px;
 }

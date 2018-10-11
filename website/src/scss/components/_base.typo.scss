@@ -43,6 +43,12 @@ body {
     color: $brand;
   }
   // Sizes
+  &--hide {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
   &--xsmall {
     font-size: 12px;
   }
@@ -92,5 +98,8 @@ body {
   // Modifiers
   &--about-last {
     margin-bottom: 122px;
+  }
+  &--inner {
+    width: 400px;
   }
 }

@@ -1,0 +1,55 @@
+.btn {
+  // Styles
+  border : 0;
+  outline: none;
+  // Modifiers
+  &--transparent {
+    padding         : 0;
+    background-color: transparent;
+  }
+
+  &--base {
+    background-color: $brand;
+    color           : $grey-dark;
+    font-size       : 18px;
+    font-weight     : 400;
+    display         : block;
+    width           : auto;
+    line-height     : 1;
+
+    // Media Queries
+    @media (min-width: 1200px) {
+      padding: 21px 50px;
+      width: 250px;
+    }
+
+    // States
+    &:link {}
+
+    &:visited {}
+
+    &:hover {}
+
+    &:active {
+      background-color: $grey-dark;
+      color: $white;
+    }
+
+    &:disabled {
+      background-color: $brand-light;
+    }
+  }
+
+  &--order {
+    position: absolute;
+    bottom: 71px;
+    left: 150px;
+  }
+}
+
+#js-sidebar-trigger {
+  z-index : 55;
+  position: absolute;
+  top     : 70px;
+  right   : 50px;
+}

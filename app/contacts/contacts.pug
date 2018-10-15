@@ -1,0 +1,74 @@
+extends ../layout/_layout.pug
+block vars
+  - var pageTitle = 'Контакты'
+  - var bodyClass = ''
+
+block content
+  // Top Panel
+  include ../includes/_top-panel-inner
+  // Top Panel End
+  // SideBar
+  include ../includes/_sidebar
+  // SideBar End
+
+  // Main
+  main.main
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--vertical-center
+            h2.heading.heading--primary О проекте
+            ul.list.list--vertical.list--unstyled
+              li.list__item.list__item--border-bottom
+                span.text.text--normal.text-regular.text--gray-dark
+                  | Отдел продаж «ТЭН»
+                  br
+                  | г. Екатеринбург, ул. Малышева, 5, 9 этаж
+                  br
+                  | (ТРЦ «Алатырь»)
+              li.list__item.list__item--border-bottom
+                a(href="tel:+7343720074").link.link--contacts
+                  span.text.text--normal.text-regular.text--gray-dark
+                    | +7 343 720 074
+                br
+                a(href="mailto:sales@geometria.ru?subject=feedback").link.link--contacts
+                  span.text.text--normal.text-regular.text--gray-dark
+                    | sales@geometria.ru
+
+              li.list__item.list__item--border-bottom
+                span.text.text--normal.text-regular.text--gray-dark
+                  | пн-пт	с 9 до 20
+                  br
+                  | сб	с 10 до 17
+                  br
+                  | вс	выходной
+
+          .col.col--center.col--center-section.col--vertical-center
+            h3.heading.heading--secondary Оставьте заявку
+            p.paragraph.text.text--medium.text--regular
+              | Поможем подобрать квартиру вашей мечты
+
+            form(action="", method="get").form
+              label(for="nameForm").label
+                input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off').input.input--text
+              label(for="phoneForm").label
+                input(type="text", id=phoneForm, name="phone", value="", placeholder="Ваш Телефон*", required='', autocomplete='off').input.input--text.input--phone
+              label(for="msgForm").label
+                textarea(name="msg", id=msgForm, rows="8", cols="80", placeholder="Ваше Сообщение*", required='', autocomplete='off').input.input--text
+              label(for="agreeForm").label.label--checkbox.text--xsmall.text--regular
+                | Согласен на обработку персональных данных.
+                br
+                a(href="#").link.link--underline Политика конфиденциальности*
+                input(type="checkbox", name="check", id='agreeForm', required='').input.input--checkbox
+              input(type="submit", name="submit", value="Отправить", disabled='disabled').btn.btn--base#js-form-submit
+
+          .col.col--right
+            .map
+              #map
+    // Section About End
+
+block scripts
+  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
+  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')
+  script(async='', src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')

@@ -1,0 +1,141 @@
+.nav {
+  // Styles
+  // Elements
+  &__list {
+    // Styles
+    margin         : 0;
+    padding        : 0;
+    list-style-type: none;
+    // Modifiers
+    &--horizontal {
+      display        : flex;
+      flex-direction : row;
+      align-items    : center;
+      justify-content: flex-start;
+    }
+
+    &--vertical {
+      display        : flex;
+      flex-direction : column;
+      align-items    : flex-start;
+      justify-content: flex-start;
+    }
+
+    &--full-width {
+      width: 100%;
+    }
+  }
+
+  &__item {
+    // Styles
+    // Modifiers
+    &--top {
+      margin-top  : 2px;
+      margin-right: 42px;
+      margin-left : -2px;
+      color       : #fff;
+      font-size   : 18px;
+      font-weight : bold;
+      line-height : 20px;
+    }
+
+    &--top-scroll {
+      color: $grey-dark;
+    }
+
+    &--main {
+      margin-bottom : 25px;
+      font-size     : 18px;
+      font-weight   : normal;
+      line-height   : 20px;
+      text-transform: uppercase;
+    }
+
+    &--map {
+      margin-bottom: 25px;
+      color        : $white;
+      color        : $white;
+      font-size    : 20px;
+      font-weight  : normal;
+    }
+
+    &--border {
+      flex          : 1 1 auto;
+      padding-bottom: 22px;
+      border-right  : 1px solid $grey-light;
+      text-align    : center;
+
+      &:last-of-type {
+        margin-bottom: 10px;
+        font-size    : 20px;
+        font-weight  : 400;
+      }
+    }
+
+    &--tabs {
+      margin-bottom: 25px;
+      font-size    : 20px;
+      font-weight  : 400;
+    }
+
+    &--active {
+      color: $brand;
+    }
+
+    &--submenu {
+      flex          : 1 1 auto;
+      padding       : 0 15px;
+      border-right  : 1px solid $brand;
+      font-size     : 14px;
+      text-transform: uppercase;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:last-of-type {
+        border-right: 0;
+      }
+    }
+
+    &--years {
+      margin-right : 19px;
+      margin-bottom: 0;
+    }
+  }
+  // Modifiers
+  &--top {}
+
+  &--main {
+    position: absolute;
+    top     : 216px;
+    width   : 100%;
+  }
+
+  &--socials {
+    width : calc(100% + 96px);
+    margin: 0 -48px;
+    float : none;
+  }
+
+  &--tabs {
+    margin-bottom: 260px;
+  }
+
+  &--years {
+    margin-bottom: 0;
+    margin-top   : 14px;
+    margin-right : 193px;
+    float        : right;
+    height       : 45px;
+  }
+
+  &--submenu {
+    width        : 425px;
+    margin-bottom: 75px;
+
+    .main--build & {
+      width: 447px;
+    }
+  }
+}

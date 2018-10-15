@@ -1,0 +1,26 @@
+.tab {
+  // Styles
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-left: -1px;
+
+  // Media Queries
+
+  // Elements
+  &__inner {
+    // Styles
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    // Modifiers
+    &--active {
+      display: block;
+    }
+  }
+
+  // Modifiers
+
+}

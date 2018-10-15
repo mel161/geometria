@@ -1,0 +1,47 @@
+extends ../layout/_layout.pug
+block vars
+  - var pageTitle = 'Контакты'
+  - var bodyClass = ''
+
+block content
+  // Top Panel
+  include ../includes/_top-panel-inner
+  // Top Panel End
+  // SideBar
+  include ../includes/_sidebar
+  // SideBar End
+
+  // Main
+  main.main
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--vertical-center
+            h2.heading.heading--primary.heading--border Новости
+            .date
+              span.text.text--small.text--regular.text--uppercase 9 апреля 2018 года
+          .col.col--center.col--center-section.col--vertical-center
+            h3.heading.heading--secondary Паркинг - комфорт для вас и вашего автомобиля!
+            p.paragraph.text.text--normal
+              | В ЖК «Геометрия» для вашего удобства мы предусмотрели уютный паркинг:
+              | здесь ваш автомобиль будет в целости и сохранности. Закрытый охраняемый
+              | паркинг оборудован лифтами, системой контроля доступа и видеонаблюдения.
+              | На полу - специальное покрытие, удобная навигация, есть все необходимые
+              | системы безопасности.
+            p.paragraph.paragraph--about-last.text.text--normal
+              | Приобрести парковочное место можно любым удобным для вас способом,
+              | есть семейные места и кладовые.
+            p.paragraph.paragraph--about-last.text.text--normal
+              | Выбирайте!
+            p.paragraph.paragraph--about-last.text.text--normal
+              | Мы ждем вас в нашем офисе продаж.
+            p.paragraph.paragraph--about-last.text.text--normal.text--underline
+              | Подробности можно узнать по телефону:
+              a(href="#").link (343) 312-80-00
+          .col.col--right(style="background-image: url('../images/news-right.jpg');")
+
+    // Section About End
+block scripts
+  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
+  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')

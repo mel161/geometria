@@ -1,0 +1,86 @@
+.heading {
+  // Styles
+  font-weight: bold;
+  // Modifiers
+  &--hero {
+    text-transform: uppercase;
+    vertical-align: middle;
+    // Media Queries
+    @media (min-width: 1200px) {
+      width    : 700px;
+      font-size: 54px;
+    }
+  }
+
+  &--primary {
+    @media (min-width: 1200px) {
+      margin-bottom: 69px;
+      font-size    : 48px;
+    }
+
+    .main--build & {
+      margin-bottom: 30px;
+      font-size    : 48px;
+      margin-right : 78px;
+      line-height  : 50px;
+    }
+  }
+
+  &--primary-inner {
+    @media (min-width: 1200px) {
+      margin-bottom: 27px;
+      font-size    : 48px;
+    }
+  }
+
+  &--secondary {
+    @media (min-width: 1200px) {
+      width        : 500px;
+      margin-bottom: 45px;
+      font-size    : 32px;
+    }
+  }
+
+  &--secondary-inner {
+    @media (min-width: 1200px) {
+      font-size     : 36px;
+      padding-bottom: 15px;
+      width         : 100%;
+
+      .main--build & {
+        // float: left;
+        height: 60px;
+        margin-bottom: 19px;
+      }
+    }
+    border-bottom: 1px solid $brand;
+  }
+
+  &--border {
+    @media (min-width: 1200px) {
+      padding-bottom: 15px;
+    }
+    border-bottom: 1px solid $brand;
+  }
+
+  &--card {
+    @media (min-width: 1200px) {
+      font-size  : 20px;
+      font-weight: 500;
+    }
+  }
+
+  &--nav-title {
+    // Styles
+    font-weight   : 400;
+    text-transform: uppercase;
+    // Media Queries
+    @media (min-width: 1200px) {
+      width         : 100%;
+      margin-bottom : 40px;
+      padding-bottom: 15px;
+      border-bottom : 1px solid $brand;
+      font-size     : 14px;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+doctype html
+html(lang="ru")
+  block vars
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    <meta name="theme-color" content="#cfd11a">
+    block title
+      title #{pageTitle}&nbsp;&mdash; ЖК&nbsp;&laquo;Геометрия&raquo;
+
+  body(class=bodyClass)
+    .page
+      block content
+
+    block scripts

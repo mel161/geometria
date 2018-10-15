@@ -1,0 +1,46 @@
+.image {
+  // Styles
+  // Media Queries
+  // Modifiers
+  &--gallery {
+    height   : auto;
+    width    : 100%;
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--card {
+    height   : 100% !important;
+    width    : 100% !important;
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--news {
+    width: 100% !important;
+    height: auto !important;
+    top: 0;
+    left: 0;
+    transform: none;
+  }
+
+  &--slider {
+    height   : auto !important;
+    width    : 100% !important;
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--logo {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    max-height: 100%;
+  }
+}

@@ -1,0 +1,67 @@
+.slider {
+  height  : 100%;
+  overflow: hidden;
+
+  &__item {
+    height  : 777px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &.slick-vertical {
+    .slick-slide {
+      height: 777px !important;
+      z-index: 5;
+
+      > div {
+        width : 100%;
+        height: 100%;
+      }
+
+      &.slick-active {
+        z-index: 10;
+        // box-shadow: 0 5px 17px 14px rgba(0, 0, 0, 0.64);
+      }
+    }
+  }
+
+  .slick-prev , .slick-next {
+    width: 110px;
+    height: 40px;
+    background-color: $brand;
+    position: absolute;
+    left: 50%;
+    margin-left: -56px;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 27px;
+      height: 15px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-image: url('./../../images/arrow.png');
+    }
+
+    &:hover {
+      background-color: $brand;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .slick-prev {
+      top: 149px;
+      z-index: 15;
+    }
+
+    .slick-next {
+      top: 930px;
+      right: auto;
+      &::before {
+        transform: rotateX(180deg) translate(-50%);
+      }
+    }
+  }
+}

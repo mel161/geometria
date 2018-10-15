@@ -1,0 +1,32 @@
+.icon {
+  // Styles
+  border : 0;
+  outline: none;
+  // Modifiers
+  &--hamburger {
+    width : 50px;
+    height: 41px;
+  }
+
+  &--social {
+    width   : 18px;
+    height  : 18px;
+    position: relative;
+    fill    : inherit;
+  }
+
+  &--info {
+    fill    : $white;
+    width   : 5px;
+    height  : 16px;
+    position: absolute;
+    top     : 7px;
+    right   : 14px;
+  }
+
+  &--docs {
+    fill    : $grey-dark;
+    width   : 44px;
+    height  : 44px;
+  }
+}

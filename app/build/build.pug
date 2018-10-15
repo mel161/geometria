@@ -1,0 +1,253 @@
+extends ../layout/_layout.pug
+block vars
+  - var pageTitle = 'Контакты'
+  - var bodyClass = ''
+
+block content
+  // Top Panel
+  include ../includes/_top-panel-inner
+  // Top Panel End
+  // SideBar
+  include ../includes/_sidebar
+  // SideBar End
+
+  // Main
+  main.main.main--build
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--margin-left.col--margin-vertical
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Фотоотчёт
+              nav.nav.nav--tabs.nav--years
+                ul.nav__list.nav__list--horizontal
+                  li.nav__item.nav__item--tabs.nav__item--years
+                    a.link.link--nav.link--tab(href='#tab1') 
+                      span.text.text--xsmall.text--f-medium 2017
+                  li.nav__item.nav__item--tabs.nav__item--years.nav__item--active
+                    a.link.link--nav.link--tab(href='#tab2')
+                      span.text.text--xsmall.text--f-medium 2018
+
+            .tab
+              #tab1.tab__inner
+                ul.list.list--years
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Январь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Февраль 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Март 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Апрель 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Май 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Июнь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Июль 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Август 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Сентябрь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Октябрь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Ноябрь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Декабрь 2017
+              #tab2.tab__inner.tab__inner--active
+                ul.list.list--years
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Январь 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Февраль 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Март 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Апрель 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Май 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Июнь 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Июль 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Август 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall.text--f-medium Сентябрь 2018
+
+          .col.col--center.col--center-full
+            .slider
+              .slider__item
+                img(src="../images/gallery-big-1.jpg" alt="1").image.image--slider
+              .slider__item
+                img(src="../images/gallery-big-2.jpg" alt="2").image.image--slider
+              .slider__item
+                img(src="../images/gallery-big-1.jpg" alt="3").image.image--slider
+            
+    // Section About End
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--margin-left.col--margin-vertical
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Веб-камера
+
+          .col.col--center.col--center-full
+            .col--overlay
+              img(src="../images/camera.jpg" alt="").image.image--gallery
+            
+    // Section About End
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--margin-left.col--margin-vertical
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Панорама
+
+          .col.col--center.col--center-full
+            .col--overlay
+              img(src="../images/gallery-big-2.jpg" alt="").image.image--gallery
+    // Section About End
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--left-no-border.col--margin-left.col--margin-vertical
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Новости
+
+          .col.col--center.col--center-full.col--vertical-center
+            ul.list.list--unstyled.list--cards
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-1.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Квартира в ипотеку — это просто!
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-2.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Как пережить переезд с легкостью?
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-3.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Новый фотоотчет со строй-площадки
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-4.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Комфортная рассрочка на паркинг
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-5.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card С Днем Победы!
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-6.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Паркинг - комфорт для вашего авто!
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-7.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Новый фотоотчет со строй-площадки
+                    span.text.text--xsmall.text--.text--right
+                      | 20-07-2018
+              li.list__item.list__item--card
+                a.link.link--card.card.card--news(href='')
+                  span.card__image
+                    img.image.image--card.image--news(src='../images/news-8.jpg', alt='Детские площадки')
+                  span.card__title
+                    h4.heading.heading--card Комфортная рассрочка на паркинг
+                    span.text.text--xsmall.text--brand.text--right
+                      | 20-07-2018
+    // Section About End
+block scripts
+  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
+  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')

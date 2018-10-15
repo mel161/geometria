@@ -1,34 +1,38 @@
 module.exports = {
   env: {
-    es6: true,
     browser: true,
+    commonjs: true,
+    es6: true,
+    node: true
   },
-  extends: 'airbnb-base',
+  plugins: ['import', 'promise', 'compat', 'node'],
+  extends: [
+    'plugin:promise/recommended',
+    'standard'
+  ],
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module',
+    ecmaVersion: 9,
+    ecmaFeatures: {
+      sourceType: 'module',
+      jsx: true
+    },
+    allowImportExportEverywhere: true
+  },
   rules: {
-    // Personal Preferences below ... proffessionally may change 
-    'arrow-body-style': 0,
-    'arrow-parens': 0,
-    'func-names': 0,
-    'consistent-return': 0,
-    'no-underscore-dangle': 0,
-    'symbol-description': 0,
-    'brace-style': 0,
-    'space-in-parens': 0,
-    'template-curly-spacing': 0,
-    'no-unused-vars': 0,
-    'no-undef': 0,
-    'no-trailing-spaces': 0,
-    'no-unused-expressions': 0,
-    'no-param-reassign': 0,
-    'no-restricted-syntax': 0,
-    'no-empty': 0,
-    'no-empty-function': 0,
-    'no-useless-return': 0,
-    'prefer-const': 0,
-    'global-require': 0,
-    // Never use these last 3 in a real application... I mean never!
-    'no-alert': 0,
-    'no-console': 0,
-    'no-debugger': 0,
-  },
-};
+    'promise/always-return': 0,
+    'promise/avoid-new': 0,
+    'compat/compat': 1,
+    'node/no-deprecated-api': 2,
+    'node/no-extraneous-require': 2,
+    'node/no-missing-require': 2,
+    'import/no-unresolved': [2, { commonjs: true, amd: true }],
+    'import/named': 2,
+    'import/namespace': 2,
+    'import/default': 2,
+    'import/export': 2,
+    'no-console': 1,
+    'curly': 0
+  }
+}

@@ -95,6 +95,10 @@
         border-right: 0;
       }
     }
+
+    &--years {
+      margin-right: 10px;
+    }
   }
   // Modifiers
   &--top {}
@@ -113,6 +117,11 @@
 
   &--tabs {
     margin-bottom: 260px;
+  }
+
+  &--years {
+    float: right;
+    margin-bottom: 0;
   }
 
   &--submenu {

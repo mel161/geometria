@@ -23,11 +23,10 @@ jQuery(document).ready(() => {
     bindSwipe: true
   })
 
-  $('.card').click(function (event) {
+  $('.link--tab').click(function (event) {
     event.preventDefault()
-
-    $(this).toggleClass('card--active')
-
-    $(this).parent().toggleClass('list__item--card-active').siblings().removeClass('list__item--card-active').find('.card').removeClass('card--active')
+    $(this).parent().addClass('nav__item--active').siblings().removeClass('nav__item--active')
+    let tab = $(this).attr('href')
+    $(tab).addClass('tab__inner--active').siblings().removeClass('tab__inner--active')
   })
 })

@@ -18,34 +18,160 @@ block content
       .grid
         .row.row--full
           .col.col--left.col--vertical-center
-            h2.heading.heading--primary О проекте
-            ul.list.list--vertical.list--unstyled
-              li.list__item.list__item--border-bottom
-                strong.text.text--big.time 3 мин
-                span.text.text--normal.location
-                  | до красивого
-                  br
-                  | парка
-              li.list__item.list__item--border-bottom
-                strong.text.text--big.time 5 мин
-                span.text.text--normal.location
-                  | до остановки
-                  br
-                  | транспорта
-              li.list__item.list__item--border-bottom
-                strong.text.text--big.time 15 мин
-                span.text.text--normal.location до центра
-          .col.col--center.col--center-section.col--vertical-center
-            h3.heading.heading--secondary Геометрия вашего комфорта: ЖК, где есть счастье
-            p.paragraph.text.text--normal
-              | Познакомьтесь с «Геометрией» — золотой пропорцией архитектуры и уюта.
-              | Тут хочется дышать полной грудью в большом зеленом дворе, пускать с детьми
-              | воздушных змеев, согреваться горячим чаем на светлой и уютной кухне.
-              | Тут хочется жить!
-            p.paragraph.paragraph--about-last.text.text--normal
-              | Продуманные планировки с антресолями, где можно хранить нужные вещи,
-              | отделка квартир «под ключ», паркинг в двух минутах от дома, удобная
-              | транспортная развязка, тихий и спокойный район — ЖК, в котором хорошо.
-              | ЖК, где начинается новый отрезок жизни: самый счастливый и добрый.
-          .col.col--right
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Фотоотчёт
+              nav.nav.nav--tabs.nav--years
+                ul.nav__list.nav__list--horizontal
+                  li.nav__item.nav__item--tabs.nav__item--years.nav__item--active
+                    a.link.link--nav.link--tab(href='#tab1') 2017
+                  li.nav__item.nav__item--tabs.nav__item--years
+                    a.link.link--nav.link--tab(href='#tab2') 2018
+
+            .tab
+              #tab1.tab__inner.tab__inner--active
+                ul.list.list--years
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Январь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Февраль 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Март 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Апрель 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Май 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Июнь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Июль 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Август 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Сентябрь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Октябрь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Ноябрь 2017
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Декабрь 2017
+              #tab2.tab__inner
+                ul.list.list--years
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Январь 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Февраль 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Март 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Апрель 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Май 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Июнь 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Июль 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Август 2018
+                  li.list__item.list__item--years
+                    a(href="#").link.link--years
+                      span.text.text--xsmall Сентябрь 2018
+
+          .col.col--center.col--center-wide.col--vertical-center
+            p 1
     // Section About End
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--vertical-center
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Веб-камера
+
+          .col.col--center.col--center-wide.col--vertical-center
+            p 1
+    // Section About End
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--vertical-center
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Панорама
+
+          .col.col--center.col--center-wide.col--vertical-center
+            p 1
+    // Section About End
+    // Section About
+    section.section.slide(data-hash='about')
+      .grid
+        .row.row--full
+          .col.col--left.col--vertical-center
+            h2.heading.heading--primary Ход строительства
+            nav.nav.nav--submenu
+              ul.nav__list.nav__list--horizontal
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Фотоотчёт
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Веб-камера
+                li.nav__item.nav__item--submenu
+                  a.link.link--nav(href='#') Панорама
+                li.nav__item.nav__item--submenu.nav__item--active
+                  a.link.link--nav(href='#') Новости
+            h3.heading.heading--secondary.heading--secondary-inner Новости
+
+          .col.col--center.col--center-wide.col--vertical-center
+            p 1
+    // Section About End
+block scripts
+  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
+  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')

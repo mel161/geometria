@@ -1,14 +1,16 @@
 .list {
   // Styles
+  margin         : 0;
+  padding        : 0;
+  list-style-type: none;
 
   // Elements
   &__item {
     // Styles
-
     // Modifiers
     &--border-bottom {
-      margin-bottom: 33px;
-      border-bottom: 1px solid $brand;
+      margin-bottom : 33px;
+      border-bottom : 1px solid $brand;
       padding-bottom: 33px;
 
       &:last-of-type {
@@ -18,9 +20,9 @@
 
     &--card {
       margin-right: 14px;
-      position: relative;
-      float: left;
-      width: 300px;
+      position    : relative;
+      float       : left;
+      width       : 300px;
 
       &:last-of-type {
         margin-right: 0;
@@ -28,44 +30,56 @@
     }
 
     &--card-active {
-      width: 100%;
+      width   : 100%;
       position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 5;
+      top     : 0;
+      left    : 0;
+      z-index : 5;
     }
 
     &--dot {
-      position: relative;
-      padding-left: 66px;
+      position     : relative;
+      padding-left : 66px;
       margin-bottom: 19px;
 
       &:before {
-        content: '•';
-        display: block;
+        content  : '•';
+        display  : block;
         font-size: 16px;
-        height: auto;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: auto;
+        height   : auto;
+        left     : 0;
+        position : absolute;
+        top      : 0;
+        width    : auto;
+      }
+    }
+
+    &--years {
+      flex: 1 1 100px;
+      max-width: 100px;
+      position: relative;
+      border: 1px solid $brand;
+      margin-right: 10px;
+      margin-bottom: 10px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: 100%;
       }
     }
   }
 
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
   &--unstyled {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin         : 0;
+    padding        : 0;
   }
 
   &--cards {
     // display: flex;
-    width: 100%;
+    width   : 100%;
     // padding: 14px;
     // justify-content: space-between;
     position: relative;
@@ -73,5 +87,10 @@
 
   &--dot {
 
+  }
+
+  &--years {
+    display  : flex;
+    flex-wrap: wrap;
   }
 }

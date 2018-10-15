@@ -43,6 +43,13 @@
     border-bottom: 1px solid $brand;
   }
 
+  &--border {
+    @media (min-width: 1200px) {
+      padding-bottom: 15px;
+    }
+    border-bottom: 1px solid $brand;
+  }
+
   &--card {
     @media (min-width: 1200px) {
       font-size  : 20px;

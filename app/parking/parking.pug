@@ -1,11 +1,11 @@
 extends ../layout/_layout.pug
 block vars
-  - var pageTitle = 'Контакты'
+  - var pageTitle = 'Паркинг'
   - var bodyClass = ''
 
 block content
   // Top Panel
-  include ../includes/_top-panel
+  include ../includes/_top-panel-inner
   // Top Panel End
   // SideBar
   include ../includes/_sidebar
@@ -18,35 +18,22 @@ block content
       .grid
         .row.row--full
           .col.col--left.col--vertical-center
-            h2.heading.heading--primary О проекте
-            ul.list.list--vertical.list--unstyled
-              li.list__item.list__item--border-bottom
-                strong.text.text--big.time 3 мин
-                span.text.text--normal.location
-                  | до красивого
-                  br
-                  | парка
-              li.list__item.list__item--border-bottom
-                strong.text.text--big.time 5 мин
-                span.text.text--normal.location
-                  | до остановки
-                  br
-                  | транспорта
-              li.list__item.list__item--border-bottom
-                strong.text.text--big.time 15 мин
-                span.text.text--normal.location до центра
+            h2.heading.heading--primary.heading--border  Подобрать паркинг
+            button.btn.btn--base(type='button', name='button') Отправить заявку
           .col.col--center.col--center-section.col--vertical-center
-            h3.heading.heading--secondary Геометрия вашего комфорта: ЖК, где есть счастье
+            h3.heading.heading--secondary Двухуровневый паркинг с удобной планировкой
             p.paragraph.text.text--normal
-              | Познакомьтесь с «Геометрией» — золотой пропорцией архитектуры и уюта.
-              | Тут хочется дышать полной грудью в большом зеленом дворе, пускать с детьми
-              | воздушных змеев, согреваться горячим чаем на светлой и уютной кухне.
-              | Тут хочется жить!
+              | Паркинг «Геометрии» — это не просто охраняемое просторное помещение,
+              | где можно оставить автомобиль. Это время с семьей, лишние полчаса утром
+              | в кровати, новая серия любимого сериала вечером. Это освободившиеся минуты,
+              | которые вы можете провести так, как хотите: проблем с парковочным
+              | местом больше не будет.
             p.paragraph.paragraph--about-last.text.text--normal
-              | Продуманные планировки с антресолями, где можно хранить нужные вещи,
-              | отделка квартир «под ключ», паркинг в двух минутах от дома, удобная
-              | транспортная развязка, тихий и спокойный район — ЖК, в котором хорошо.
-              | ЖК, где начинается новый отрезок жизни: самый счастливый и добрый.
-          .col.col--right
+              | Выберите место для своего автомобиля на просторном паркинге.
+          .col.col--right(style="background-image: url('../images/parking-right.jpg');")
 
     // Section About End
+
+block scripts
+  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
+  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')

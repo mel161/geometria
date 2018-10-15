@@ -274,7 +274,7 @@ const pages = [
     },
     template: path.join(paths.app, 'news/news.pug'),
 
-    chunks: ['news', 'runtime', 'vendors', 'common']
+    chunks: ['news', 'runtime', 'vendors']
   }),
   parts.page({
     title: 'parking',
@@ -295,7 +295,6 @@ module.exports = env => {
     ? productionConfig
     : developmentConfig
 
-  // 3. Merge these pages into the final config
   return merge(commonConfig, config, ...pages)
 }
 

@@ -9,12 +9,22 @@
     // Styles
     // Modifiers
     &--border-bottom {
-      margin-bottom : 33px;
-      border-bottom : 1px solid $brand;
-      padding-bottom: 33px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #cfd11a;
+      padding-bottom: 14px;
+
+      @media (min-width: 1200px) {
+        margin-bottom : 33px;
+        padding-bottom: 22px;
+      }
 
       &:last-of-type {
         border: 0;
+        margin-bottom: 35px;
+
+        @media (min-width: 1200px) {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -79,11 +89,8 @@
   }
 
   &--cards {
-    // display: flex;
     width   : 100%;
     height: auto;
-    // padding: 14px;
-    // justify-content: space-between;
     position: relative;
   }
 
@@ -94,5 +101,10 @@
   &--years {
     display  : flex;
     flex-wrap: wrap;
+  }
+
+  &--scroll {
+    width: 3770px;
+    height: 625px;
   }
 }

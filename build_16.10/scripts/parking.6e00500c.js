@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{"gw+M":function(e,t,n){"use strict";n.r(t),function(e,t){n("xFrt"),n("GFxn"),n("WMMs");var s=new EventEmitter;e(document).ready(function(){t.smartscroll({autoHash:!1,sectionScroll:!0,sectionWrapperSelector:".page",sectionClass:"slide",eventEmitter:s,bindSwipe:!0})})}.call(this,n("qIEf"),n("qIEf"))}},[["gw+M",0,1,2]]]);

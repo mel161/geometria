@@ -88,4 +88,10 @@ span.input--error {
     line-height  : 1.2;
     cursor       : pointer;
   }
+
+  &:last-of-type {
+    .form--modal & {
+      margin: 31px 0 35px -5px;
+    }
+  }
 }

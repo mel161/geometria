@@ -2,6 +2,7 @@
   // Styles
   border : 0;
   outline: none;
+  transition      : all 500ms ease-in-out;
   // Modifiers
   &--hamburger {
     width : 50px;
@@ -25,8 +26,25 @@
   }
 
   &--docs {
-    fill    : $grey-dark;
-    width   : 44px;
-    height  : 44px;
+    fill  : $grey-dark;
+    width : 44px;
+    height: 44px;
+  }
+
+  &--arrow {
+    fill      : $grey-dark;
+    width     : 27px;
+    height    : 15px;
+    margin-top: 4px;
+  }
+
+  &--close {
+    fill: $grey-dark;
+
+    .btn & {
+      &:hover {
+        fill: $brand;
+      }
+    }
   }
 }

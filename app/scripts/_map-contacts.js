@@ -57,12 +57,16 @@ function init () {
 
     zoomIn: function () {
       var map = this.getData().control.getMap()
-      map.setZoom(map.getZoom() + 1, {checkZoomRange: true})
+      map.setZoom(map.getZoom() + 1, {
+        checkZoomRange: true
+      })
     },
 
     zoomOut: function () {
       var map = this.getData().control.getMap()
-      map.setZoom(map.getZoom() - 1, {checkZoomRange: true})
+      map.setZoom(map.getZoom() - 1, {
+        checkZoomRange: true
+      })
     }
   })
 
@@ -77,6 +81,25 @@ function init () {
 
   myMap.controls.add(zoomControl)
   myMap.geoObjects.add(myPlacemark)
+
+  /* global Strip */
+  $('.map').click(function () {
+    var elem = $('#map-big')
+
+    Strip.show('https://dummyimage.com/1260x1000/000/fff', {
+      onShow: function () {
+        elem.detach().appendTo('.strp-container')
+        myMap.container.fitToViewport()
+      },
+      afterHide: function () {
+        elem.detach().appendTo('.strp-window')
+        myMap.container.fitToViewport()
+      },
+      afterPosition: function (position) {
+        myMap.container.fitToViewport()
+      }
+    })
+  })
 }
 
 export default init

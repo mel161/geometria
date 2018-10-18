@@ -3,6 +3,8 @@
 
 import 'smartscroll'
 
+import 'jquery.scrollbar'
+
 import '../scripts/_sidebar'
 
 import '../styles/main.scss'
@@ -23,11 +25,5 @@ jQuery(document).ready(() => {
     bindSwipe: true
   })
 
-  $('.card').click(function (event) {
-    event.preventDefault()
-
-    $(this).toggleClass('card--active')
-
-    $(this).parent().toggleClass('list__item--card-active').siblings().removeClass('list__item--card-active').find('.card').removeClass('card--active')
-  })
+  $('.scrollbar-rail').scrollbar()
 })

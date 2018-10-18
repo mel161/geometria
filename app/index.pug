@@ -20,7 +20,7 @@ block content
     section.section.slide(data-hash='about')
       .grid
         .row.row--full
-          .col.col--left.col--vertical-center
+          .col.col--left.col--margin-left.col--margin-vertical
             h2.heading.heading--primary О проекте
             ul.list.list--vertical.list--unstyled
               li.list__item.list__item--border-bottom
@@ -38,18 +38,20 @@ block content
               li.list__item.list__item--border-bottom
                 strong.text.text--big.time 15 мин
                 span.text.text--normal.location до центра
-          .col.col--center.col--center-section.col--vertical-center
+          
+          .col.col--center.col--margin-vertical
             h3.heading.heading--secondary Геометрия вашего комфорта: ЖК, где есть счастье
             p.paragraph.text.text--normal
               | Познакомьтесь с «Геометрией» — золотой пропорцией архитектуры и уюта.
               | Тут хочется дышать полной грудью в большом зеленом дворе, пускать с детьми
               | воздушных змеев, согреваться горячим чаем на светлой и уютной кухне.
               | Тут хочется жить!
-            p.paragraph.paragraph--about-last.text.text--normal
+            p.paragraph.text.text--normal
               | Продуманные планировки с антресолями, где можно хранить нужные вещи,
               | отделка квартир «под ключ», паркинг в двух минутах от дома, удобная
               | транспортная развязка, тихий и спокойный район — ЖК, в котором хорошо.
               | ЖК, где начинается новый отрезок жизни: самый счастливый и добрый.
+          
           .col.col--right
             ul.gallery.gallery--vertical
               li.gallery__item.gallery__item--first
@@ -63,15 +65,21 @@ block content
                   img.image.image--gallery(src='./images/gallery-thumb-3.jpg', alt='')
     // Section About End
     // Section Location
-    section.section.slide(data-hash='location')
+    section.section.section--no-margin.slide(data-hash='location')
       .grid
         .row
-          .col.col--left.col--left-no-border.col--vertical-center.bg--grey-dark
-            h2.heading.heading--primary.text--white Расположение
+          .col.col--left.col--left-no-border.col--margin-left.col--margin-vertical.bg.bg--grey-dark
+            h2.heading.heading--primary.text--white.heading--index-location Расположение
             nav.nav.nav--map
               ul#js-map-nav.nav__list.nav__list--vertical
-                li.nav__item.nav__item--map.nav__item--active
+                li.nav__item.nav__item--map.nav__item--map-first.nav__item--active
                   a#js-map-nav-show-all.link.link--nav(href='#') Все объекты
+              button(type="button", name="js-map-nav-toggle")#js-map-nav-toggle.btn.btn--base.btn--map-nav-toggle
+                svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 27 15').icon.icon--arrow
+                  path(fill-rule='evenodd', d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z')
+                  path(fill-rule='evenodd', d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z')
+
+                
           .col.col--center.col--center-full
             .map
               #map
@@ -80,7 +88,7 @@ block content
     section.section.slide(data-hash='features')
       .grid
         .row
-          .col.col--left.col--left-no-border.col--vertical-center
+          .col.col--left.col--left-no-border.col--margin-left.col--margin-vertical
             h2.heading.heading--primary Преимущества
             h3.heading.heading--nav-title Категории
             nav.nav.nav--tabs
@@ -93,32 +101,32 @@ block content
                   a.link.link--nav.link--tab(href='#tab3') Паркинг
                 li.nav__item.nav__item--tabs
                   a.link.link--nav.link--tab(href='#tab4') Комфорт
-          .col.col--center.col--center-full.col--vertical-center
+          .col.col--center.col--margin-vertical
             .tab
               #tab1.tab__inner.tab__inner--active
                 ul.list.list--unstyled.list--cards
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/1-1-playground.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/1-1-playground.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Детские площадки
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/1-2-closed-area.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/1-2-closed-area.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Закрытая территория
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/1-3-rest-zone.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/1-3-rest-zone.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Зоны для отдыха детей и взрослых
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                      img.image.image--card(src='./images/1-4-sports-ground.jpg', alt='Детские площадки')
+                      img.image.image--card(src='./images/features/1-4-sports-ground.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Спортивные площадки
               #tab2.tab__inner
@@ -126,25 +134,25 @@ block content
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/2-1-warm-and-cozy.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/2-1-warm-and-cozy.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Тёплые и удобные
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/2-2-connection.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/2-2-connection.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Интернет, домофон, телефония
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/2-3-overhaul.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/2-3-overhaul.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Ремонт «под ключ»
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                      img.image.image--card(src='./images/2-4-entresol.jpg', alt='Детские площадки')
+                      img.image.image--card(src='./images/features/2-4-entresol.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Антресоли в каждой квартире
               #tab3.tab__inner
@@ -152,25 +160,25 @@ block content
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/3-1-first-floor-parking.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/3-1-first-floor-parking.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Первый уровень паркинга
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/3-2-second-floor-parking.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/3-2-second-floor-parking.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Второй уровень паркинга
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/3-3-by-the-house.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/3-3-by-the-house.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Прямо рядом с домом
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                      img.image.image--card(src='./images/3-4-large-area.jpg', alt='Детские площадки')
+                      img.image.image--card(src='./images/features/3-4-large-area.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Большая территория
               #tab4.tab__inner
@@ -178,33 +186,33 @@ block content
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/4-1-video-intercoms.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/4-1-video-intercoms.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Видеодомофоны
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Места для хранения велосипедов и колясок
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                        img.image.image--card(src='./images/4-3-dog-wash.jpg', alt='Детские площадки')
+                        img.image.image--card(src='./images/features/4-3-dog-wash.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Место, где можно вымыть лапы собакам и велосипеды
                   li.list__item.list__item--card
                     a.link.link--card.card(href='')
                       span.card__image
-                      img.image.image--card(src='./images/4-4-hall.jpg', alt='Детские площадки')
+                      img.image.image--card(src='./images/features/4-4-hall.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Просторные светлые МОПы
     // Section Features End
   // Main End
 
 block scripts
-  script(async='', src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
-  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')
-  script(async='', src='http://www.stripjs.com/bower_components/strip/dist/js/strip.pkgd.min.js')
-  script(async='', src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
+  script(src='https://d4nyll.github.io/smartscroll/lethargy.min.js')
+  script(src='http://www.stripjs.com/bower_components/strip/dist/js/strip.pkgd.min.js')
+  script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')

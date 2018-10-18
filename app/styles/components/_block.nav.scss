@@ -6,6 +6,7 @@
     margin         : 0;
     padding        : 0;
     list-style-type: none;
+    transition     : all 500ms ease-in-out;
     // Modifiers
     &--horizontal {
       display        : flex;
@@ -24,10 +25,25 @@
     &--full-width {
       width: 100%;
     }
+
+    &--visible {
+      flex-direction : row;
+      flex-wrap      : wrap;
+      align-items    : center;
+      justify-content: center;
+
+      .nav__item {
+        display      : inline-block;
+        width        : auto;
+        margin-bottom: 10px;
+        margin-left  : 12px;
+      }
+    }
   }
 
   &__item {
     // Styles
+    transition: all 500ms ease-in-out;
     // Modifiers
     &--top {
       margin-top  : 2px;
@@ -52,12 +68,25 @@
     }
 
     &--map {
-      margin-bottom: 25px;
-      color        : $white;
-      color        : $white;
-      font-size    : 20px;
-      font-weight  : normal;
+      display    : none;
+      color      : $white;
+      font-size  : 16px;
+      font-weight: normal;
+      text-align : center;
+
+      &.nav__item--active {
+        display: block;
+        width  : 100%;
+        order  : -1;
+        margin : 0 0 25px;
+      }
+      @media (min-width: 1200px) {
+        margin-bottom: 25px;
+        font-size    : 20px;
+      }
     }
+
+    &--map-first {}
 
     &--border {
       flex          : 1 1 auto;
@@ -74,8 +103,13 @@
 
     &--tabs {
       margin-bottom: 25px;
-      font-size    : 20px;
+      font-size    : 16px;
       font-weight  : 400;
+      width        : 50%;
+      @media (min-width: 1200px) {
+        margin-bottom: 25px;
+        font-size    : 20px;
+      }
     }
 
     &--active {
@@ -104,12 +138,21 @@
     }
   }
   // Modifiers
-  &--top {}
+  &--top {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
 
   &--main {
     position: absolute;
     top     : 216px;
     width   : 100%;
+  }
+
+  &--map {
+    padding: 30px 0 46px;
   }
 
   &--socials {
@@ -119,7 +162,11 @@
   }
 
   &--tabs {
-    margin-bottom: 260px;
+    .nav__list--vertical {
+      flex-direction: row;
+      flex-wrap     : wrap;
+      height        : 66px;
+    }
   }
 
   &--years {

@@ -24,6 +24,12 @@ $brand-light: #cfd11a;
 // Grid
 @import 'components/_base.grid';
 
+// Vendors
+@import 'vendor/strip';
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
+@import 'vendor/jquery.scrollbar';
+@import 'vendor/jquery.modal';
 
 // Typography
 @import 'components/_base.typo';
@@ -49,11 +55,8 @@ $brand-light: #cfd11a;
 @import 'components/_block.form';
 @import 'components/_block.input';
 @import 'components/_block.slider';
+@import 'components/_block.modal';
 
 
 // Helpers
 @import 'components/_base.helper';
-
-@import 'vendor/strip';
-@import 'vendor/slick.scss';
-@import 'vendor/slick-theme.scss';

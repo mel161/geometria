@@ -103,110 +103,145 @@ block content
                   a.link.link--nav.link--tab(href='#tab4') Комфорт
           .col.col--center.col--margin-vertical
             .tab
-              #tab1.tab__inner.tab__inner--active
-                ul.list.list--unstyled.list--cards
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/1-1-playground.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Детские площадки
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/1-2-closed-area.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Закрытая территория
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/1-3-rest-zone.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Зоны для отдыха детей и взрослых
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                      img.image.image--card(src='./images/features/1-4-sports-ground.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Спортивные площадки
-              #tab2.tab__inner
-                ul.list.list--unstyled.list--cards
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/2-1-warm-and-cozy.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Тёплые и удобные
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/2-2-connection.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Интернет, домофон, телефония
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/2-3-overhaul.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Ремонт «под ключ»
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                      img.image.image--card(src='./images/features/2-4-entresol.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Антресоли в каждой квартире
-              #tab3.tab__inner
-                ul.list.list--unstyled.list--cards
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/3-1-first-floor-parking.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Первый уровень паркинга
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/3-2-second-floor-parking.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Второй уровень паркинга
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/3-3-by-the-house.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Прямо рядом с домом
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                      img.image.image--card(src='./images/features/3-4-large-area.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Большая территория
-              #tab4.tab__inner
-                ul.list.list--unstyled.list--cards
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/4-1-video-intercoms.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Видеодомофоны
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Места для хранения велосипедов и колясок
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                        img.image.image--card(src='./images/features/4-3-dog-wash.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Место, где можно вымыть лапы собакам и велосипеды
-                  li.list__item.list__item--card
-                    a.link.link--card.card(href='')
-                      span.card__image
-                      img.image.image--card(src='./images/features/4-4-hall.jpg', alt='Детские площадки')
-                      span.card__title
-                        h4.heading.heading--card Просторные светлые МОПы
+              #tab1.tab__item.tab__item--active
+                .scrollbar-rail.wrap.wrap--index-card-scroll
+                  ul.list.list--unstyled.list--cards.list--cards-index
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#playground')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/1-1-playground.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Детские площадки
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#closed-area')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/1-2-closed-area.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Закрытая территория
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#rest-zone')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/1-3-rest-zone.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Зоны для отдыха детей и взрослых
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#sports-ground')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/1-4-sports-ground.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Спортивные площадки
+              
+              #tab2.tab__item
+                .scrollbar-rail.wrap.wrap--index-card-scroll
+                  ul.list.list--unstyled.list--cards.list--cards-index
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#warm-and-cozy')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/2-1-warm-and-cozy.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Тёплые и удобные
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#connection')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/2-2-connection.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Интернет, домофон, телефония
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#overhaul')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/2-3-overhaul.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Ремонт «под ключ»
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#entresol')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/2-4-entresol.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Антресоли в каждой квартире
+              
+              #tab3.tab__item
+                .scrollbar-rail.wrap.wrap--index-card-scroll
+                  ul.list.list--unstyled.list--cards.list--cards-index
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#first-floor-parking')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/3-1-first-floor-parking.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Первый уровень паркинга
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#second-floor-parking')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/3-2-second-floor-parking.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Второй уровень паркинга
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#by-the-house')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/3-3-by-the-house.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Прямо рядом с домом
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#large-area')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/3-4-large-area.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Большая территория
+              
+              #tab4.tab__item
+                .scrollbar-rail.wrap.wrap--index-card-scroll
+                  ul.list.list--unstyled.list--cards.list--cards-index
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#video-intercoms')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/4-1-video-intercoms.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Видео&shy;домофоны
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#bicycles-and-strollers')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Места для хранения велосипедов и колясок
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#dog-wash')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/4-3-dog-wash.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Место, где можно вымыть лапы собакам и велосипеды
+                    
+                    li.list__item.list__item--card
+                      a.link.link--card.card.card--features(href='#hall')
+                        span.card__inner
+                          span.card__image
+                            img.image.image--card(src='./images/features/4-4-hall.jpg', alt='Детские площадки')
+                          span.card__title
+                            h4.heading.heading--card Просторные светлые МОПы
     // Section Features End
   // Main End
 

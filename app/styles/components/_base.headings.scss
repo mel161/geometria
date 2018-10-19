@@ -70,9 +70,10 @@
   }
 
   &--card {
+    font-size: 12px;
+    font-weight: 500;
     @media (min-width: 1200px) {
       font-size  : 20px;
-      font-weight: 500;
     }
   }
 

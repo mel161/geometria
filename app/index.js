@@ -5,6 +5,8 @@ import 'smartscroll'
 
 import './styles/main.scss'
 
+import 'jquery.scrollbar'
+
 // import './scripts/_scroll'
 import './scripts/_sidebar'
 
@@ -65,11 +67,13 @@ jQuery(document).ready(() => {
     event.preventDefault()
     $(this).parent().addClass('nav__item--active').siblings().removeClass('nav__item--active')
     let tab = $(this).attr('href')
-    $(tab).addClass('tab__inner--active').siblings().removeClass('tab__inner--active')
+    $(tab).addClass('tab__item--active').siblings().removeClass('tab__item--active')
   })
 
   $('#js-map-nav-toggle').click(function () {
     $(this).toggleClass('btn--active')
     $('#js-map-nav').toggleClass('nav__list--visible')
   })
+
+  $('.scrollbar-rail').scrollbar()
 })

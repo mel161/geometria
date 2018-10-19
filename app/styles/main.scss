@@ -1,3 +1,11 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
 // Reset
 @import 'base/minireset';
 

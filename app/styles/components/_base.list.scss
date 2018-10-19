@@ -3,25 +3,22 @@
   margin         : 0;
   padding        : 0;
   list-style-type: none;
-
   // Elements
   &__item {
     // Styles
     // Modifiers
     &--border-bottom {
-      margin-bottom: 16px;
-      border-bottom: 1px solid #cfd11a;
+      margin-bottom : 16px;
+      border-bottom : 1px solid #cfd11a;
       padding-bottom: 14px;
-
       @media (min-width: 1200px) {
         margin-bottom : 33px;
         padding-bottom: 22px;
       }
 
       &:last-of-type {
-        border: 0;
+        border       : 0;
         margin-bottom: 35px;
-
         @media (min-width: 1200px) {
           margin-bottom: 0;
         }
@@ -29,23 +26,35 @@
     }
 
     &--card {
-      margin-right: 14px;
-      margin-bottom: 14px;
-      position    : relative;
-      float       : left;
-      width       : 300px;
+      @include clearfix;
+      position: relative;
+      float   : left;
+      @media (min-width: 1200px) {
+        width        : 300px;
+        margin-right : 14px;
+        margin-bottom: 14px;
 
-      &:last-of-type {
-        margin-right: 0;
+        &:nth-child(2n) {
+          margin-right: 14px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
     }
 
     &--card-active {
-      width   : 100%;
-      position: absolute;
-      top     : 0;
-      left    : 0;
-      z-index : 5;
+      width           : calc(100vw - 60px);
+      height          : 100%;
+      position        : absolute;
+      top             : 0;
+      left            : 0;
+      z-index         : 100;
+      background-color: $grey-dark;
+      @media (min-width: 1200px) {
+        width: 100%;
+      }
     }
 
     &--dot {
@@ -66,17 +75,17 @@
     }
 
     &--years {
-      flex: 1 1 100px;
-      max-width: 100px;
-      position: relative;
-      border: 1px solid $brand;
-      margin-right: 10px;
+      flex         : 1 1 100px;
+      max-width    : 100px;
+      position     : relative;
+      border       : 1px solid $brand;
+      margin-right : 10px;
       margin-bottom: 10px;
 
       &::before {
-        content: '';
-        display: block;
-        width: 100%;
+        content    : '';
+        display    : block;
+        width      : 100%;
         padding-top: 100%;
       }
     }
@@ -90,13 +99,20 @@
 
   &--cards {
     width   : 100%;
-    height: auto;
+    height  : 100%;
     position: relative;
+    @media (min-width: 1200px) {}
   }
 
-  &--dot {
-
+  &--cards-index {
+    width   : 536px;
+    height  : 100%;
+    position: relative;
+    margin  : 0 auto;
+    @media (min-width: 1200px) {}
   }
+
+  &--dot {}
 
   &--years {
     display  : flex;
@@ -104,7 +120,7 @@
   }
 
   &--scroll {
-    width: 3770px;
+    width : 3770px;
     height: 625px;
   }
 }

@@ -36,43 +36,55 @@ block content
             | ЖК уютно, чисто и зелено — отличное место, где можно провести время с семьей или прогуляться
             | в одиночестве.
         .col.col--center.col--center-full.col--vertical-center
-          ul.list.list--unstyled.list--cards
-            li.list__item.list__item--card.list__item--card-active
-              a.link.link--card.card.card--active(href='')
-                span.card__image(style="background-image: url('../images/features/1-1-playground-big.jpg');")
-                span.card__title
-                  h4.heading.heading--card Детские площадки
-                span.card__text
-                  span.text.text--normal
-                    | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
-                    | чемпионат по настольному теннису на спортивных площадках ЖК.
-            li.list__item.list__item--card
-              a.link.link--card.card(href='')
-                span.card__image(style="background-image: url('../images/features/1-1-playground-big.jpg');")
-                span.card__title
-                  h4.heading.heading--card Закрытая территория
-                span.card__text
-                  span.text.text--normal
-                    | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
-                    | чемпионат по настольному теннису на спортивных площадках ЖК.
-            li.list__item.list__item--card
-              a.link.link--card.card(href='')
-                span.card__image(style="background-image: url('../images/features/1-1-playground-big.jpg');")
-                span.card__title
-                  h4.heading.heading--card Зоны для отдыха детей и взрослых
-                span.card__text
-                  span.text.text--normal
-                    | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
-                    | чемпионат по настольному теннису на спортивных площадках ЖК.
-            li.list__item.list__item--card
-              a.link.link--card.card(href='')
-                span.card__image(style="background-image: url('../images/features/1-1-playground-big.jpg');")
-                span.card__title
-                  h4.heading.heading--card Спортивные площадки
-                span.card__text
-                  span.text.text--normal
-                    | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
-                    | чемпионат по настольному теннису на спортивных площадках ЖК.
+          .scrollbar-rail.wrap.wrap--index-card-scroll
+            ul.list.list--unstyled.list--cards.list--cards-index
+              li.list__item.list__item--card
+                a.link.link--card.card.card--features(href='#playground')
+                  span.card__inner
+                    span.card__image
+                      img.image.image--card(src='../images/features/1-1-playground.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Детские площадки
+                    span.card__text
+                      span.text.text--normal
+                        | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        | чемпионат по настольному теннису на спортивных площадках ЖК.
+              
+              li.list__item.list__item--card
+                a.link.link--card.card.card--features(href='#closed-area')
+                  span.card__inner
+                    span.card__image
+                      img.image.image--card(src='../images/features/1-2-closed-area.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Закрытая территория
+                    span.card__text
+                      span.text.text--normal
+                        | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        | чемпионат по настольному теннису на спортивных площадках ЖК.
+              
+              li.list__item.list__item--card
+                a.link.link--card.card.card--features(href='#rest-zone')
+                  span.card__inner
+                    span.card__image
+                      img.image.image--card(src='../images/features/1-3-rest-zone.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Зоны для отдыха детей и взрослых
+                    span.card__text
+                      span.text.text--normal
+                        | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        | чемпионат по настольному теннису на спортивных площадках ЖК.
+              
+              li.list__item.list__item--card
+                a.link.link--card.card.card--features(href='#sports-ground')
+                  span.card__inner
+                    span.card__image
+                      img.image.image--card(src='../images/features/1-4-sports-ground.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Спортивные площадки
+                    span.card__text
+                      span.text.text--normal
+                        | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
+                        | чемпионат по настольному теннису на спортивных площадках ЖК.
   // Section About End
   // Section About
   section.section.slide(data-hash='flat')

@@ -1,185 +1,289 @@
+// .card {
+//   // Styles
+//   display         : block;
+//   position        : relative;
+//   width           : 100%;
+//   background-color: inherit;
+//   color           : inherit;
+//   transition      : all 500ms ease-in-out;
+//
+//   @media (min-width: 1200px) {
+//     height: 690px;
+//   }
+//   // Elements
+//   &__front {
+//     display: block;
+//     height : 100%;
+//   }
+//
+//   &__back {
+//     display   : block;
+//     position  : absolute;
+//     left      : 100%;
+//     bottom    : 100%;
+//     width     : 100%;
+//     height    : 100%;
+//     transition: all 500ms ease-in-out;
+//
+//     &--hover {
+//       left  : 0;
+//       bottom: 0;
+//     }
+//   }
+//
+//   &__inner {
+//     position: absolute;
+//     top     : 0;
+//     left    : 0;
+//     width   : 100%;
+//     height  : 100%;
+//
+//     @media (min-width: 1200px) {
+//       padding : 30px 40px 30px 30px;
+//     }
+//   }
+//
+//   &__image {
+//     display : block;
+//     position: relative;
+//     height  : 100%;
+//   }
+//
+//   &__title {
+//     display         : block;
+//     position        : absolute;
+//     bottom          : 0;
+//     left            : 0;
+//     width           : 100%;
+//     background-color: inherit;
+//     color           : inherit;
+//     transition      : all 500ms ease-in-out;
+//
+//     @media (min-width: 1200px) {
+//       max-width       : 300px;
+//       height          : 140px;
+//       padding         : 49px 39px;
+//     }
+//   }
+//
+//   &__text {
+//     display   : block;
+//     position  : absolute;
+//     right     : 0;
+//     bottom    : 0;
+//     width     : 0;
+//     height    : 140px;
+//     padding   : 0;
+//     overflow  : hidden;
+//     color     : transparent;
+//     transition: all 500ms ease-in-out;
+//   }
+//
+//   &__info {
+//     z-index         : 15;
+//     position        : absolute;
+//     top             : 0;
+//     right           : 0;
+//     width           : 32.87px;
+//     height          : 32.9px;
+//     background-color: $grey-dark;
+//     transition      : all ease 500ms;
+//     cursor          : pointer;
+//   }
+//   // Modifiers
+//   &--active {
+//     border: 1px solid $brand;
+//
+//     .card__image {
+//       width: 100%;
+//     }
+//
+//     .card__title {
+//       background-color: $brand;
+//       color           : $grey-dark;
+//     }
+//
+//     .card__text {
+//       // display         : block;
+//       width           : calc(100% - 300px);
+//       padding         : 49px 39px;
+//       background-color: $white;
+//       color           : $grey-dark;
+//     }
+//   }
+//
+//   &--info {
+//     border: 1px solid $brand;
+//   }
+//
+//   &--banks {
+//     overflow: hidden;
+//
+//     @media (min-width: 1200px) {
+//       width   : 300px;
+//       height  : 186px;
+//     }
+//
+//     .card__inner {
+//       padding: 27px 30px 30px;
+//       width  : auto;
+//       height : auto;
+//     }
+//
+//     .card__image {
+//       height       : auto;
+//       margin-bottom: 26px;
+//     }
+//
+//     .card__content {
+//       margin-left: -2px;
+//     }
+//
+//     .text--xsmall {
+//       margin-bottom: 10px;
+//     }
+//   }
+//
+//   &--docs {
+//     width   : 300px;
+//     height  : 186px;
+//     overflow: hidden;
+//
+//     .card__inner {
+//       padding: 20px 25px;
+//       width  : auto;
+//       height : auto;
+//     }
+//
+//     .card__image {
+//       height       : auto;
+//       margin-bottom: 6px;
+//     }
+//
+//     .card__content {
+//       margin-left: 3px;
+//     }
+//
+//     .text--normal {
+//       margin-bottom: 37px;
+//     }
+//   }
+//
+//   &--news {
+//     width     : 300px;
+//     height    : 335px;
+//     overflow  : hidden;
+//     transition: all 500ms ease-in-out;
+//
+//     &:hover {
+//       .text--brand {
+//         color     : $grey-dark;
+//         transition: all 500ms ease-in-out;
+//       }
+//     }
+//   }
+// }
+
 .card {
   // Styles
-  display         : block;
-  position        : relative;
-  width           : 100%;
-  background-color: inherit;
-  color           : inherit;
-  transition      : all 500ms ease-in-out;
-
-  @media (min-width: 1200px) {
-    height: 690px;
-  }
+  // Media Queries
   // Elements
   &__front {
-    display: block;
-    height : 100%;
+    // Styles
+    // Media Queries
   }
 
   &__back {
-    display   : block;
-    position  : absolute;
-    left      : 100%;
-    bottom    : 100%;
-    width     : 100%;
-    height    : 100%;
-    transition: all 500ms ease-in-out;
-
-    &--hover {
-      left  : 0;
-      bottom: 0;
-    }
+    // Styles
+    display: none;
+    // Media Queries
   }
 
   &__inner {
-    position: absolute;
-    top     : 0;
-    left    : 0;
-    width   : 100%;
-    height  : 100%;
-
-    @media (min-width: 1200px) {
-      padding : 30px 40px 30px 30px;
-    }
+    // Styles
+    display: block;
+    width  : 100%;
+    height : 100%;
+    // Media Queries
   }
 
   &__image {
+    // Styles
     display : block;
     position: relative;
-    height  : 100%;
+    width   : 100%;
+
+    .card--features & {
+      height  : 247px;
+      overflow: hidden;
+      // Media Queries
+      @media (min-width: 1200px) {
+        height: 690px;
+      }
+    }
+    // Media Queries
   }
 
   &__title {
-    display         : block;
-    position        : absolute;
-    bottom          : 0;
-    left            : 0;
-    width           : 100%;
+    // Styles
+    display: block;
+    max-height: 120px;
+    padding: 20px;
     background-color: inherit;
-    color           : inherit;
-    transition      : all 500ms ease-in-out;
-
-    @media (min-width: 1200px) {
-      max-width       : 300px;
-      height          : 140px;
-      padding         : 49px 39px;
-    }
+    color: inherit;
+    // Media Queries
   }
 
   &__text {
-    display   : block;
-    position  : absolute;
-    right     : 0;
-    bottom    : 0;
-    width     : 0;
-    height    : 140px;
-    padding   : 0;
-    overflow  : hidden;
-    color     : transparent;
-    transition: all 500ms ease-in-out;
+    // Styles
+    display: none;
+    // Media Queries
   }
 
   &__info {
-    z-index         : 15;
-    position        : absolute;
-    top             : 0;
-    right           : 0;
-    width           : 32.87px;
-    height          : 32.9px;
-    background-color: $grey-dark;
-    transition      : all ease 500ms;
-    cursor          : pointer;
+    // Styles
+    // Media Queries
   }
   // Modifiers
-  &--active {
-    border: 1px solid $brand;
+  // Type 1
+  &--type-one {
+    // Styles
+    // Media Queries
+  }
 
-    .card__image {
+  &--features {
+    // Styles
+    display: block;
+    width  : 126px;
+    height : 367px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+
+    &.card--active {
       width: 100%;
+      height: 100%;
     }
 
-    .card__title {
-      background-color: $brand;
-      color           : $grey-dark;
-    }
-
-    .card__text {
-      // display         : block;
-      width           : calc(100% - 300px);
-      padding         : 49px 39px;
-      background-color: $white;
-      color           : $grey-dark;
-    }
-  }
-
-  &--info {
-    border: 1px solid $brand;
-  }
-
-  &--banks {
-    overflow: hidden;
-
-    @media (min-width: 1200px) {
-      width   : 300px;
-      height  : 186px;
-    }
-
-    .card__inner {
-      padding: 27px 30px 30px;
-      width  : auto;
-      height : auto;
-    }
-
-    .card__image {
-      height       : auto;
-      margin-bottom: 26px;
-    }
-
-    .card__content {
-      margin-left: -2px;
-    }
-
-    .text--xsmall {
-      margin-bottom: 10px;
-    }
-  }
-
-  &--docs {
-    width   : 300px;
-    height  : 186px;
-    overflow: hidden;
-
-    .card__inner {
-      padding: 20px 25px;
-      width  : auto;
-      height : auto;
-    }
-
-    .card__image {
-      height       : auto;
-      margin-bottom: 6px;
-    }
-
-    .card__content {
-      margin-left: 3px;
-    }
-
-    .text--normal {
-      margin-bottom: 37px;
-    }
+    // Media Queries
   }
 
   &--news {
-    width     : 300px;
-    height    : 335px;
-    overflow  : hidden;
-    transition: all 500ms ease-in-out;
+    // Styles
+    // Media Queries
+  }
+  // Type 2
+  &--type-two {
+    // Styles
+    // Media Queries
+  }
 
-    &:hover {
-      .text--brand {
-        color     : $grey-dark;
-        transition: all 500ms ease-in-out;
-      }
-    }
+  &--banks {
+    // Styles
+    // Media Queries
+  }
+
+  &--docs {
+    // Styles
+    // Media Queries
   }
 }

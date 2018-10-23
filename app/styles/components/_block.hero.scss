@@ -16,7 +16,7 @@
     background-position: 62.5% 50%;
 
     @media (min-width: 1200px) {
-      display         : block;
+      display         : flex;
       margin-top      : 0;
       padding         : 0 150px 99px;
       background-image: url('../../images/hero-bg-big.jpg');

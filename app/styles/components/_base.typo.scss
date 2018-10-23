@@ -57,6 +57,15 @@ body {
 
   &--xsmall {
     font-size: 12px;
+
+    &.label {
+      font-size: 10px;
+
+      @media (min-width: 1200px) {
+        font-size: 12px;
+      }
+    }
+
     @media (min-width: 1200px) {
       font-size: 12px;
     }
@@ -83,6 +92,7 @@ body {
   }
 
   &--medium {
+    font-size: 14px;
     @media (min-width: 1200px) {
       font-size: 18px;
     }

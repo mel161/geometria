@@ -13,13 +13,16 @@
   &--base {
     background-color: $brand;
     color           : $grey-dark;
-    font-size       : 18px;
+    font-size       : 16px;
     font-weight     : 400;
     display         : block;
-    width           : auto;
+    // width           : auto;
     line-height     : 1;
+    width           : 100%;
+    padding         : 16px 0;
     // Media Queries
     @media (min-width: 1200px) {
+      font-size       : 18px;
       padding: 21px 45px;
       width  : 250px;
     }
@@ -46,18 +49,24 @@
 
   &--order {
     position: absolute;
-    bottom: 352px;
-    left: 0;
-    width: calc(100% - 60px);
-    margin: 0 30px;
-    padding: 15px 0;
-
+    bottom  : 352px;
+    left    : 0;
+    width   : calc(100% - 60px);
+    margin  : 0 30px;
+    padding : 15px 0;
     @media (min-width: 1200px) {
       position: absolute;
       bottom  : 71px;
       left    : 150px;
-      width: auto;
+      width   : auto;
     }
+  }
+
+  &--load-more {
+    width  : 110px;
+    height : 40px;
+    display: block;
+    margin : 0 auto;
   }
 
   &--map-nav-toggle {

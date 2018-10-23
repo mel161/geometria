@@ -15,18 +15,22 @@
   }
 
   &--primary {
-    font-size    : 36px;
-    margin-bottom: 15px;
+    font-size     : 36px;
+    margin-bottom : 27px;
+    padding-bottom: 7px;
+
+    .main--build & {
+      font-size: 36px;
+      @media (min-width: 1200px) {
+        margin-bottom: 30px;
+        font-size    : 48px;
+        margin-right : 78px;
+        line-height  : 50px;
+      }
+    }
     @media (min-width: 1200px) {
       margin-bottom: 69px;
       font-size    : 48px;
-    }
-
-    .main--build & {
-      margin-bottom: 30px;
-      font-size    : 48px;
-      margin-right : 78px;
-      line-height  : 50px;
     }
   }
 

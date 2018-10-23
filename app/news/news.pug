@@ -19,8 +19,13 @@ block content
         .row.row--full
           .col.col--left.col--vertical-center
             h2.heading.heading--primary.heading--border Новости
+            
             .date
-              span.text.text--small.text--regular.text--uppercase 9 апреля 2018 года
+              span.text.text--small.text--regular.text--uppercase.date__big 9 апреля 2018 года
+              span.text.text--small.text--regular.text--uppercase.date__small 09.04.2018
+            
+            a(href='#back').link.btn.btn--base.btn--order Вернуться к списку
+            
           .col.col--center.col--center-section.col--vertical-center
             h3.heading.heading--secondary Паркинг - комфорт для вас и вашего автомобиля!
             p.paragraph.text.text--normal
@@ -29,18 +34,18 @@ block content
               | паркинг оборудован лифтами, системой контроля доступа и видеонаблюдения.
               | На полу - специальное покрытие, удобная навигация, есть все необходимые
               | системы безопасности.
-            p.paragraph.paragraph--about-last.text.text--normal
+            p.paragraph.text.text--normal
               | Приобрести парковочное место можно любым удобным для вас способом,
               | есть семейные места и кладовые.
-            p.paragraph.paragraph--about-last.text.text--normal
+            p.paragraph.text.text--normal
               | Выбирайте!
-            p.paragraph.paragraph--about-last.text.text--normal
+            p.paragraph.text.text--normal
               | Мы ждем вас в нашем офисе продаж.
-            p.paragraph.paragraph--about-last.text.text--normal.text--underline
+            p.paragraph.text.text--normal.text--underline
               | Подробности можно узнать по телефону:
               a(href="#").link (343) 312-80-00
-          .col.col--right(style="background-image: url('../images/news-right.jpg');")
-
+          
+          .col.col--right.col--no-padding(style="background-image: url('../images/news-right.jpg');")
     // Section About End
 block scripts
   script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')

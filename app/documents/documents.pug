@@ -12,17 +12,17 @@ block content
   // SideBar End
 
   // Main
-  main.main
+  main.main.main--docs
     // Section About
     section.section.slide(data-hash='about')
       .grid
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical.col--left-no-border
-            h2.heading.heading--primary Документация
+            h2.heading.heading--primary.heading--border Документация
             span.text.text--normal.text--regular Здесь вы найдете все необоходимые документы.
           .col.col--center.col--margin-vertical
             .scrollbar-rail.block--scroll
-              ul.list.list--unstyled.list--cards.list--scroll
+              ul.list.list--unstyled.list--cards.list--scroll.list--docs
                 li.list__item.list__item--card
 
                   .card.card--info.card--docs
@@ -491,7 +491,11 @@ block content
                         .card__content
                           .text.text--normal.text--regular.text--black Изменение в проектную декларацию от 05.04.2018
                           .text.text--xsmall.text--regular.text--black .pdf (4,6 Mb)
-                
+              
+              button(type="button", name="load-more").btn.btn--base.btn--load-more
+                svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 27 15').icon.icon--arrow
+                  path(fill-rule='evenodd', d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z')
+                  path(fill-rule='evenodd', d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z')
     // Section About End
 
 block scripts

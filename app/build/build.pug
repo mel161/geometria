@@ -19,7 +19,7 @@ block content
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical
             h2.heading.heading--primary Ход строительства
-            nav.nav.nav--submenu
+            nav.nav.nav--submenu.nav--submenu-first
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu.nav__item--active
                   a.link.link--nav(href='#') Фотоотчёт
@@ -32,15 +32,15 @@ block content
             h3.heading.heading--secondary.heading--secondary-inner Фотоотчёт
               nav.nav.nav--tabs.nav--years
                 ul.nav__list.nav__list--horizontal
-                  li.nav__item.nav__item--tabs.nav__item--years
+                  li.nav__item.nav__item--tabs.nav__item--years.nav__item--active
                     a.link.link--nav.link--tab(href='#tab1') 
                       span.text.text--xsmall.text--f-medium 2017
-                  li.nav__item.nav__item--tabs.nav__item--years.nav__item--active
+                  li.nav__item.nav__item--tabs.nav__item--years
                     a.link.link--nav.link--tab(href='#tab2')
                       span.text.text--xsmall.text--f-medium 2018
 
             .tab
-              #tab1.tab__inner
+              #tab1.tab__item.tab__item--active
                 ul.list.list--years
                   li.list__item.list__item--years
                     a(href="#").link.link--years
@@ -78,7 +78,7 @@ block content
                   li.list__item.list__item--years
                     a(href="#").link.link--years
                       span.text.text--xsmall.text--f-medium Декабрь 2017
-              #tab2.tab__inner.tab__inner--active
+              #tab2.tab__item
                 ul.list.list--years
                   li.list__item.list__item--years
                     a(href="#").link.link--years
@@ -110,12 +110,18 @@ block content
 
           .col.col--center.col--center-full
             .slider
+              .slider__item              
+                picture.image.image--slider
+                  source(media='(min-width: 1200px)', srcset='../images/gallery-big-1.jpg')
+                  img(src='../images/gallery-thumb-2.jpg')
               .slider__item
-                img(src="../images/gallery-big-1.jpg" alt="1").image.image--slider
+                picture.image.image--slider
+                  source(media='(min-width: 1200px)', srcset='../images/gallery-big-2.jpg')
+                  img(src='../images/gallery-thumb-2.jpg')
               .slider__item
-                img(src="../images/gallery-big-2.jpg" alt="2").image.image--slider
-              .slider__item
-                img(src="../images/gallery-big-1.jpg" alt="3").image.image--slider
+                picture.image.image--slider
+                  source(media='(min-width: 1200px)', srcset='../images/gallery-big-3.jpg')
+                  img(src='../images/gallery-thumb-2.jpg')
             
     // Section About End
     // Section About
@@ -137,8 +143,10 @@ block content
             h3.heading.heading--secondary.heading--secondary-inner Веб-камера
 
           .col.col--center.col--center-full
-            .col--overlay
-              img(src="../images/camera.jpg" alt="").image.image--gallery
+            .col--overlay            
+              picture.image.image--gallery
+                source(media='(min-width: 1200px)', srcset='../images/camera.jpg')
+                img(src='../images/camera-thumb.jpg')
             
     // Section About End
     // Section About
@@ -158,10 +166,29 @@ block content
                 li.nav__item.nav__item--submenu
                   a.link.link--nav(href='#') Новости
             h3.heading.heading--secondary.heading--secondary-inner Панорама
+            .block
+              ul.list.list--years
+                li.list__item.list__item--years
+                  a(href="#").link.link--years
+                    span.text.text--xsmall.text--f-medium Январь 2017
+                    
+                li.list__item.list__item--years
+                  a(href="#").link.link--years
+                    span.text.text--xsmall.text--f-medium Май 2018
+                
+                li.list__item.list__item--years
+                  a(href="#").link.link--years
+                    span.text.text--xsmall.text--f-medium Август 2018
+                
+                li.list__item.list__item--years
+                  a(href="#").link.link--years
+                    span.text.text--xsmall.text--f-medium Сентябрь 2018
 
           .col.col--center.col--center-full
-            .col--overlay
-              img(src="../images/gallery-big-2.jpg" alt="").image.image--gallery
+            .col--overlay            
+              picture.image.image--gallery
+                source(media='(min-width: 1200px)', srcset='../images/camera.jpg')
+                img(src='../images/camera-thumb.jpg')
     // Section About End
     // Section About
     section.section.slide(data-hash='about')
@@ -182,7 +209,7 @@ block content
             h3.heading.heading--secondary.heading--secondary-inner Новости
 
           .col.col--center.col--center-full.col--vertical-center
-            ul.list.list--unstyled.list--cards
+            ul.list.list--unstyled.list--cards.list--news.list--scroll
               li.list__item.list__item--card
                 a.link.link--card.card.card--news(href='')
                   span.card__image
@@ -247,6 +274,10 @@ block content
                     h4.heading.heading--card Комфортная рассрочка на паркинг
                     span.text.text--xsmall.text--brand.text--right
                       | 20-07-2018
+            button(type="button", name="load-more").btn.btn--base.btn--load-more
+              svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 27 15').icon.icon--arrow
+                path(fill-rule='evenodd', d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z')
+                path(fill-rule='evenodd', d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z')
     // Section About End
 block scripts
   script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')

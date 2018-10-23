@@ -46,6 +46,10 @@
       .main--buy & {
         float: none;
       }
+
+      .list--news & {
+        width: 100%;
+      }
     }
 
     &--card-active {
@@ -83,8 +87,8 @@
     }
 
     &--years {
-      flex         : 1 1 100px;
-      max-width    : 100px;
+      flex         : 1 1 80px;
+      max-width    : 80px;
       position     : relative;
       border       : 1px solid $brand;
       margin-right : 10px;
@@ -95,6 +99,10 @@
         display    : block;
         width      : 100%;
         padding-top: 100%;
+      }
+      @media (min-width: 1200px) {
+        flex     : 1 1 100px;
+        max-width: 100px;
       }
     }
   }
@@ -132,20 +140,28 @@
     }
   }
 
+  &--docs {
+    margin-top: 30px;
+  }
+
   &--dot {}
 
   &--years {
     display  : flex;
     flex-wrap: wrap;
+    width    : 100%;
   }
 
   &--scroll {
     width : 3770px;
     height: 625px;
 
-    .main--buy & {
-      width: auto;
+    .main--buy &,
+    .main--build &,
+    .main--docs &  {
+      width : auto;
       height: auto;
+      @include clearfix;
 
       .list__item--card {
         display: none;
@@ -157,9 +173,8 @@
         }
       }
     }
-
     @media (min-width: 1200px) {
-      width : 3770px;
+      width: 3770px;
     }
   }
 }

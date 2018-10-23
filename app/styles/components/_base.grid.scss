@@ -24,6 +24,10 @@ body {
     height          : 133px;
     background-color: transparent;
   }
+
+  .row {
+    padding: 0;
+  }
 }
 
 .sidebar {
@@ -49,15 +53,21 @@ body {
 }
 
 .main {
+  @include clearfix;
   position: relative;
   top     : 0;
   left    : 0;
   width   : 100%;
   height  : auto;
+  margin-top: 75px;
+
+  @media (min-width: 1200px) {
+    margin-top: 0;
+  }
 }
 
 .section {
-  padding-top: 57px;
+  padding-top: 55px;
   @media (min-width: 1200px) {
     padding: 0;
   }
@@ -95,17 +105,27 @@ body {
 
   &--space {
     justify-content: space-between;
+    flex-direction: row;
+    padding: 0;
   }
 
   &--horizontal {
     flex-direction: row;
   }
+
+  .main & {
+    position: relative;
+  }
 }
 
 .col {
-  position: relative;
   // Styles
+  position: relative;
   flex    : 1 1 auto;
+
+  .main & {
+    position: initial;
+  }
   // Modifiers
   &--left {
     @media (min-width: 1200px) {
@@ -142,6 +162,10 @@ body {
         display: block;
       }
     }
+
+    .main & {
+      margin-bottom: 70px;
+    }
   }
 
   &--center-section {
@@ -160,6 +184,10 @@ body {
   &--right {
     @media (min-width: 1200px) {
       flex: 0 0 330px;
+    }
+
+    .main & {
+      height: 330px;
     }
   }
 
@@ -210,7 +238,11 @@ body {
   }
 
   &--auto {
-    flex: 0 1 calc(50% - 21px);
+    flex: 0 1 calc(50%);
+
+    .card--banks & {
+      flex: 0 1 calc(50% - 21px);
+    }
   }
 
   &--overlay {
@@ -247,6 +279,12 @@ body {
   @include clearfix;
 
   &--index-card-scroll {
-    width: 100%;
+    width: auto;
+    // margin: 0 -30px;
+    // padding: 0 30px;
+
+    &.scroll-wrapper {
+      // padding: 0 30px !important;
+    }
   }
 }

@@ -12,14 +12,14 @@ block content
   // SideBar End
 
   // Main
-  main.main
+  main.main.main--buy
     // Section About
     section.section.slide(data-hash='hood')
       .grid
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical
             h2.heading.heading--primary.heading--primary-inner Как купить
-            nav.nav.nav--submenu
+            nav.nav.nav--submenu.nav--submenu-first
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu.nav__item--active
                   a.link.link--nav(href='#') Рассрочка
@@ -36,19 +36,17 @@ block content
             p.paragraph.text.text--normal.text--regular
               | Есть множество способов приблизить долгожданное новоселье.
               br
-              |                 Например, вы можете внести не всю сумму сразу, а по частям:
+              | Например, вы можете внести не всю сумму сразу, а по частям:
             ul.list.list--dot
               li.list__item.list__item--dot
                 span.text.text--normal.text--regular при первоначальном взносе от 75% — рассрочка без удорожания;
               li.list__item.list__item--dot
                 span.text.text--normal.text--regular
                   | при первоначальном взносе от 50% до 75% —
-                  br
                   | рассрочка под 1% с ежемесячным удорожанием;
               li.list__item.list__item--dot
                 span.text.text--normal.text--regular
                   | при первоначальном взносе от 30% до 50% —
-                  br
                   | рассрочка под 1,5% с ежемесячным удорожанием.
             p.paragraph.text.text--normal.text--regular
               | Рассрочка предоставляется до 30 сентября 2019 года.
@@ -75,6 +73,9 @@ block content
 
             h3.heading.heading--secondary.heading--secondary-inner Ипотека
 
+            p.paragraph.text.text--normal.text--regular
+              | Квартиру в «Геометрии» можно приобрести уже сейчас, воспользовавшись выгодными предложениями крупных банков.
+
             a.link.btn.btn--base.btn--order(href='#js-modal-form', rel="modal:open") Отправить заявку
 
           .col.col--center.col--margin-vertical
@@ -83,7 +84,6 @@ block content
                 li.list__item.list__item--card
 
                   .card.card--info.card--banks
-
                     .card__front
                       .card__info
                         svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
@@ -122,170 +122,9 @@ block content
                               .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
                             li.list__item
                               .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
+
                 li.list__item.list__item--card
                   .card.card--info.card--banks
-
-                    .card__front
-                      .card__info
-                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
-                          g#info
-                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
-                            circle(cx='37.71', cy='30.71', r='20.46')
-                            path(d='M7 86.18h56.91v19.75H7z')
-                            path(d='M17.25 86.18h46.66v121.5H17.25z')
-                            path(d='M7.75 183.18h65.66v24.5H7.75z')
-                      .card__inner
-                        .card__image.clearfix
-                          .logo.logo--bank
-                            a.logo__link(href='#')
-                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
-                        .card__content
-                          .grid.grid--inner
-                            .row.row--space
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Годовые проценты
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 9,3%
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 15%
-
-                    .card__back
-                      .card__inner.bg--grey-dark
-                        .info__inner
-                          ul.list.list--unstyled
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
-                li.list__item.list__item--card
-                  .card.card--info.card--banks
-                    .card__front
-                      .card__info
-                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
-                          g#info
-                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
-                            circle(cx='37.71', cy='30.71', r='20.46')
-                            path(d='M7 86.18h56.91v19.75H7z')
-                            path(d='M17.25 86.18h46.66v121.5H17.25z')
-                            path(d='M7.75 183.18h65.66v24.5H7.75z')
-                      .card__inner
-                        .card__image.clearfix
-                          .logo.logo--bank
-                            a.logo__link(href='#')
-                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
-                        .card__content
-                          .grid.grid--inner
-                            .row.row--space
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Годовые проценты
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 9,3%
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 15%
-                    .card__back
-                      .card__inner.bg--grey-dark
-                        .info__inner
-                          ul.list.list--unstyled
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
-                li.list__item.list__item--card
-                  .card.card--info.card--banks
-                    .card__front
-                      .card__info
-                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
-                          g#info
-                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
-                            circle(cx='37.71', cy='30.71', r='20.46')
-                            path(d='M7 86.18h56.91v19.75H7z')
-                            path(d='M17.25 86.18h46.66v121.5H17.25z')
-                            path(d='M7.75 183.18h65.66v24.5H7.75z')
-                      .card__inner
-                        .card__image.clearfix
-                          .logo.logo--bank
-                            a.logo__link(href='#')
-                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
-                        .card__content
-                          .grid.grid--inner
-                            .row.row--space
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Годовые проценты
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 9,3%
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 15%
-                    .card__back
-                      .card__inner.bg--grey-dark
-                        .info__inner
-                          ul.list.list--unstyled
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
-                li.list__item.list__item--card
-
-                  .card.card--info.card--banks
-
-                    .card__front
-                      .card__info
-                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
-                          g#info
-                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
-                            circle(cx='37.71', cy='30.71', r='20.46')
-                            path(d='M7 86.18h56.91v19.75H7z')
-                            path(d='M17.25 86.18h46.66v121.5H17.25z')
-                            path(d='M7.75 183.18h65.66v24.5H7.75z')
-                      .card__inner
-                        .card__image.clearfix
-                          .logo.logo--bank
-                            a.logo__link(href='#')
-                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
-                        .card__content
-                          .grid.grid--inner
-                            .row.row--space
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Годовые проценты
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 9,3%
-                              .col.col--auto
-                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
-                                span.text.text--normal.text--regular.text--black от&nbsp;
-                                span.text.text--xlarge.text--regular.text--black 15%
-
-                    .card__back
-                      .card__inner.bg--grey-dark
-                        .info__inner
-                          ul.list.list--unstyled
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
-                            li.list__item
-                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
-                li.list__item.list__item--card
-                  .card.card--info.card--banks
-
                     .card__front
                       .card__info
                         svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
@@ -1529,6 +1368,171 @@ block content
                               .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
                             li.list__item
                               .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
+                li.list__item.list__item--card
+
+                  .card.card--info.card--banks
+
+                    .card__front
+                      .card__info
+                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
+                          g#info
+                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
+                            circle(cx='37.71', cy='30.71', r='20.46')
+                            path(d='M7 86.18h56.91v19.75H7z')
+                            path(d='M17.25 86.18h46.66v121.5H17.25z')
+                            path(d='M7.75 183.18h65.66v24.5H7.75z')
+                      .card__inner
+                        .card__image.clearfix
+                          .logo.logo--bank
+                            a.logo__link(href='#')
+                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
+                        .card__content
+                          .grid.grid--inner
+                            .row.row--space
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Годовые проценты
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 9,3%
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 15%
+
+                    .card__back
+                      .card__inner.bg--grey-dark
+                        .info__inner
+                          ul.list.list--unstyled
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
+                li.list__item.list__item--card
+                  .card.card--info.card--banks
+
+                    .card__front
+                      .card__info
+                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
+                          g#info
+                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
+                            circle(cx='37.71', cy='30.71', r='20.46')
+                            path(d='M7 86.18h56.91v19.75H7z')
+                            path(d='M17.25 86.18h46.66v121.5H17.25z')
+                            path(d='M7.75 183.18h65.66v24.5H7.75z')
+                      .card__inner
+                        .card__image.clearfix
+                          .logo.logo--bank
+                            a.logo__link(href='#')
+                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
+                        .card__content
+                          .grid.grid--inner
+                            .row.row--space
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Годовые проценты
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 9,3%
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 15%
+
+                    .card__back
+                      .card__inner.bg--grey-dark
+                        .info__inner
+                          ul.list.list--unstyled
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
+                li.list__item.list__item--card
+                  .card.card--info.card--banks
+                    .card__front
+                      .card__info
+                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
+                          g#info
+                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
+                            circle(cx='37.71', cy='30.71', r='20.46')
+                            path(d='M7 86.18h56.91v19.75H7z')
+                            path(d='M17.25 86.18h46.66v121.5H17.25z')
+                            path(d='M7.75 183.18h65.66v24.5H7.75z')
+                      .card__inner
+                        .card__image.clearfix
+                          .logo.logo--bank
+                            a.logo__link(href='#')
+                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
+                        .card__content
+                          .grid.grid--inner
+                            .row.row--space
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Годовые проценты
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 9,3%
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 15%
+                    .card__back
+                      .card__inner.bg--grey-dark
+                        .info__inner
+                          ul.list.list--unstyled
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
+                li.list__item.list__item--card
+                  .card.card--info.card--banks
+                    .card__front
+                      .card__info
+                        svg.icon.icon--info(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 82 214.24')
+                          g#info
+                            path(d='M75.42 178.51H70v-94.3a6.48 6.48 0 0 0-6.58-6.38H6.58A6.48 6.48 0 0 0 0 84.21v23a6.48 6.48 0 0 0 6.58 6.38h5.53v65H6.58a6.48 6.48 0 0 0-6.58 6.3v23a6.48 6.48 0 0 0 6.58 6.38h68.84a6.48 6.48 0 0 0 6.58-6.41v-23a6.48 6.48 0 0 0-6.58-6.35zm-6.58 23H13.16v-10.24h5.53a6.48 6.48 0 0 0 6.58-6.38v-77.71a6.48 6.48 0 0 0-6.58-6.38h-5.53V90.59h43.57v94.3a6.48 6.48 0 0 0 6.58 6.38h5.46zM37.71 61.41A30.71 30.71 0 1 0 7 30.71a30.71 30.71 0 0 0 30.71 30.7zm0-46.68a11.35 11.35 0 1 1-.07-.07h.07z')
+                            circle(cx='37.71', cy='30.71', r='20.46')
+                            path(d='M7 86.18h56.91v19.75H7z')
+                            path(d='M17.25 86.18h46.66v121.5H17.25z')
+                            path(d='M7.75 183.18h65.66v24.5H7.75z')
+                      .card__inner
+                        .card__image.clearfix
+                          .logo.logo--bank
+                            a.logo__link(href='#')
+                              img.image.image--logo(src='../images/logo-vtb.png', alt='')
+                        .card__content
+                          .grid.grid--inner
+                            .row.row--space
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Годовые проценты
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 9,3%
+                              .col.col--auto
+                                .text.text--xsmall.text--regular.text--black Первоначальный взнос
+                                span.text.text--normal.text--regular.text--black от&nbsp;
+                                span.text.text--xlarge.text--regular.text--black 15%
+                    .card__back
+                      .card__inner.bg--grey-dark
+                        .info__inner
+                          ul.list.list--unstyled
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular возраст от 21 до 65 лет
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular стаж на последнем месте работы 3 мес
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular рассмотрения ИП и собственников бизнеса
+                            li.list__item
+                              .text.text--brand.text--xsmall.text--regular подтверждение дохода по форме Банка/форме стороннерго банка и в свободной форме
+            button(type="button", name="load-more").btn.btn--base.btn--load-more
+              svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 27 15').icon.icon--arrow
+                path(fill-rule='evenodd', d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z')
+                path(fill-rule='evenodd', d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z')
     // Section About End
     // Section About
     section.section.slide(data-hash='hood')
@@ -1588,16 +1592,16 @@ block content
               | дилерский центр оплатит покупку вашего автомобиля.
           .col.col--right(style="background-image: url('../images/buy-cars-right.jpg');")
     // Section About End
-    
+
     .modal.modal--form#js-modal-form
       a(href='#' rel="modal:close").btn.btn--transparent.modal__close
         svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
           path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
           path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
-        
+
       .modal__inner
         h4.heading.heading--modal Оставьте заявку на&nbsp;бесплатную&nbsp;консультацию
-        
+
         form(action="", method="get").form.form--modal
           label(for="nameForm").label
             input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off').input.input--text
@@ -1609,7 +1613,7 @@ block content
             a(href="#").link.link--underline Политика конфиденциальности*
             input(type="checkbox", name="check", id='agreeForm', required='').input.input--checkbox
           input(type="submit", name="submit", value="Отправить", disabled='disabled').btn.btn--base#js-form-submit
-    
+
     .modal.modal--success#js-modal-success
       a(href='#' rel="modal:close").btn.btn--transparent.modal__close
         svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
@@ -1618,15 +1622,15 @@ block content
 
       .modal__inner
         h4.heading.heading--modal Спасибо!
-        
-        span.text.text--normal.text--regular 
+
+        span.text.text--normal.text--regular
           | Ваша заявка успешно отправлена!
           br
           | Наш менеджер свяжется в вами в ближайшее время
-        
+
         a(href='#' rel="modal:close").link.btn.btn--base Хорошо
-        
-    
+
+
 block scripts
   script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
   script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')

@@ -17,18 +17,19 @@ import '../styles/main.scss'
 if (process.env.NODE_ENV !== 'production') {
   require('./buy.pug')
 }
-/* global EventEmitter */
-let ee = new EventEmitter()
+
+// /* global EventEmitter */
+// let ee = new EventEmitter()
 
 jQuery(document).ready(() => {
-  $.smartscroll({
-    autoHash: false,
-    sectionScroll: true,
-    sectionWrapperSelector: '.page',
-    sectionClass: 'slide',
-    eventEmitter: ee,
-    bindSwipe: true
-  })
+  // $.smartscroll({
+  //   autoHash: false,
+  //   sectionScroll: true,
+  //   sectionWrapperSelector: '.page',
+  //   sectionClass: 'slide',
+  //   eventEmitter: ee,
+  //   bindSwipe: true
+  // })
 
   $('.card__info').hover(function () {
     $(this)

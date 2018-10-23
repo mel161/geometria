@@ -112,16 +112,14 @@
       }
     }
 
-    &--active {
-      color: $brand;
-    }
-
     &--submenu {
       flex          : 1 1 auto;
-      padding       : 0 15px;
+      padding       : 0;
       border-right  : 1px solid $brand;
-      font-size     : 14px;
+      font-size     : 9px;
       text-transform: uppercase;
+      color         : $white;
+      text-align    : center;
 
       &:first-of-type {
         padding-left: 0;
@@ -130,11 +128,20 @@
       &:last-of-type {
         border-right: 0;
       }
+      @media (min-width: 1200px) {
+        font-size: 14px;
+        padding  : 0 15px;
+        color    : $grey-dark;
+      }
     }
 
     &--years {
       margin-right : 19px;
       margin-bottom: 0;
+    }
+
+    &--active {
+      color: $brand;
     }
   }
   // Modifiers
@@ -163,6 +170,7 @@
 
   &--tabs {
     margin-bottom: 14px;
+
     .nav__list--vertical {
       flex-direction: row;
       flex-wrap     : wrap;
@@ -179,11 +187,26 @@
   }
 
   &--submenu {
-    width        : 425px;
-    margin-bottom: 75px;
+    width           : auto;
+    margin          : 0 -30px;
+    background-color: $grey-dark;
+    padding         : 25px 15px;
+    display         : none;
 
     .main--build & {
       width: 447px;
     }
+    @media (min-width: 1200px) {
+      width        : 425px;
+      margin-bottom: 75px;
+
+      .main--build & {
+        width: 447px;
+      }
+    }
+  }
+
+  &--submenu-first {
+    display: block;
   }
 }

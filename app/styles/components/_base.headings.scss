@@ -16,7 +16,7 @@
 
   &--primary {
     font-size    : 36px;
-    margin-bottom: 21px;
+    margin-bottom: 15px;
     @media (min-width: 1200px) {
       margin-bottom: 69px;
       font-size    : 48px;
@@ -48,6 +48,11 @@
   }
 
   &--secondary-inner {
+    font-size     : 26px;
+    margin-top    : 56px;
+    margin-bottom : 30px;
+    padding-bottom: 16px;
+    border-bottom : 1px solid $brand;
     @media (min-width: 1200px) {
       font-size     : 36px;
       padding-bottom: 15px;
@@ -59,7 +64,6 @@
         margin-bottom: 19px;
       }
     }
-    border-bottom: 1px solid $brand;
   }
 
   &--border {
@@ -70,10 +74,10 @@
   }
 
   &--card {
-    font-size: 12px;
+    font-size  : 12px;
     font-weight: 500;
     @media (min-width: 1200px) {
-      font-size  : 20px;
+      font-size: 20px;
     }
   }
 

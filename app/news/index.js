@@ -1,10 +1,9 @@
 /* global $ */
 /* global jQuery */
 
-import 'smartscroll'
-
 import '../scripts/_sidebar'
 import '../scripts/_scroll'
+import '../scripts/_form'
 
 import '../styles/main.scss'
 

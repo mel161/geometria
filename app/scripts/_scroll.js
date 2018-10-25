@@ -1,6 +1,10 @@
 /* global $ */
+import 'smartscroll'
 
+import 'jquery.scrollbar'
 import 'page-scroll-to-id'
+// import EventEmitter from './vendor/EventEmitter.min'
+// import './vendor/lethargy.min'
 
 /* global EventEmitter */
 let ee = new EventEmitter()
@@ -8,7 +12,13 @@ let ee = new EventEmitter()
 $(document).ready(() => {
   var resizing = false
 
-  $("a[href*='#']").mPageScroll2id()
+  $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id()
+  $('.nav__item--submenu .link--nav').click(function (event) {
+    var mq = checkMQ()
+    if (mq === 'mobile') {
+      $(this).parent().addClass('nav__item--active').siblings().removeClass('nav__item--active')
+    }
+  })
 
   if ($('.wrap').is('.scrollbar-rail')) {
     $('.scrollbar-rail').scrollbar()

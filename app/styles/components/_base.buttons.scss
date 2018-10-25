@@ -22,9 +22,9 @@
     padding         : 16px 0;
     // Media Queries
     @media (min-width: 1200px) {
-      font-size       : 18px;
-      padding: 21px 45px;
-      width  : 250px;
+      font-size: 18px;
+      padding  : 21px 45px;
+      width    : 250px;
     }
     // States
     &:link {}
@@ -58,7 +58,16 @@
       position: absolute;
       bottom  : 71px;
       left    : 150px;
-      width   : auto;
+      width   : 250px;
+      margin  : 0;
+      padding : 16px 0;
+    }
+  }
+
+  &--order-wide {
+    @media (max-width: 1200px) {
+      // top: 10px;
+      bottom: 10px;
     }
   }
 
@@ -67,6 +76,9 @@
     height : 40px;
     display: block;
     margin : 0 auto;
+    @media (min-width: 1200px) {
+      display: none;
+    }
   }
 
   &--map-nav-toggle {
@@ -86,7 +98,6 @@
         transform: scale(1, -1);
       }
     }
-
     @media (min-width: 1200px) {
       display: none;
     }

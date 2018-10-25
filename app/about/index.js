@@ -1,20 +1,15 @@
 /* global $ */
 /* global jQuery */
 
-import 'smartscroll'
-
 import '../scripts/_sidebar'
 import '../scripts/_scroll'
-
-import 'jquery.scrollbar'
+import '../scripts/_form'
 
 import '../styles/main.scss'
 
 if (process.env.NODE_ENV !== 'production') {
   require('./about.pug')
 }
-// /* global EventEmitter */
-// let ee = new EventEmitter()
 
 jQuery(document).ready(() => {
   $('.card').click(function (event) {
@@ -24,6 +19,4 @@ jQuery(document).ready(() => {
 
     $(this).parent().toggleClass('list__item--card-active').siblings().removeClass('list__item--card-active').find('.card').removeClass('card--active')
   })
-
-  $('.scrollbar-rail').scrollbar()
 })

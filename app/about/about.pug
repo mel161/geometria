@@ -35,9 +35,9 @@ block content
               | детская площадка, место для занятий спортом, зоны для отдыха и широкие тротуары. Во дворе
               | ЖК уютно, чисто и зелено — отличное место, где можно провести время с семьей или прогуляться
               | в одиночестве.
-          .col.col--center.col--center-full.col--vertical-center
+          .col.col--center.col--margin-vertical
             .scrollbar-rail.wrap.wrap--index-card-scroll
-              ul.list.list--unstyled.list--cards.list--cards-index
+              ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card
                   a.link.link--card.card.card--features(href='#playground')
                     span.card__inner
@@ -113,9 +113,9 @@ block content
               | поместится в шкафы, можно спрятать
               | на удобных антресолях. Это интерьерное
               | решение есть в каждой квартире!
-          .col.col--center.col--center-full.col--vertical-center
+          .col.col--center.col--margin-vertical
             .scrollbar-rail.wrap.wrap--index-card-scroll
-              ul.list.list--unstyled.list--cards.list--cards-index
+              ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card
                   a.link.link--card.card.card--features(href='#playground')
                     span.card__inner
@@ -190,9 +190,9 @@ block content
               | Машина ждёт их в двух шагах от дома:
               | на просторном охраняемом паркинге.
               | Места хватит всем!
-          .col.col--center.col--center-full.col--vertical-center
+          .col.col--center.col--margin-vertical
             .scrollbar-rail.wrap.wrap--index-card-scroll
-              ul.list.list--unstyled.list--cards.list--cards-index
+              ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card
                   a.link.link--card.card.card--features(href='#playground')
                     span.card__inner
@@ -269,9 +269,9 @@ block content
               | оборудованные комнаты, где можно оставить
               | коляски и велосипеды, вымыть ламы домашним
               | питомцам и спокойно отправиться домой.
-          .col.col--center.col--center-full.col--vertical-center
+          .col.col--center.col--margin-vertical
             .scrollbar-rail.wrap.wrap--index-card-scroll
-              ul.list.list--unstyled.list--cards.list--cards-index
+              ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card
                   a.link.link--card.card.card--features(href='#playground')
                     span.card__inner
@@ -290,7 +290,7 @@ block content
                       span.card__image
                         img.image.image--card(src='../images/features/1-2-closed-area.jpg', alt='Детские площадки')
                       span.card__title
-                        h4.heading.heading--card Закрытая территория
+                        h4.heading.heading--card Места для хранения велосипедов и колясок
                       span.card__text
                         span.text.text--normal
                           | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
@@ -302,7 +302,7 @@ block content
                       span.card__image
                         img.image.image--card(src='../images/features/1-3-rest-zone.jpg', alt='Детские площадки')
                       span.card__title
-                        h4.heading.heading--card Зоны для отдыха детей и взрослых
+                        h4.heading.heading--card Место, где можно вымыть лапы собакам и велосипеды
                       span.card__text
                         span.text.text--normal
                           | Для детей мы продумали игровые зоны, где можно знакомиться и общаться, а взрослые смогут устроить
@@ -321,7 +321,43 @@ block content
                           | чемпионат по настольному теннису на спортивных площадках ЖК.
     // Section About End
 
-  // Main End
+    // Main End
+    .modal.modal--form#js-modal-form
+      a(href='#' rel="modal:close").btn.btn--transparent.modal__close
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+          path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+          path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
+
+      .modal__inner
+        h4.heading.heading--modal Оставьте заявку на&nbsp;бесплатную&nbsp;консультацию
+
+        form(action="", method="get").form.form--modal
+          label(for="nameForm").label
+            input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off').input.input--text
+          label(for="phoneForm").label.label--modal
+            input(type="text", id=phoneForm, name="phone", value="", placeholder="Ваш Телефон*", required='', autocomplete='off').input.input--text.input--phone
+          label(for="agreeForm").label.label--checkbox.text--xsmall.text--regular
+            | Согласен на обработку персональных данных.
+            br
+            a(href="#").link.link--underline Политика конфиденциальности*
+            input(type="checkbox", name="check", id='agreeForm', required='').input.input--checkbox
+          input(type="submit", name="submit", value="Отправить", disabled='disabled').btn.btn--base#js-form-submit
+
+    .modal.modal--success#js-modal-success
+      a(href='#' rel="modal:close").btn.btn--transparent.modal__close
+        svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+          path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+          path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
+
+      .modal__inner
+        h4.heading.heading--modal Спасибо!
+
+        span.text.text--normal.text--regular
+          | Ваша заявка успешно отправлена!
+          br
+          | Наш менеджер свяжется в вами в ближайшее время
+
+        a(href='#' rel="modal:close").link.btn.btn--base Хорошо
 
 block scripts
   script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')

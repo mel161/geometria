@@ -1,6 +1,6 @@
 extends ../layout/_layout.pug
 block vars
-  - var pageTitle = 'Контакты'
+  - var pageTitle = 'Ход строительства'
   - var bodyClass = ''
 
 block content
@@ -112,15 +112,15 @@ block content
             .slider
               .slider__item
                 picture.image.image--slider
-                  source(media='(min-width: 1200px)', srcset='../images/gallery-big-1.jpg')
+                  source(media='(min-width: 1200px)', srcset='./app/images/gallery-big-1.jpg')
                   img(src='../images/gallery-thumb-2.jpg')
               .slider__item
                 picture.image.image--slider
-                  source(media='(min-width: 1200px)', srcset='../images/gallery-big-2.jpg')
+                  source(media='(min-width: 1200px)', srcset='./app/images/gallery-big-2.jpg')
                   img(src='../images/gallery-thumb-2.jpg')
               .slider__item
                 picture.image.image--slider
-                  source(media='(min-width: 1200px)', srcset='../images/gallery-big-3.jpg')
+                  source(media='(min-width: 1200px)', srcset='./app/images/gallery-big-1.jpg')
                   img(src='../images/gallery-thumb-2.jpg')
 
     // Section About End
@@ -145,7 +145,7 @@ block content
           .col.col--center.col--center-full
             .col--overlay
               picture.image.image--gallery
-                source(media='(min-width: 1200px)', srcset='../images/camera.jpg')
+                source(media='(min-width: 1200px)', srcset='./app/images/camera.jpg')
                 img(src='../images/camera-thumb.jpg')
 
     // Section About End
@@ -187,7 +187,7 @@ block content
           .col.col--center.col--center-full
             .col--overlay
               picture.image.image--gallery
-                source(media='(min-width: 1200px)', srcset='../images/camera.jpg')
+                source(media='(min-width: 1200px)', srcset='./app/images/camera.jpg')
                 img(src='../images/camera-thumb.jpg')
     // Section About End
     // Section About
@@ -209,76 +209,114 @@ block content
             h3.heading.heading--secondary.heading--secondary-inner Новости
 
           .col.col--center.col--center-full.col--vertical-center
-            ul.list.list--unstyled.list--cards.list--news.list--scroll
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-1.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Квартира в ипотеку — это просто!
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-2.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Как пережить переезд с легкостью?
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-3.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Новый фотоотчет со строй-площадки
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-4.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Комфортная рассрочка на паркинг
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-5.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card С Днем Победы!
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-6.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Паркинг - комфорт для вашего авто!
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-7.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Новый фотоотчет со строй-площадки
-                    span.text.text--xsmall.text--.text--right
-                      | 20-07-2018
-              li.list__item.list__item--card
-                a.link.link--card.card.card--news(href='')
-                  span.card__image
-                    img.image.image--card.image--news(src='../images/news-8.jpg', alt='Детские площадки')
-                  span.card__title
-                    h4.heading.heading--card Комфортная рассрочка на паркинг
-                    span.text.text--xsmall.text--brand.text--right
-                      | 20-07-2018
+            .scrollbar-rail
+              ul.list.list--unstyled.list--cards.list--news
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-1.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Квартира в ипотеку — это просто!
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-2.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Как пережить переезд с легкостью?
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-3.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Новый фотоотчет со строй-площадки
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-4.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Комфортная рассрочка на паркинг
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-5.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card С Днем Победы!
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-6.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Паркинг - комфорт для вашего авто!
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-7.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Новый фотоотчет со строй-площадки
+                      span.text.text--xsmall.text--.text--center
+                        | 20-07-2018
+                li.list__item.list__item--card
+                  a.link.link--card.card.card--news(href='')
+                    span.card__image
+                      img.image.image--card.image--news(src='../images/news-8.jpg', alt='Детские площадки')
+                    span.card__title
+                      h4.heading.heading--card Комфортная рассрочка на паркинг
+                      span.text.text--xsmall.text--brand.text--center
+                        | 20-07-2018
             button(type="button", name="load-more").btn.btn--base.btn--load-more
               svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 27 15').icon.icon--arrow
                 path(fill-rule='evenodd', d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z')
                 path(fill-rule='evenodd', d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z')
     // Section About End
+  // Main End
+  .modal.modal--form#js-modal-form
+    a(href='#' rel="modal:close").btn.btn--transparent.modal__close
+      svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+        path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+        path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
+
+    .modal__inner
+      h4.heading.heading--modal Оставьте заявку на&nbsp;бесплатную&nbsp;консультацию
+
+      form(action="", method="get").form.form--modal
+        label(for="nameForm").label
+          input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off').input.input--text
+        label(for="phoneForm").label.label--modal
+          input(type="text", id=phoneForm, name="phone", value="", placeholder="Ваш Телефон*", required='', autocomplete='off').input.input--text.input--phone
+        label(for="agreeForm").label.label--checkbox.text--xsmall.text--regular
+          | Согласен на обработку персональных данных.
+          br
+          a(href="#").link.link--underline Политика конфиденциальности*
+          input(type="checkbox", name="check", id='agreeForm', required='').input.input--checkbox
+        input(type="submit", name="submit", value="Отправить", disabled='disabled').btn.btn--base#js-form-submit
+
+  .modal.modal--success#js-modal-success
+    a(href='#' rel="modal:close").btn.btn--transparent.modal__close
+      svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+        path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+        path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
+
+    .modal__inner
+      h4.heading.heading--modal Спасибо!
+
+      span.text.text--normal.text--regular
+        | Ваша заявка успешно отправлена!
+        br
+        | Наш менеджер свяжется в вами в ближайшее время
+
+      a(href='#' rel="modal:close").link.btn.btn--base Хорошо
 block scripts
   script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
   script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')

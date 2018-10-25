@@ -49,6 +49,9 @@
 
       .list--news & {
         width: 100%;
+        @media (min-width: 1200px) {
+          width: 300px;
+        }
       }
     }
 
@@ -62,7 +65,8 @@
       z-index         : 100;
       background-color: $grey-dark;
       @media (min-width: 1200px) {
-        width: 100%;
+        width : 100%;
+        margin: 0;
       }
     }
 
@@ -89,6 +93,7 @@
     &--years {
       flex         : 1 1 80px;
       max-width    : 80px;
+      min-width    : 80px;
       position     : relative;
       border       : 1px solid $brand;
       margin-right : 10px;
@@ -122,10 +127,14 @@
   }
 
   &--cards {
+    @include clearfix;
     width   : 100%;
     height  : 100%;
     position: relative;
-    @media (min-width: 1200px) {}
+    margin-bottom: 10px;
+    @media (min-width: 1200px) {
+      margin-bottom: 0;
+    }
   }
 
   &--cards-index {
@@ -158,9 +167,9 @@
     width : 3770px;
     height: 625px;
 
-    .main--buy &,
     .main--build &,
-    .main--docs &  {
+    .main--buy &,
+    .main--docs & {
       width : auto;
       height: auto;
       @include clearfix;
@@ -172,6 +181,14 @@
         &:nth-child(2),
         &:nth-child(3) {
           display: block;
+        }
+      }
+      @media (min-width: 1200px) {
+        width: 3770px;
+
+        .list__item--card {
+          display: block;
+          float  : left;
         }
       }
     }

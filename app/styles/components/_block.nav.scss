@@ -69,6 +69,7 @@
         font-size   : 18px;
         font-weight : bold;
         line-height : 20px;
+        text-transform: none;
       }
     }
 
@@ -106,8 +107,8 @@
       @media (min-width: 1200px) {
         margin-bottom: 25px;
         font-size    : 20px;
-        display: block;
-        text-align: left;
+        display      : block;
+        text-align   : left;
       }
     }
 
@@ -203,7 +204,8 @@
     position: relative;
     bottom  : 0;
     @media (min-width: 1200px) {
-      margin: 0 -48px;
+      margin  : 0 -48px;
+      position: absolute;
     }
   }
 
@@ -247,8 +249,10 @@
     }
     @media (min-width: 1200px) {
       width           : 425px;
-      margin-bottom   : 75px;
+      margin          : 0 0 77px;
+      padding: 0;
       background-color: transparent;
+      display         : block;
 
       .main--build & {
         width: 447px;

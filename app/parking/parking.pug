@@ -17,10 +17,10 @@ block content
     section.section.slide(data-hash='about')
       .grid
         .row.row--full
-          .col.col--left.col--vertical-center
+          .col.col--left.col--margin-left.col--margin-vertical
             h2.heading.heading--primary.heading--border  Подобрать паркинг
             button.btn.btn--base.btn--order(type='button', name='button') Отправить заявку
-          .col.col--center.col--center-section.col--vertical-center
+          .col.col--center.col--margin-vertical.col--margin-left
             h3.heading.heading--secondary Двухуровневый паркинг с удобной планировкой
             p.paragraph.text.text--normal
               | Паркинг «Геометрии» — это не просто охраняемое просторное помещение,
@@ -30,10 +30,55 @@ block content
               | местом больше не будет.
             p.paragraph.text.text--normal
               | Выберите место для своего автомобиля на просторном паркинге.
-          .col.col--right(style="background-image: url('../images/parking-right.jpg');")
+          .col.col--right
+            ul.gallery.gallery--vertical
+              li.gallery__item
+                a.link.link--gallery.strip(href='./app/images/parking-full.jpg', data-strip-group='mygroup', data-caption='Caption #1')
+                  picture.image.image--gallery
+                    source(media='(min-width: 1200px)', srcset='./app/images/parking-right.jpg')
+                    img(src='../images/parking-small.jpg')
 
     // Section About End
+  // Main End
+  .modal.modal--form#js-modal-form
+    a(href='#' rel="modal:close").btn.btn--transparent.modal__close
+      svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+        path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+        path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
+
+    .modal__inner
+      h4.heading.heading--modal Оставьте заявку на&nbsp;бесплатную&nbsp;консультацию
+
+      form(action="", method="get").form.form--modal
+        label(for="nameForm").label
+          input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off').input.input--text
+        label(for="phoneForm").label.label--modal
+          input(type="text", id=phoneForm, name="phone", value="", placeholder="Ваш Телефон*", required='', autocomplete='off').input.input--text.input--phone
+        label(for="agreeForm").label.label--checkbox.text--xsmall.text--regular
+          | Согласен на обработку персональных данных.
+          br
+          a(href="#").link.link--underline Политика конфиденциальности*
+          input(type="checkbox", name="check", id='agreeForm', required='').input.input--checkbox
+        input(type="submit", name="submit", value="Отправить", disabled='disabled').btn.btn--base#js-form-submit
+
+  .modal.modal--success#js-modal-success
+    a(href='#' rel="modal:close").btn.btn--transparent.modal__close
+      svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+        path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+        path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
+
+    .modal__inner
+      h4.heading.heading--modal Спасибо!
+
+      span.text.text--normal.text--regular
+        | Ваша заявка успешно отправлена!
+        br
+        | Наш менеджер свяжется в вами в ближайшее время
+
+      a(href='#' rel="modal:close").link.btn.btn--base Хорошо
 
 block scripts
   script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
   script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+  script(src='http://www.stripjs.com/bower_components/strip/dist/js/strip.pkgd.min.js')

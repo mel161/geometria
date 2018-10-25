@@ -36,7 +36,7 @@
 
   &--primary-inner {
     @media (min-width: 1200px) {
-      margin-bottom: 27px;
+      margin-bottom: 20px;
       font-size    : 48px;
     }
   }
@@ -80,8 +80,17 @@
   &--card {
     font-size  : 12px;
     font-weight: 500;
+
+    .card--news & {
+      margin-bottom: 10px;
+    }
     @media (min-width: 1200px) {
       font-size: 20px;
+
+      .card--news & {
+        font-size    : 16px;
+        margin-bottom: 7px;
+      }
     }
   }
 

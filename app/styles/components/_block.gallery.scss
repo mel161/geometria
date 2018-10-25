@@ -62,3 +62,14 @@
     }
   }
 }
+
+.strp-window {
+  @media (min-width: 1200px) {
+    width: 0;
+    max-width: calc(100vw - 660px) !important;
+  }
+}
+
+.strp-close {
+
+}

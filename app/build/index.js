@@ -1,12 +1,11 @@
 /* global $ */
-/* global jQuery */
 
-import 'smartscroll'
+import '../scripts/_scroll'
+import '../scripts/_sidebar'
+import '../scripts/_tab'
+import '../scripts/_form'
 
 import 'slick-carousel'
-
-import '../scripts/_sidebar'
-import '../scripts/_scroll'
 
 import '../styles/main.scss'
 
@@ -14,22 +13,10 @@ if (process.env.NODE_ENV !== 'production') {
   require('./build.pug')
 }
 
-jQuery(document).ready(() => {
-  $('.link--tab').click(function (event) {
-    event.preventDefault()
-    $(this).parent().addClass('nav__item--active').siblings().removeClass('nav__item--active')
-    let tab = $(this).attr('href')
-    $(tab).addClass('tab__item--active').siblings().removeClass('tab__item--active')
-  })
+$(document).ready(() => {
+  var resizing = false
 
-  $('.list--years').slick({
-    arrows: true,
-    dots: false,
-    slidesToShow: 3,
-    infinite: false,
-    prevArrow: "<button class='btn btn--transparent btn--prev slick-prev'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>",
-    nextArrow: "<button class='btn btn--transparent btn--next slick-next'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>"
-  })
+  scrollInit()
 
   $('.slider').slick({
     autoplay: false,
@@ -70,4 +57,42 @@ jQuery(document).ready(() => {
       }
     ]
   })
+
+  /* eslint no-console: 1 */
+  $(window).on('resize', function () {
+    if (!resizing) {
+      (!window.requestAnimationFrame)
+        ? setTimeout(scrollInit, 300)
+        : window.requestAnimationFrame(scrollInit)
+      resizing = true
+    }
+  })
+
+  function checkMQ () {
+    var dw = $('.page').outerWidth()
+
+    if (dw >= 1200) {
+      return 'desktop'
+    } else {
+      return 'mobile'
+    }
+  }
+
+  function scrollInit () {
+    var mq = checkMQ()
+
+    if (mq === 'mobile') {
+      $('.list--years').slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 3,
+        infinite: false,
+        prevArrow: "<button class='btn btn--transparent btn--prev slick-prev'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>",
+        nextArrow: "<button class='btn btn--transparent btn--next slick-next'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>"
+      })
+    } else {
+      $('.slick-next').css('top', $('.slick-initialized').height() - 45 + 'px')
+    }
+    resizing = false
+  }
 })

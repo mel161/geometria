@@ -1,10 +1,11 @@
 .slider {
-  width: auto;
-  height: auto;
-  margin: 0 -30px;
-
+  @include aspect-ratio(32, 33);
+  width     : auto;
+  height    : auto;
+  margin    : 0 -30px;
   @media (min-width: 1200px) {
     height  : 100%;
+    margin  : 0;
     overflow: hidden;
   }
 
@@ -12,20 +13,28 @@
     height  : 330px;
     position: relative;
     overflow: hidden;
-
     @media (min-width: 1200px) {
-      height  : 777px;
+      height: 100%;
     }
   }
 
   .slick-list {
     z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @media (min-width: 1200px) {
+      height : 100vh !important;
+    }
   }
 
   &.slick-vertical {
     .slick-slide {
-      height : 777px !important;
+      height : calc(100vh - 192px) !important;
       z-index: 5;
+      border : 0;
 
       > div {
         width : 100%;
@@ -39,74 +48,56 @@
     }
   }
 
-
   .btn--next,
   .btn--prev {
-    height: 70px;
-    width: 30px;
+    height    : 70px;
+    width     : 30px;
+    top       : 50%;
+    // margin-top: -35px;
+    @media (min-width: 1200px) {
+      width      : 110px;
+      height     : 40px;
+      left       : 50%;
+      right      : auto;
+      margin-left: -55px;
+      margin-top : 0;
+      position   : absolute;
+    }
   }
 
   .btn--next {
     right: 0;
+    @media (min-width: 1200px) {
+      right : auto;
+      bottom: 0;
+    }
   }
 
   .btn--prev {
     left: 0;
+    @media (min-width: 1200px) {
+      left: 50%;
+      top : 150px;
+    }
   }
-
-  // .slick-next,
-  // .slick-prev {
-  //   width           : 110px;
-  //   height          : 40px;
-  //   background-color: $brand;
-  //   position        : absolute;
-  //   left            : 50%;
-  //   margin-left     : -56px;
-  //
-  //   &::before {
-  //     content         : '';
-  //     display         : block;
-  //     width           : 27px;
-  //     height          : 15px;
-  //     position        : absolute;
-  //     top             : 50%;
-  //     left            : 50%;
-  //     transform       : translate(-50%, -50%);
-  //     background-image: url('./../../images/arrow.png');
-  //   }
-  //
-  //   &:hover {
-  //     background-color: $brand;
-  //   }
-  // }
-  // @media (min-width: 1200px) {
-  //   .slick-prev {
-  //     top    : 149px;
-  //     z-index: 15;
-  //   }
-  //
-  //   .slick-next {
-  //     top  : 930px;
-  //     right: auto;
-  //
-  //     &::before {
-  //       transform: rotateX(180deg) translate(-50%);
-  //     }
-  //   }
-  // }
 }
 
 .btn--next,
 .btn--prev {
   z-index: 10;
+
   &::before {
     display: none;
   }
 
+  &:hover {
+    background-color: $brand;
+  }
+
   .icon {
     transform: rotate(90deg);
-    width: 18px;
-    height: 10px;
+    width    : 18px;
+    height   : 10px;
   }
 }
 

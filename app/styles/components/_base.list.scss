@@ -133,7 +133,9 @@
     width : 536px;
     height: 100%;
     margin: 0 auto;
-    @media (min-width: 1200px) {}
+    @media (min-width: 1200px) {
+      width: 100%;
+    }
 
     .scroll-content {
       padding: 0 30px;

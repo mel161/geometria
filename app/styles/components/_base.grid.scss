@@ -42,6 +42,8 @@ body {
   width         : 0;
   height        : 100%;
   transition    : all 700ms ease-in-out;
+
+
   @media (min-width: 1200px) {
     width  : 330px;
     right  : -330px;
@@ -52,8 +54,18 @@ body {
     width: 100%;
 
     .sidebar__inner {
-      width      : 100%;
-      display    : block;
+      width  : 100%;
+      display: block;
+    }
+
+    @media (min-width: 1200px) {
+      width  : 330px;
+      right: 0;
+
+      .sidebar__inner {
+        width  : 330px;
+        display: block;
+      }
     }
   }
 
@@ -69,9 +81,9 @@ body {
     background-color: rgba($white, .9);
     padding         : 112px 30px 0;
     transition      : all 700ms ease-in-out;
-
     @media (min-width: 1200px) {
-      padding         : 0 48px;
+      padding: 0 48px;
+      width: 330px;
     }
   }
 }
@@ -120,6 +132,7 @@ body {
   padding       : 0 30px;
   @media (min-width: 1200px) {
     flex-direction: row;
+    padding       : 0;
   }
 
   &--full {
@@ -172,6 +185,7 @@ body {
     &::before {
       display: none;
     }
+
     .main--index & {
       position: relative;
     }
@@ -192,6 +206,10 @@ body {
 
     .main & {
       margin-bottom: 70px;
+    }
+
+    .main--index & {
+      margin: 0;
     }
   }
 
@@ -216,6 +234,7 @@ body {
     .main & {
       height: 330px;
     }
+
     .main--index & {
       height: auto;
     }

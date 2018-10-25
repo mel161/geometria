@@ -31,6 +31,4 @@ jQuery(document).ready(() => {
     $(this).toggleClass('btn--active')
     $('#js-map-nav').toggleClass('nav__list--visible')
   })
-
-  $('.scrollbar-rail').scrollbar()
 })

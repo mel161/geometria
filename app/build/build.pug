@@ -14,7 +14,7 @@ block content
   // Main
   main.main.main--build
     // Section About
-    section.section.slide(data-hash='about')
+    section.section.slide(data-hash='photo')#photo
       .grid
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical
@@ -22,18 +22,18 @@ block content
             nav.nav.nav--submenu.nav--submenu-first
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu.nav__item--active
-                  a.link.link--nav(href='#') Фотоотчёт
+                  a.link.link--nav(href='#photo') Фотоотчёт
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Веб-камера
+                  a.link.link--nav(href='#camera') Веб-камера
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Панорама
+                  a.link.link--nav(href='#panorama') Панорама
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Новости
+                  a.link.link--nav(href='#news') Новости
             h3.heading.heading--secondary.heading--secondary-inner Фотоотчёт
               nav.nav.nav--tabs.nav--years
                 ul.nav__list.nav__list--horizontal
                   li.nav__item.nav__item--tabs.nav__item--years.nav__item--active
-                    a.link.link--nav.link--tab(href='#tab1') 
+                    a.link.link--nav.link--tab(href='#tab1')
                       span.text.text--xsmall.text--f-medium 2017
                   li.nav__item.nav__item--tabs.nav__item--years
                     a.link.link--nav.link--tab(href='#tab2')
@@ -110,7 +110,7 @@ block content
 
           .col.col--center.col--center-full
             .slider
-              .slider__item              
+              .slider__item
                 picture.image.image--slider
                   source(media='(min-width: 1200px)', srcset='../images/gallery-big-1.jpg')
                   img(src='../images/gallery-thumb-2.jpg')
@@ -122,10 +122,10 @@ block content
                 picture.image.image--slider
                   source(media='(min-width: 1200px)', srcset='../images/gallery-big-3.jpg')
                   img(src='../images/gallery-thumb-2.jpg')
-            
+
     // Section About End
     // Section About
-    section.section.slide(data-hash='about')
+    section.section.slide(data-hash='camera')#camera
       .grid
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical
@@ -133,24 +133,24 @@ block content
             nav.nav.nav--submenu
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Фотоотчёт
+                  a.link.link--nav(href='#photo') Фотоотчёт
                 li.nav__item.nav__item--submenu.nav__item--active
-                  a.link.link--nav(href='#') Веб-камера
+                  a.link.link--nav(href='#camera') Веб-камера
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Панорама
+                  a.link.link--nav(href='#panorama') Панорама
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Новости
+                  a.link.link--nav(href='#news') Новости
             h3.heading.heading--secondary.heading--secondary-inner Веб-камера
 
           .col.col--center.col--center-full
-            .col--overlay            
+            .col--overlay
               picture.image.image--gallery
                 source(media='(min-width: 1200px)', srcset='../images/camera.jpg')
                 img(src='../images/camera-thumb.jpg')
-            
+
     // Section About End
     // Section About
-    section.section.slide(data-hash='about')
+    section.section.slide(data-hash='panorama')#panorama
       .grid
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical
@@ -158,40 +158,40 @@ block content
             nav.nav.nav--submenu
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Фотоотчёт
+                  a.link.link--nav(href='#photo') Фотоотчёт
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Веб-камера
+                  a.link.link--nav(href='#camera') Веб-камера
                 li.nav__item.nav__item--submenu.nav__item--active
-                  a.link.link--nav(href='#') Панорама
+                  a.link.link--nav(href='#panorama') Панорама
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Новости
+                  a.link.link--nav(href='#news') Новости
             h3.heading.heading--secondary.heading--secondary-inner Панорама
             .block
               ul.list.list--years
                 li.list__item.list__item--years
                   a(href="#").link.link--years
                     span.text.text--xsmall.text--f-medium Январь 2017
-                    
+
                 li.list__item.list__item--years
                   a(href="#").link.link--years
                     span.text.text--xsmall.text--f-medium Май 2018
-                
+
                 li.list__item.list__item--years
                   a(href="#").link.link--years
                     span.text.text--xsmall.text--f-medium Август 2018
-                
+
                 li.list__item.list__item--years
                   a(href="#").link.link--years
                     span.text.text--xsmall.text--f-medium Сентябрь 2018
 
           .col.col--center.col--center-full
-            .col--overlay            
+            .col--overlay
               picture.image.image--gallery
                 source(media='(min-width: 1200px)', srcset='../images/camera.jpg')
                 img(src='../images/camera-thumb.jpg')
     // Section About End
     // Section About
-    section.section.slide(data-hash='about')
+    section.section.slide(data-hash='news')#news
       .grid
         .row.row--full
           .col.col--left.col--left-no-border.col--margin-left.col--margin-vertical
@@ -199,13 +199,13 @@ block content
             nav.nav.nav--submenu
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Фотоотчёт
+                  a.link.link--nav(href='#photo') Фотоотчёт
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Веб-камера
+                  a.link.link--nav(href='#camera') Веб-камера
                 li.nav__item.nav__item--submenu
-                  a.link.link--nav(href='#') Панорама
+                  a.link.link--nav(href='#panorama') Панорама
                 li.nav__item.nav__item--submenu.nav__item--active
-                  a.link.link--nav(href='#') Новости
+                  a.link.link--nav(href='#news') Новости
             h3.heading.heading--secondary.heading--secondary-inner Новости
 
           .col.col--center.col--center-full.col--vertical-center

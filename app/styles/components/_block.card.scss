@@ -186,6 +186,8 @@
 
 .card {
   // Styles
+  position  : relative;
+  transition: all 0.5s ease-in-out;
   // Media Queries
   // Elements
   &__front {
@@ -239,16 +241,21 @@
 
   &__image {
     // Styles
-    display : block;
-    position: relative;
-    width   : 100%;
+    display            : block;
+    position           : relative;
+    width              : 100%;
+    background-position: top center;
+    background-size    : cover;
+    background-repeat  : no-repeat;
 
     .card--features & {
       height  : 247px;
       overflow: hidden;
       // Media Queries
       @media (min-width: 1200px) {
-        height: 690px;
+        height  : 690px;
+        display : block;
+        position: relative;
       }
     }
 
@@ -258,8 +265,8 @@
 
     .card--news & {
       @include aspect-ratio(26, 19);
-      display: block;
-      width: 100%;
+      display      : block;
+      width        : 100%;
       margin-bottom: 6px;
     }
     // Media Queries
@@ -273,6 +280,12 @@
     background-color: inherit;
     color           : inherit;
     // Media Queries
+    @media (min-width: 1200px) {
+      left     : 0;
+      width    : 100%;
+      max-width: 300px;
+      padding  : 49px 39px;
+    }
   }
 
   &__text {
@@ -283,8 +296,8 @@
 
   &__content {
     display: block;
-    width: auto;
-    height: auto;
+    width  : auto;
+    height : auto;
 
     .card--docs & {
       margin-left: 3px;
@@ -313,17 +326,24 @@
 
   &--features {
     // Styles
-    display      : block;
-    width        : 126px;
-    height       : 367px;
-    margin-right : 8px;
-    margin-bottom: 20px;
+    display         : block;
+    width           : 126px;
+    height          : 367px;
+    margin-right    : 8px;
+    margin-bottom   : 20px;
+    background-color: inherit;
+    color           : inherit;
 
     &.card--active {
       width : 100%;
       height: 100%;
     }
     // Media Queries
+    @media (min-width: 1200px) {
+      height: 690px;
+      width : 300px;
+      float: left;
+    }
   }
 
   &--news {
@@ -352,9 +372,9 @@
 
   &--docs {
     // Styles
-    width: 100%;
-    height: 186px;
-    border: 1px solid $brand;
+    width     : 100%;
+    height    : 186px;
+    border    : 1px solid $brand;
     box-sizing: border-box;
 
     .text--normal {

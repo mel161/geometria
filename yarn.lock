@@ -7624,6 +7624,10 @@ package-json@^4.0.0:
     registry-url "^3.0.3"
     semver "^5.1.0"
 
+page-scroll-to-id@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/page-scroll-to-id/-/page-scroll-to-id-1.5.9.tgz#2ef54feaccf3550a5142339e82ecc61469107c58"
+
 pako@~0.2.0:
   version "0.2.9"
   resolved "https://registry.yarnpkg.com/pako/-/pako-0.2.9.tgz#f3f7522f4ef782348da8161bad9ecfd51bf83a75"

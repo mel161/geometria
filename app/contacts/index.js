@@ -4,6 +4,7 @@
 import 'smartscroll'
 
 import '../scripts/_sidebar'
+import '../scripts/_scroll'
 
 import 'jquery-mask-plugin'
 import 'jquery-validation'
@@ -17,18 +18,7 @@ if (process.env.NODE_ENV !== 'production') {
   require('./contacts.pug')
 }
 
-// /* global EventEmitter */
-// let ee = new EventEmitter()
-
 jQuery(document).ready(() => {
-  // $.smartscroll({
-  //   autoHash: false,
-  //   sectionScroll: true,
-  //   sectionWrapperSelector: '.page',
-  //   sectionClass: 'slide',
-  //   eventEmitter: ee,
-  //   bindSwipe: true
-  // })
   $('.input--phone').mask('+7(999) 999 99-99')
 
   //  Form

@@ -41,9 +41,9 @@
     }
 
     .nav--top & {
-      flex-direction: column;
+      flex-direction : column;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items    : flex-start;
       @media (min-width: 1200px) {
         flex-direction: row;
       }
@@ -55,13 +55,12 @@
     transition: all 500ms ease-in-out;
     // Modifiers
     &--top {
-      color       : $black;
-      font-size   : 16px;
-      font-weight : normal;
-      line-height : 20px;
+      color         : $black;
+      font-size     : 16px;
+      font-weight   : normal;
+      line-height   : 20px;
       text-transform: uppercase;
-      margin-bottom: 18px;
-
+      margin-bottom : 18px;
       @media (min-width: 1200px) {
         margin-top  : 2px;
         margin-right: 42px;
@@ -84,7 +83,7 @@
       line-height   : 20px;
       text-transform: uppercase;
       @media (min-width: 1200px) {
-        margin-bottom : 20px;
+        margin-bottom: 20px;
         font-size    : 18px;
         line-height  : 20px;
         margin-bottom: 25px;
@@ -107,6 +106,8 @@
       @media (min-width: 1200px) {
         margin-bottom: 25px;
         font-size    : 20px;
+        display: block;
+        text-align: left;
       }
     }
 
@@ -183,7 +184,7 @@
   }
 
   &--main {
-    width: 100%;
+    width        : 100%;
     margin-bottom: 44px;
     @media (min-width: 1200px) {
       position: absolute;
@@ -239,14 +240,15 @@
     display         : none;
 
     .main--build & {
-      width: auto;
+      // width: 100%;
       @media (min-width: 1200px) {
         width: 447px;
       }
     }
     @media (min-width: 1200px) {
-      width        : 425px;
-      margin-bottom: 75px;
+      width           : 425px;
+      margin-bottom   : 75px;
+      background-color: transparent;
 
       .main--build & {
         width: 447px;
@@ -256,5 +258,14 @@
 
   &--submenu-first {
     display: block;
+  }
+
+  &--subheader-sticky {
+    position: fixed;
+    top     : 75px;
+    left    : 0;
+    width   : 100%;
+    z-index : 55;
+    margin  : 0;
   }
 }

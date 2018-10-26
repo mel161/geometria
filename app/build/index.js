@@ -1,9 +1,7 @@
 /* global $ */
 
-import '../scripts/_scroll'
-import '../scripts/_sidebar'
+import '../scripts/_common'
 import '../scripts/_tab'
-import '../scripts/_form'
 
 import 'slick-carousel'
 

@@ -1,13 +1,38 @@
 /* global $ */
-import 'smartscroll'
-
-import 'jquery.scrollbar'
-import 'page-scroll-to-id'
-// import EventEmitter from './vendor/EventEmitter.min'
-// import './vendor/lethargy.min'
-
 /* global EventEmitter */
 let ee = new EventEmitter()
+
+var scrollStartListenerIndex = function (slideNumber) {
+  $('.sidebar').removeClass('sidebar--active')
+  if (slideNumber === 0 && slideNumber === 1) {
+    $('#svg-figure').css('stroke', '#fff')
+    $('#svg-text').css('fill', '#fff')
+    $('.nav__item--top').removeClass('nav__item--top-scroll')
+  } else if (slideNumber % 2 === 0 || slideNumber > 4) {
+    $('#svg-figure').css('stroke', '#323232')
+    $('#svg-text').css('fill', '#323232')
+    $('.nav__item--top').addClass('nav__item--top-scroll')
+  } else if (slideNumber % 3 === 0) {
+    $('#svg-figure').css('stroke', '#fff')
+    $('#svg-text').css('fill', '#fff')
+  } else {
+    $('#svg-figure').css('stroke', '#fff')
+    $('#svg-text').css('fill', '#fff')
+    $('.nav__item--top').removeClass('nav__item--top-scroll')
+  }
+}
+
+var scrollStartListener = function (slideNumber) {
+  $('.sidebar').removeClass('sidebar--active')
+}
+var scrollEndListener = function () {}
+
+if ($('.main').is('.main--index')) {
+  ee.addListener('scrollStart', scrollStartListenerIndex)
+} else {
+  ee.addListener('scrollStart', scrollStartListener)
+}
+ee.addListener('scrollEnd', scrollEndListener)
 
 $(document).ready(() => {
   var resizing = false
@@ -25,7 +50,6 @@ $(document).ready(() => {
   }
 
   scrollInit()
-  /* eslint no-console: 1 */
   $(window).on('resize', function () {
     if (!resizing) {
       (!window.requestAnimationFrame)

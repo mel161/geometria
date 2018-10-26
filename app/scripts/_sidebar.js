@@ -1,10 +1,5 @@
 /* global $ */
-
-// import MobileDetect from 'mobile-detect'
-
 $(document).ready(function () {
-  // var md = new MobileDetect(window.navigator.userAgent)
-
   var topNav = $('.nav--top')
   var sidebar = $('.sidebar')
   var sidebarInner = $('.sidebar__inner')

@@ -1,11 +1,6 @@
 /* global $ */
 /* global jQuery */
 
-import 'jquery-mask-plugin'
-import 'jquery-validation'
-
-import 'jquery-modal'
-
 jQuery(document).ready(() => {
   $('.modal__close').modal({closeClass: '', closeText: ''})
 

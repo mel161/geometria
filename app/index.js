@@ -1,14 +1,12 @@
 /* global $ */
 /* global jQuery */
 
-import './styles/main.scss'
-
-import './scripts/_scroll'
-import './scripts/_sidebar'
+import './scripts/_common'
 import './scripts/_tab'
-import './scripts/_form'
 
 import mapInit from './scripts/_map'
+
+import './styles/main.scss'
 
 if (process.env.NODE_ENV !== 'production') {
   require('./index.pug')

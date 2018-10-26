@@ -1,9 +1,7 @@
 /* global $ */
 /* global jQuery */
 
-import '../scripts/_scroll'
-import '../scripts/_sidebar'
-import '../scripts/_form'
+import '../scripts/_common'
 
 import mapInit from './../scripts/_map-contacts'
 import mapBigInit from './../scripts/_map-contacts-2'

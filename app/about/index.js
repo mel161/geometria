@@ -1,9 +1,7 @@
 /* global $ */
 /* global jQuery */
 
-import '../scripts/_sidebar'
-import '../scripts/_scroll'
-import '../scripts/_form'
+import '../scripts/_common'
 
 import '../styles/main.scss'
 

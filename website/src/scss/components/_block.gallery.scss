@@ -8,8 +8,9 @@
     position  : relative;
     overflow  : hidden;
     cursor    : pointer;
+    height    : 100%;
 
-    &:before {
+    &::before {
       display         : block;
       z-index         : 1;
       position        : absolute;
@@ -23,36 +24,52 @@
     }
 
     &:hover {
-      &:before {
+      &::before {
         background-color: rgba($black, 0);
         display         : none;
       }
 
-    .link {
+      .link {
         transform: translate(-50%, -50%) scale(1.1);
       }
     }
     // Modifiers
     &--first {
       flex-grow: 1;
+      height   : auto;
     }
 
     &--second {
       flex-grow: 2;
+      height   : auto;
     }
 
     &--third {
       flex-grow: 1;
+      height   : auto;
     }
   }
   // Modifiers
   &--vertical {
+    min-height    : 430px;
+    height        : calc(100vh - 75px);
+    margin        : 30px -30px 0;
     display       : flex;
     flex-direction: column;
-    height        : 100%;
+    @media (min-width: 1200px) {
+      height: 100%;
+      margin: 0;
+    }
   }
 }
 
-.slideGallery {
-  background-color: red;
+.strp-window {
+  @media (min-width: 1200px) {
+    width: 0;
+    max-width: calc(100vw - 660px) !important;
+  }
+}
+
+.strp-close {
+
 }

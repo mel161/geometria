@@ -1,15 +1,35 @@
-// Font Awesome
-@import '_vendors/font-awesome/fontawesome';
-@import '_vendors/font-awesome/solid';
-@import '_vendors/font-awesome/brands';
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
 
-// @import 'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css';
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+
+  &::before {
+    display    : block;
+    content    : '';
+    width      : 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+
+  > .content {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    right   : 0;
+    bottom  : 0;
+  }
+}
 
 // Reset
 @import 'base/minireset';
 
 // Fonts
-@import "fonts";
+@import 'fonts';
 //
 $font-sans: 'Muller', sans-serif;
 
@@ -26,10 +46,17 @@ $grey-light: #ccc;
 
 //
 $brand: #cfd11a;
+$brand-light: #cfd11a;
 
 // Grid
 @import 'components/_base.grid';
 
+// Vendors
+@import 'vendor/strip';
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
+@import 'vendor/jquery.scrollbar';
+@import 'vendor/jquery.modal';
 
 // Typography
 @import 'components/_base.typo';
@@ -52,6 +79,10 @@ $brand: #cfd11a;
 @import 'components/_block.tab';
 @import 'components/_block.gallery';
 @import 'components/_block.card';
+@import 'components/_block.form';
+@import 'components/_block.input';
+@import 'components/_block.slider';
+@import 'components/_block.modal';
 
 
 // Helpers

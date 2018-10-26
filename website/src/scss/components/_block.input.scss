@@ -1,0 +1,116 @@
+.input {
+  width  : 100%;
+  outline: none;
+
+  &:active {
+    outline: none;
+  }
+
+  &--text {
+    margin-bottom: 15px;
+    padding      : 20px 24px;
+    border       : 1px solid $brand;
+    color        : $black;
+    font-size    : 12px;
+    font-weight  : 400;
+    line-height  : 1;
+    @media (min-width: 1200px) {
+      font-size: 16px;
+    }
+
+    ::-webkit-input-placeholder {
+      color: $grey-light;
+    }
+
+    ::-moz-placeholder {
+      color: $grey-light;
+    }
+
+    :-ms-input-placeholder {
+      color: $grey-light;
+    }
+
+    :-moz-placeholder {
+      color: $grey-light;
+    }
+  }
+
+  &--checkbox {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    width   : 0;
+    height  : 0;
+    cursor  : pointer;
+
+    &::before {
+      display : block;
+      position: absolute;
+      top     : 5px;
+      left    : 0;
+      width   : 25px;
+      height  : 25px;
+      border  : 1px solid $brand;
+      content : '';
+      @media (min-width: 1200px) {
+        left: 5px;
+        width : 30px;
+        height: 30px;
+      }
+    }
+
+    &:checked::after {
+      display         : block;
+      position        : absolute;
+      top             : 7.5px;
+      left            : 2.5px;
+      width           : 20px;
+      height          : 20px;
+      background-color: $brand;
+      content         : '';
+
+      @media (min-width: 1200px) {
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+}
+
+span.input--error {
+  position   : absolute;
+  top        : 0;
+  right      : 0;
+  width      : 260px;
+  color      : $brand;
+  font-size  : 12px;
+  font-weight: 400;
+  line-height: 60px;
+  @media (min-width: 1200px) {
+    font-size: 16px;
+  }
+}
+
+.label {
+  display : block;
+  position: relative;
+  width   : 100%;
+
+  &--checkbox {
+    height       : 40px;
+    margin-bottom: 25px;
+    padding-top  : 6px;
+    padding-left : 37px;
+    line-height  : 1.2;
+    cursor       : pointer;
+    @media (min-width: 1200px) {
+      padding-left: 45px;
+    }
+  }
+
+  &:last-of-type {
+    .form--modal & {
+      margin: 31px 0 35px -5px;
+    }
+  }
+}

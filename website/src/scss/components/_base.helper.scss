@@ -1,23 +1,33 @@
 .bg {
+  @media (max-width: 1200px) {
+    margin: 0 -30px;
+    padding: 0 30px;
+  }
   // Modifiers
   &--transparent {
     background-color: transparent;
   }
+
   &--black {
     background-color: $black;
   }
+
   &--white {
     background-color: $white;
   }
+
   &--brand {
     background-color: $brand;
   }
+
   &--grey {
     background-color: $grey;
   }
+
   &--grey-dark {
     background-color: $grey-dark;
   }
+
   &--grey-light {
     background-color: $grey-light;
   }
@@ -28,6 +38,7 @@
   &--fill-white {
     fill: white;
   }
+
   &--fill-grey-dark {
     fill: $grey-dark;
   }
@@ -35,7 +46,16 @@
   &--stroke-white {
     stroke: white;
   }
+
   &--stroke-grey-dark {
     stroke: $grey-dark;
+  }
+}
+
+.clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
   }
 }

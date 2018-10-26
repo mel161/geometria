@@ -1,16 +1,18 @@
 body {
   -webkit-font-smoothing: antialiased;
   font-family           : $font-sans;
-  font-feature-settings : "liga", 'clig';
+  font-feature-settings : 'liga', 'clig';
   font-size             : 16px;
   font-weight           : 300;
   line-height           : 1.2;
   text-rendering        : optimizeLegibility;
+
   // Selection
   *::-moz-selection {
     background-color: rgba($brand, 0.3);
     text-shadow     : none;
   }
+
   //
   *::selection {
     background-color: rgba($brand, 0.3);
@@ -29,12 +31,15 @@ body {
   &--black {
     color: $black;
   }
+
   &--grey {
     color: $grey;
   }
+
   &--grey-light {
     color: $grey-light;
   }
+
   &--grey-dark {
     color: $grey-dark;
   }
@@ -42,50 +47,89 @@ body {
   &--brand {
     color: $brand;
   }
+
   // Sizes
   &--hide {
     text-indent: 100%;
     white-space: nowrap;
-    overflow: hidden;
+    overflow   : hidden;
   }
 
   &--xsmall {
     font-size: 12px;
+
+    &.label {
+      font-size: 10px;
+
+      @media (min-width: 1200px) {
+        font-size: 12px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      font-size: 12px;
+    }
   }
 
   &--small {
-    font-size: 14px;
+    @media (min-width: 1200px) {
+      font-size: 14px;
+    }
   }
 
   &--normal {
-    font-size: 16px;
+    font-size: 12px;
+    @media (min-width: 1200px) {
+      font-size: 16px;
+    }
 
     &.location {
       display: inline-block;
-      width: 150px;
+      @media (min-width: 1200px) {
+        width: 150px;
+      }
     }
   }
 
   &--medium {
-    font-size: 18px;
+    font-size: 14px;
+    @media (min-width: 1200px) {
+      font-size: 18px;
+    }
   }
 
   &--large {
-    font-size: 20px;
+    @media (min-width: 1200px) {
+      font-size: 20px;
+    }
   }
 
   &--xlarge {
-    font-size: 22px;
-  }
-  &--big {
-    font-size: 36px;
+    @media (min-width: 1200px) {
+      font-size: 22px;
+    }
 
-    &.time {
-      display: inline-block;
-      width: 139px;
-      margin-left: 2px;
+    .card & {
+      font-size: 25px;
     }
   }
+
+  &--big {
+    font-size: 26px;
+    @media (min-width: 1200px) {
+      font-size: 36px;
+    }
+
+    &.time {
+      display     : inline-block;
+      margin-right: 72px;
+      @media (min-width: 1200px) {
+        width      : 139px;
+        margin-left: 2px;
+      }
+    }
+  }
+
   // Styled
   &--underline {
     text-decoration: underline;
@@ -94,40 +138,76 @@ body {
   &--thin {
     font-weight: 100;
   }
+
   &--ultrathin {
     font-weight: 200;
   }
+
   &--light {
     font-weight: 300;
   }
+
   &--regular {
     font-weight: 400;
   }
-  &--medium {
+
+  &--f-medium {
     font-weight: 500;
   }
+
   &--bold {
     font-weight: 600;
   }
+
   &--extrabold {
     font-weight: 700;
   }
+
   &--heavy {
     font-weight: 800;
   }
-  &--black {
+
+  &--f-black {
     font-weight: 900;
+  }
+
+  // Text Align
+  &--left {
+    display   : inline-block;
+    width     : 100%;
+    text-align: left;
+  }
+
+  &--center {
+    display   : inline-block;
+    width     : 100%;
+    text-align: center;
+  }
+
+  &--right {
+    display   : inline-block;
+    width     : 100%;
+    text-align: right;
   }
 }
 
 .paragraph {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
+  @media (min-width: 1200px) {
+    margin-bottom: 20px;
+    max-width: 500px;
+  }
 
   // Modifiers
   &--about-last {
     margin-bottom: 122px;
   }
+
   &--inner {
-    width: 400px;
+    width: auto;
+    display: none;
+    @media (min-width: 1200px) {
+      width: 400px;
+    }
   }
 }

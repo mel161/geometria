@@ -4,20 +4,18 @@
   float   : left;
   // Elements
   &__link {
-    display: block;
+    display : block;
+    position: relative;
+    width   : 100%;
+    height  : 100%;
   }
-
-  &__image {
-    width: 100%;
-  }
-
   // Modifiers
   &--top {
-    // height: 100%;
+    width: 109px;
+    margin: 20px 0 0 30px;
     @media (min-width: 1200px) {
-      // padding: 53px 0 0 150px;
-      width: 254px;
-      margin: 2px 0 0px 0px;
+      width : 254px;
+      margin: 2px 0 0;
     }
   }
 
@@ -25,10 +23,24 @@
     width        : 100%;
     margin-bottom: 8px;
     margin-left  : 2px;
+    @media (min-width: 1200px) {
+
+    }
+  }
+
+  &--bank {
+    width    : auto;
+    max-width: 90px;
+    height   : auto;
   }
 }
 
 #svg-figure {
+  stroke: $black;
+  @media (min-width: 1200px) {
+    stroke: $white;
+  }
+
   .logo__link:hover & {
     stroke: $brand;
   }
@@ -39,6 +51,12 @@
 }
 
 #svg-text {
+  fill: $black;
+
+  @media (min-width: 1200px) {
+    fill: $white;
+  }
+
   .about-features & {
     fill: $black;
   }

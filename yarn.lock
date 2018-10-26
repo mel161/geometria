@@ -2,10 +2,6 @@
 # yarn lockfile v1
 
 
-"@fancyapps/fancybox@^3.5.2":
-  version "3.5.2"
-  resolved "https://registry.yarnpkg.com/@fancyapps/fancybox/-/fancybox-3.5.2.tgz#d6ff4bf3bc99dd69c53bcee9397d8cf698462fe3"
-
 "@gulp-sourcemaps/identity-map@1.X":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@gulp-sourcemaps/identity-map/-/identity-map-1.0.2.tgz#1e6fe5d8027b1f285dc0d31762f566bccd73d5a9"
@@ -22,6 +18,10 @@
   dependencies:
     normalize-path "^2.0.1"
     through2 "^2.0.3"
+
+"@staaky/strip@^1.6.5":
+  version "1.6.5"
+  resolved "https://registry.yarnpkg.com/@staaky/strip/-/strip-1.6.5.tgz#5d289ed2320ebb39d73f8198cc75cc0105788846"
 
 "@webassemblyjs/ast@1.5.13":
   version "1.5.13"
@@ -4578,7 +4578,25 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery@^3.3.1:
+jquery-mask-plugin@^1.14.15:
+  version "1.14.15"
+  resolved "https://registry.yarnpkg.com/jquery-mask-plugin/-/jquery-mask-plugin-1.14.15.tgz#9daabb41024383cba2a793bacfa46ef8f87273a5"
+
+jquery-modal@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/jquery-modal/-/jquery-modal-0.9.1.tgz#f22f13f0efa5ea3f2afaeb7981c1e20114c9d2f2"
+
+jquery-validation@^1.18.0:
+  version "1.18.0"
+  resolved "https://registry.yarnpkg.com/jquery-validation/-/jquery-validation-1.18.0.tgz#69898f6cddc3e8ef5811de84ff8b23fc24d93776"
+  dependencies:
+    jquery "^1.7 || ^2.0 || ^3.1"
+
+jquery.scrollbar@^0.2.11:
+  version "0.2.11"
+  resolved "https://registry.yarnpkg.com/jquery.scrollbar/-/jquery.scrollbar-0.2.11.tgz#e91bd4a97d83859463024d26e730dc36676ab59d"
+
+"jquery@^1.7 || ^2.0 || ^3.1", jquery@^3.3.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -5271,6 +5289,10 @@ mixin-deep@^1.2.0:
   dependencies:
     minimist "0.0.8"
 
+mobile-detect@^1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/mobile-detect/-/mobile-detect-1.4.3.tgz#e436a3839f5807dd4d3cd4e081f7d3a51ffda2dd"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -5828,6 +5850,10 @@ p-try@^1.0.0:
 p-try@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/p-try/-/p-try-2.0.0.tgz#85080bb87c64688fa47996fe8f7dfbe8211760b1"
+
+page-scroll-to-id@^1.5.9:
+  version "1.5.9"
+  resolved "https://registry.yarnpkg.com/page-scroll-to-id/-/page-scroll-to-id-1.5.9.tgz#2ef54feaccf3550a5142339e82ecc61469107c58"
 
 pako@~1.0.5:
   version "1.0.6"
@@ -6883,6 +6909,10 @@ slice-ansi@1.0.0:
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-1.0.0.tgz#044f1a49d8842ff307aad6b505ed178bd950134d"
   dependencies:
     is-fullwidth-code-point "^2.0.0"
+
+slick-carousel@^1.8.1:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/slick-carousel/-/slick-carousel-1.8.1.tgz#a4bfb29014887bb66ce528b90bd0cda262cc8f8d"
 
 smartscroll@^2.5.2:
   version "2.5.2"

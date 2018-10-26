@@ -1,7 +1,9 @@
 .btn {
   // Styles
-  border : 0;
-  outline: none;
+  border     : 0;
+  outline    : none;
+  font-family: $font-sans;
+  text-align : center;
   // Modifiers
   &--transparent {
     padding         : 0;
@@ -11,22 +13,104 @@
   &--base {
     background-color: $brand;
     color           : $grey-dark;
-    font-size       : 18px;
+    font-size       : 16px;
     font-weight     : 400;
     display         : block;
-    width           : auto;
+    // width           : auto;
     line-height     : 1;
+    width           : 100%;
+    padding         : 16px 0;
     // Media Queries
     @media (min-width: 1200px) {
-      padding: 21px 50px;
-      width: 250px;
+      font-size: 18px;
+      padding  : 21px 45px;
+      width    : 250px;
+    }
+    // States
+    &:link {}
+
+    &:visited {}
+
+    &:hover {}
+
+    &:active {
+      background-color: $grey-dark;
+      color           : $white;
+    }
+
+    &:disabled {
+      background-color: $brand-light;
+    }
+
+    .modal--success & {
+      margin-top: 74px;
+    }
+  }
+
+  &--order {
+    position: absolute;
+    bottom  : 352px;
+    left    : 0;
+    width   : calc(100% - 60px);
+    margin  : 0 30px;
+    padding : 15px 0;
+    @media (min-width: 1200px) {
+      position: absolute;
+      bottom  : 71px;
+      left    : 150px;
+      width   : 250px;
+      margin  : 0;
+      padding : 16px 0;
+    }
+  }
+
+  &--order-wide {
+    @media (max-width: 1200px) {
+      // top: 10px;
+      bottom: 10px;
+    }
+  }
+
+  &--load-more {
+    width  : 110px;
+    height : 40px;
+    display: block;
+    margin : 0 auto;
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+
+  &--map-nav-toggle {
+    width          : 110px;
+    height         : 40px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    position       : absolute;
+    bottom         : -20px;
+    left           : 50%;
+    margin-left    : -55px;
+    z-index        : 10;
+
+    &.btn--active {
+      .icon {
+        transform: scale(1, -1);
+      }
+    }
+    @media (min-width: 1200px) {
+      display: none;
     }
   }
 }
 
 #js-sidebar-trigger {
-  z-index : 15;
+  z-index : 55;
   position: absolute;
-  top     : 67px;
-  right   : 34px;
+  top     : 16px;
+  right   : 25px;
+  @media (min-width: 1200px) {
+    top  : 70px;
+    right: 50px;
+  }
 }

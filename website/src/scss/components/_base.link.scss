@@ -30,6 +30,10 @@
     text-decoration: underline;
   }
 
+  &--underline {
+    text-decoration: underline;
+  }
+
   &--socials {
     color: $brand;
     fill : $brand;
@@ -88,5 +92,29 @@
     }
 
     &:active {}
+  }
+
+  &--years {
+    position  : absolute;
+    display   : block;
+    width     : 100%;
+    height    : 100%;
+    top       : 0;
+    left      : 0;
+    padding   : 21px 20px;
+    text-align: center;
+
+    &:link {}
+
+    &:visited {}
+
+    &:hover {
+      background-color: $brand;
+    }
+
+    &:active {}
+    @media (min-width: 1200px) {
+      padding: 32px 25px;
+    }
   }
 }

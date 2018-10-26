@@ -44,9 +44,16 @@
     "webpack-stream": "^5.1.1"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "^3.5.2",
+    "@staaky/strip": "^1.6.5",
     "jquery": "^3.3.1",
+    "jquery-mask-plugin": "^1.14.15",
+    "jquery-modal": "^0.9.1",
+    "jquery-validation": "^1.18.0",
+    "jquery.scrollbar": "^0.2.11",
+    "mobile-detect": "^1.4.3",
     "normalize-scss": "^7.0.1",
+    "page-scroll-to-id": "^1.5.9",
+    "slick-carousel": "^1.8.1",
     "smartscroll": "^2.5.2"
   }
 }

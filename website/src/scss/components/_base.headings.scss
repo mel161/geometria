@@ -5,6 +5,8 @@
   &--hero {
     text-transform: uppercase;
     vertical-align: middle;
+    font-size     : 21px;
+    z-index       : 1;
     // Media Queries
     @media (min-width: 1200px) {
       width    : 700px;
@@ -13,6 +15,19 @@
   }
 
   &--primary {
+    font-size     : 36px;
+    margin-bottom : 27px;
+    padding-bottom: 7px;
+
+    .main--build & {
+      font-size: 36px;
+      @media (min-width: 1200px) {
+        margin-bottom: 30px;
+        font-size    : 48px;
+        margin-right : 78px;
+        line-height  : 50px;
+      }
+    }
     @media (min-width: 1200px) {
       margin-bottom: 69px;
       font-size    : 48px;
@@ -21,12 +36,14 @@
 
   &--primary-inner {
     @media (min-width: 1200px) {
-      margin-bottom: 27px;
+      margin-bottom: 20px;
       font-size    : 48px;
     }
   }
 
   &--secondary {
+    font-size    : 18px;
+    margin-bottom: 26px;
     @media (min-width: 1200px) {
       width        : 500px;
       margin-bottom: 45px;
@@ -35,18 +52,45 @@
   }
 
   &--secondary-inner {
+    font-size     : 26px;
+    margin-top    : 56px;
+    margin-bottom : 30px;
+    padding-bottom: 16px;
+    border-bottom : 1px solid $brand;
     @media (min-width: 1200px) {
       font-size     : 36px;
       padding-bottom: 15px;
       width         : 100%;
+
+      .main--build & {
+        // float: left;
+        height       : 60px;
+        margin-bottom: 19px;
+      }
+    }
+  }
+
+  &--border {
+    @media (min-width: 1200px) {
+      padding-bottom: 15px;
     }
     border-bottom: 1px solid $brand;
   }
 
   &--card {
+    font-size  : 12px;
+    font-weight: 500;
+
+    .card--news & {
+      margin-bottom: 10px;
+    }
     @media (min-width: 1200px) {
-      font-size  : 20px;
-      font-weight: 500;
+      font-size: 20px;
+
+      .card--news & {
+        font-size    : 16px;
+        margin-bottom: 7px;
+      }
     }
   }
 
@@ -54,13 +98,32 @@
     // Styles
     font-weight   : 400;
     text-transform: uppercase;
+    font-size     : 14px;
+    margin-bottom : 19px;
+    padding-top   : 3px;
+    padding-bottom: 15px;
+    border-bottom : 1px solid $brand;
     // Media Queries
     @media (min-width: 1200px) {
       width         : 100%;
       margin-bottom : 40px;
       padding-bottom: 15px;
-      border-bottom : 1px solid $brand;
       font-size     : 14px;
+    }
+  }
+
+  &--modal {
+    @media (min-width: 1200px) {
+      font-size    : 32px;
+      font-weight  : bold;
+      margin-bottom: 37px;
+    }
+  }
+
+  &--index-location {
+    display: none;
+    @media (min-width: 1200px) {
+      display: inline-block;
     }
   }
 }

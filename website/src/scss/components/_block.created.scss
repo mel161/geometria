@@ -2,5 +2,9 @@
   width: 100%;
   float: none;
   font-size: 12px;
-  margin-bottom: 93px;
+  margin-bottom: 57px;
+
+  @media (min-width: 1200px) {
+    margin-bottom: 93px;
+  }
 }

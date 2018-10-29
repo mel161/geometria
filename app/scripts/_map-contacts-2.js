@@ -1,5 +1,6 @@
 /* global ymaps */
 // /* global $ */
+import './vendor/jquery.min'
 
 function init () {
   var myMap = new ymaps.Map('map-big', {

@@ -1,7 +1,14 @@
 /* global $ */
 /* global jQuery */
 
-jQuery(document).ready(() => {
+import 'jquery-mask-plugin'
+// import './vendor/jquery.mask.min'
+import 'jquery-modal'
+// import './vendor/jquery.modal.min'
+import 'jquery-validation'
+// import './vendor/jquery.validate.min'
+
+$(document).ready(() => {
   $('.modal__close').modal({closeClass: '', closeText: ''})
 
   $('.input--phone').mask('+7(999) 999 99-99')
@@ -29,6 +36,6 @@ jQuery(document).ready(() => {
   //
 
   $('#js-modal-success').on($.modal.BEFORE_CLOSE, function (event, modal) {
-    $('.btn--order').attr('href', '#js-modal-success')
+    $('a').attr('href', '#js-modal-success')
   })
 })

@@ -5,6 +5,30 @@
   margin-right: -30px;
   margin-left : -30px;
 
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($black, .5);
+    z-index: 1;
+    opacity: 1;
+    transition    : all 600ms ease-in-out;
+  }
+
+  .main--index &::before {
+    display: none;
+  }
+
+  &:hover {
+    &::before {
+      opacity: 0;
+    }
+  }
+
   @media (min-width: 600px) {
     max-height: 500px;
   }
@@ -17,7 +41,9 @@
 
   .main--index & {
     max-height: none;
-    margin: 0;
+    @media (min-width: 1200px) {
+      margin: 0;      
+    }
   }
 }
 

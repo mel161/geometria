@@ -59,18 +59,18 @@ exports.loadPug = (options) => ({
 })
 
 exports.lintJS = ({ include, exclude, options }) => ({
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        include,
-        exclude,
-        enforce: 'pre',
-        loader: 'eslint-loader',
-        options
-      }
-    ]
-  }
+  // module: {
+  //   rules: [
+  //     {
+  //       test: /\.js$/,
+  //       include,
+  //       exclude,
+  //       enforce: 'pre',
+  //       loader: 'eslint-loader',
+  //       options
+  //     }
+  //   ]
+  // }
 })
 
 const sharedCSSLoaders = [
@@ -91,7 +91,7 @@ exports.autoprefix = () => ({
 
 exports.purifyCSS = (options) => ({
   plugins: [
-    new PurifyCSSPlugin(options)
+    // new PurifyCSSPlugin(options)
   ]
 })
 

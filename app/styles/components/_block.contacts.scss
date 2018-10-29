@@ -18,8 +18,11 @@
   }
 
   &__call-me {
-    color    : $brand;
     font-size: 14px;
+
+    @media (min-width: 1200px) {
+      color    : $brand;
+    }
   }
   // Modifiers
 }

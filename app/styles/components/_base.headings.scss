@@ -32,13 +32,32 @@
       margin-bottom: 69px;
       font-size    : 48px;
     }
+    @media (min-width: 1600px) {
+      font-size: 42px;
+    }
+    @media (min-width: 1920px) {
+      margin-bottom: 69px;
+      font-size    : 48px;
+    }
   }
 
   &--primary-inner {
+    display: none;
     @media (min-width: 1200px) {
       margin-bottom: 20px;
       font-size    : 48px;
     }
+    @media (min-width: 1600px) {
+      font-size: 42px;
+    }
+    @media (min-width: 1920px) {
+      margin-bottom: 20px;
+      font-size    : 48px;
+    }
+  }
+
+  &--primary-first {
+    display: block;
   }
 
   &--secondary {

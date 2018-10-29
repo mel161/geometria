@@ -19,7 +19,7 @@ block content
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical
             h2.heading.heading--primary.heading--border  Подобрать паркинг
-            button.btn.btn--base.btn--order(type='button', name='button') Отправить заявку
+            a.link.btn.btn--base.btn--order(href='#js-modal-form', rel="modal:open") Отправить заявку
           .col.col--center.col--margin-vertical.col--margin-left
             h3.heading.heading--secondary Двухуровневый паркинг с удобной планировкой
             p.paragraph.text.text--normal
@@ -33,7 +33,7 @@ block content
           .col.col--right
             ul.gallery.gallery--vertical
               li.gallery__item
-                a.link.link--gallery.strip(href='./app/images/parking-full.jpg', data-strip-group='mygroup', data-caption='Caption #1')
+                a.link.link--gallery.strip(href='./app/images/parking-full.jpg', data-strip-group='mygroup', data-caption='Caption #1', data-strip-group-options="maxWidth: 1260")
                   picture.image.image--gallery
                     source(media='(min-width: 1200px)', srcset='./app/images/parking-right.jpg')
                     img(src='../images/parking-small.jpg')

@@ -1,5 +1,6 @@
 /* global ymaps */
 /* global $ */
+import './vendor/jquery.min'
 
 function init () {
   var myMap = new ymaps.Map('map', {
@@ -37,6 +38,7 @@ function init () {
     var windowSize = ($('.page').width() - 660) + 'x' + $('.page').height()
 
     Strip.show('https://dummyimage.com/' + windowSize + '+/000/fff', {
+      maxWidth: 1260,
       onShow: function () {
         elem.detach().appendTo('.strp-container')
         myMap.container.fitToViewport()

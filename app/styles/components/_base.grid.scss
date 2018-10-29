@@ -41,7 +41,7 @@ body {
   flex-wrap     : wrap;
   width         : 0;
   height        : 100%;
-  transition    : all 600ms ease-in-out;
+  transition    : all 500ms ease-in-out;
   @media (min-width: 1200px) {
     width  : 330px;
     right  : -330px;
@@ -50,13 +50,13 @@ body {
   // Modifiers
   &--active {
     width     : 100%;
-    transition: all 600ms ease-in-out;
+    transition: all 500ms ease-in-out;
 
     .sidebar__inner {
       width     : 100%;
       display   : block;
       right     : 0;
-      transition: all 600ms ease-in-out;
+      transition: all 500ms ease-in-out;
     }
     @media (min-width: 1200px) {
       width: 330px;
@@ -80,7 +80,7 @@ body {
     overflow-x      : hidden;
     background-color: rgba($white, .9);
     padding         : 112px 30px 0;
-    transition      : all 600ms ease-in-out;
+    transition      : all 500ms ease-in-out;
     @media (min-width: 1200px) {
       padding        : 0 48px;
       width          : 330px;
@@ -107,7 +107,7 @@ body {
 }
 
 .section {
-  padding-top: 55px;
+  // padding-top: 55px;
   @media (min-width: 1200px) {
     padding: 0;
   }
@@ -174,7 +174,7 @@ body {
   // Modifiers
   &--left {
     @media (min-width: 1200px) {
-      flex: 0 0 660px;
+      flex: 0 0 345px;
 
       &::before {
         display         : block;
@@ -187,6 +187,11 @@ body {
         content         : '';
       }
     }
+
+    @media (min-width: 1920px) {
+      flex: 0 0 660px;
+    }
+
   }
 
   &--left-no-border {
@@ -262,6 +267,23 @@ body {
 
   &--margin-vertical {
     @media (min-width: 1200px) {
+      padding-top: 200px;
+
+      .main--build & {
+        padding-top: 265px;
+      }
+
+      &.col--center {
+        padding-top: 275px;
+
+        &:last-of-type {
+          padding-top : 176px;
+          padding-left: 1px;
+        }
+      }
+    }
+
+    @media (min-width: 1920px) {
       padding-top: 263px;
 
       .main--build & {
@@ -281,6 +303,18 @@ body {
 
   &--margin-left {
     @media (min-width: 1200px) {
+      padding-left: 10px;
+
+      &.col--center {
+        padding-left: 81px;
+      }
+
+      .main--build & {
+        padding-left: 10px;
+      }
+    }
+
+    @media (min-width: 1920px) {
       padding-left: 147px;
 
       &.col--center {
@@ -295,6 +329,14 @@ body {
 
   &--margin-logo {
     @media (min-width: 1200px) {
+      padding-top : 53px;
+      padding-left: 10px;
+    }
+    @media (min-width: 1600px) {
+      padding-top : 53px;
+      padding-left: 10px;
+    }
+    @media (min-width: 1920px) {
       padding-top : 53px;
       padding-left: 150px;
     }
@@ -357,6 +399,12 @@ body {
     // padding: 0 30px;
     &.scroll-wrapper {
       // padding: 0 30px !important;
+    }
+  }
+  &--about-card-scroll {
+    position: relative;
+    @media (min-width: 1200px) {
+      margin: 0 17px 0 0;
     }
   }
   @media (min-width: 1200px) {

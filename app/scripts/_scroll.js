@@ -1,23 +1,31 @@
 /* global $ */
 /* global EventEmitter */
+// import './vendor/jquery.min'
+
+// import EventEmitter from './vendor/EventEmitter.min'
+// import './vendor/lethargy.min'
+import 'smartscroll'
+// import './vendor/smartscroll.min'
+import 'page-scroll-to-id'
+// import './vendor/jquery.malihu.PageScroll2id'
+import 'jquery.scrollbar'
+// import './vendor/jquery.scrollbar.min'
+
 let ee = new EventEmitter()
 
 var scrollStartListenerIndex = function (slideNumber) {
   $('.sidebar').removeClass('sidebar--active')
-  if (slideNumber === 0 && slideNumber === 1) {
-    $('#svg-figure').css('stroke', '#fff')
-    $('#svg-text').css('fill', '#fff')
+  if (slideNumber <= 0 || slideNumber === 1) {
+    $('.logo--top').removeClass('logo--top-dark')
     $('.nav__item--top').removeClass('nav__item--top-scroll')
+    $('.sidebar').addClass('sidebar--active')
   } else if (slideNumber % 2 === 0 || slideNumber > 4) {
-    $('#svg-figure').css('stroke', '#323232')
-    $('#svg-text').css('fill', '#323232')
+    $('.logo--top').addClass('logo--top-dark')
     $('.nav__item--top').addClass('nav__item--top-scroll')
   } else if (slideNumber % 3 === 0) {
-    $('#svg-figure').css('stroke', '#fff')
-    $('#svg-text').css('fill', '#fff')
+    $('.logo--top').removeClass('logo--top-dark')
   } else {
-    $('#svg-figure').css('stroke', '#fff')
-    $('#svg-text').css('fill', '#fff')
+    $('.logo--top').removeClass('logo--top-dark')
     $('.nav__item--top').removeClass('nav__item--top-scroll')
   }
 }
@@ -25,16 +33,15 @@ var scrollStartListenerIndex = function (slideNumber) {
 var scrollStartListener = function (slideNumber) {
   $('.sidebar').removeClass('sidebar--active')
 }
-var scrollEndListener = function () {}
-
-if ($('.main').is('.main--index')) {
-  ee.addListener('scrollStart', scrollStartListenerIndex)
-} else {
-  ee.addListener('scrollStart', scrollStartListener)
-}
-ee.addListener('scrollEnd', scrollEndListener)
 
 $(document).ready(() => {
+  if ($('.main').is('.main--index')) {
+    ee.addListener('scrollStart', scrollStartListenerIndex)
+    $('.sidebar').addClass('sidebar--active')
+  } else {
+    ee.addListener('scrollStart', scrollStartListener)
+  }
+
   var resizing = false
 
   $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id()

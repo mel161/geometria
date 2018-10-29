@@ -68,8 +68,21 @@
     width: 0;
     max-width: calc(100vw - 660px) !important;
   }
+  @media (min-width: 1600px) {
+    width: 0;
+    max-width: calc(100vw - 345px) !important;
+  }
+  @media (min-width: 1920px) {
+    width: 0;
+    max-width: calc(100vw - 660px) !important;
+  }
 }
 
 .strp-close {
 
+}
+
+.strp-content-element {
+  width: 100% !important;
+  height: auto !important;
 }

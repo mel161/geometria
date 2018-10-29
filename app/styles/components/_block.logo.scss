@@ -19,6 +19,15 @@
     }
   }
 
+  &--top-dark {
+    .svg-figure {
+      stroke: $grey-dark;
+    }
+    .svg-text {
+      fill: $grey-dark;
+    }
+  }
+
   &--ten {
     width        : 100%;
     margin-bottom: 8px;
@@ -35,8 +44,8 @@
   }
 }
 
-#svg-figure {
-  stroke: $black;
+.svg-figure {
+  stroke: $grey-dark;
   @media (min-width: 1200px) {
     stroke: $white;
   }
@@ -46,18 +55,18 @@
   }
 
   .about-features & {
-    stroke: $black;
+    stroke: $grey-dark;
   }
 }
 
-#svg-text {
-  fill: $black;
+.svg-text {
+  fill: $grey-dark;
 
   @media (min-width: 1200px) {
     fill: $white;
   }
 
   .about-features & {
-    fill: $black;
+    fill: $grey-dark;
   }
 }

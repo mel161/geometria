@@ -18,7 +18,7 @@ block content
       .grid
         .row.row--full
           .col.col--left.col--left-no-border.col--margin-left.col--margin-vertical
-            h2.heading.heading--primary.heading--primary-inner Преимущества
+            h2.heading.heading--primary.heading--primary-inner.heading--primary-first Преимущества
             nav.nav.nav--submenu.nav--submenu-first
               ul.nav__list.nav__list--horizontal
                 li.nav__item.nav__item--submenu.nav__item--active
@@ -36,13 +36,14 @@ block content
               | ЖК уютно, чисто и зелено — отличное место, где можно провести время с семьей или прогуляться
               | в одиночестве.
           .col.col--center.col--margin-vertical
-            .scrollbar-rail.wrap.wrap--index-card-scroll
+            .scrollbar-rail.wrap.wrap--about-card-scroll
               ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card#playground
                   a.link.link--card.card.card--features(href='#playground')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/1-1-playground.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/1-1-playground.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/1-1-playground-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Детские площадки
                       span.card__text
@@ -54,7 +55,8 @@ block content
                   a.link.link--card.card.card--features(href='#closed-area')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/1-2-closed-area.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/1-2-closed-area.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/1-2-closed-area-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Закрытая территория
                       span.card__text
@@ -66,7 +68,8 @@ block content
                   a.link.link--card.card.card--features(href='#rest-zone')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/1-3-rest-zone.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/1-3-rest-zone.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/1-3-rest-zone-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Зоны для отдыха детей и взрослых
                       span.card__text
@@ -78,7 +81,8 @@ block content
                   a.link.link--card.card.card--features(href='#sports-ground')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/1-4-sports-ground.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/1-4-sports-ground.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/1-4-sports-ground-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Спортивные площадки
                       span.card__text
@@ -114,13 +118,14 @@ block content
               | на удобных антресолях. Это интерьерное
               | решение есть в каждой квартире!
           .col.col--center.col--margin-vertical
-            .scrollbar-rail.wrap.wrap--index-card-scroll
+            .scrollbar-rail.wrap.wrap--about-card-scroll
               ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card#warm-and-cozy
                   a.link.link--card.card.card--features(href='#warm-and-cozy')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/2-1-warm-and-cozy.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/2-1-warm-and-cozy.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/2-1-warm-and-cozy-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Тёплые и удобные
                       span.card__text
@@ -132,7 +137,8 @@ block content
                   a.link.link--card.card.card--features(href='#connection')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/2-2-connection.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/2-2-connection.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/2-2-connection-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Интернет, домофон, телефония
                       span.card__text
@@ -144,7 +150,8 @@ block content
                   a.link.link--card.card.card--features(href='#overhaul')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/2-3-overhaul.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/2-3-overhaul.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/2-3-overhaul-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Ремонт «под ключ»
                       span.card__text
@@ -156,7 +163,8 @@ block content
                   a.link.link--card.card.card--features(href='#entresol')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/2-4-entresol.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/2-4-entresol.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/2-4-entresol-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Антресоли в каждой квартире
                       span.card__text
@@ -191,13 +199,14 @@ block content
               | на просторном охраняемом паркинге.
               | Места хватит всем!
           .col.col--center.col--margin-vertical
-            .scrollbar-rail.wrap.wrap--index-card-scroll
+            .scrollbar-rail.wrap.wrap--about-card-scroll
               ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card#first-floor-parking
                   a.link.link--card.card.card--features(href='#first-floor-parking')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/3-1-first-floor-parking.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/3-1-first-floor-parking.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/3-1-first-floor-parking-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Первый уровень паркинга
                       span.card__text
@@ -209,7 +218,8 @@ block content
                   a.link.link--card.card.card--features(href='#second-floor-parking')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/3-2-second-floor-parking.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/3-2-second-floor-parking.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/3-2-second-floor-parking-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Второй уровень паркинга
                       span.card__text
@@ -221,7 +231,8 @@ block content
                   a.link.link--card.card.card--features(href='#by-the-house')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/3-3-by-the-house.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/3-3-by-the-house.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/3-3-by-the-house-big.jpg', al-bigt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card  Прямо рядом с домом
                       span.card__text
@@ -233,7 +244,8 @@ block content
                   a.link.link--card.card.card--features(href='#large-area')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/3-4-large-area.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/3-4-large-area.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/3-4-large-area-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Большая территория
                       span.card__text
@@ -270,13 +282,14 @@ block content
               | коляски и велосипеды, вымыть ламы домашним
               | питомцам и спокойно отправиться домой.
           .col.col--center.col--margin-vertical
-            .scrollbar-rail.wrap.wrap--index-card-scroll
+            .scrollbar-rail.wrap.wrap--about-card-scroll
               ul.list.list--cards.list--cards-index
                 li.list__item.list__item--card#video-intercoms
                   a.link.link--card.card.card--features(href='#video-intercoms')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/4-1-video-intercoms.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/4-1-video-intercoms.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/4-1-video-intercoms-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Видео&shy;домофоны
                       span.card__text
@@ -288,7 +301,8 @@ block content
                   a.link.link--card.card.card--features(href='#bicycles-and-strollers')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/4-2-bicycles-and-strollers-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Места для хранения велосипедов и колясок
                       span.card__text
@@ -300,7 +314,8 @@ block content
                   a.link.link--card.card.card--features(href='#dog-wash')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/4-3-dog-wash.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/4-3-dog-wash.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/4-3-dog-wash-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Место, где можно вымыть лапы собакам и велосипеды
                       span.card__text
@@ -312,7 +327,8 @@ block content
                   a.link.link--card.card.card--features(href='#hall')
                     span.card__inner
                       span.card__image
-                        img.image.image--card(src='../images/features/4-4-hall.jpg', alt='Детские площадки')
+                        img.image.image--card.is-visible(src='../images/features/4-4-hall.jpg', alt='Детские площадки')
+                        img.image.image--card.is-hidden(src='../images/features/4-4-hall-big.jpg', alt='Детские площадки')
                       span.card__title
                         h4.heading.heading--card Просторные светлые МОПы
                       span.card__text
@@ -360,5 +376,5 @@ block content
         a(href='#' rel="modal:close").link.btn.btn--base Хорошо
 
 block scripts
-  script(async='', src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
-  script(async='', src='https://d4nyll.github.io/smartscroll/lethargy.min.js')
+  script(src='./app/scripts/vendor/EventEmitter.min.js')
+  script(src='./app/scripts/vendor/lethargy.min.js')

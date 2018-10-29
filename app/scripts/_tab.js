@@ -1,4 +1,5 @@
 /* global $ */
+import './vendor/jquery.min'
 
 $('.link--tab').click(function (event) {
   event.preventDefault()

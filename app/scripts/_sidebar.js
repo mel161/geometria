@@ -1,4 +1,6 @@
 /* global $ */
+import './vendor/jquery.min'
+
 $(document).ready(function () {
   var topNav = $('.nav--top')
   var sidebar = $('.sidebar')

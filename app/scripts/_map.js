@@ -1,5 +1,6 @@
 /* global ymaps */
 /* global $ */
+import './vendor/jquery.min'
 
 import {points as groups} from './_location-points.js'
 

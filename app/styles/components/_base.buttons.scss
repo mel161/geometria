@@ -118,8 +118,43 @@
   position: absolute;
   top     : 16px;
   right   : 25px;
+  background-image: url('../../images/arrow-left.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 40px;
+  height: 40px;
+
+  > .icon {
+    display: none;
+  }
+
+  &.btn--active {
+    background-image: url('../../images/arrow-right.png');
+  }
+
   @media (min-width: 1200px) {
     top  : 70px;
     right: 50px;
+    background-image: none;
+
+    > .icon {
+      display: block;
+    }
+
+    &:hover {
+      background-image: url('../../images/arrow-left.png');
+
+      > .icon {
+        display: none;
+      }
+    }
+
+    &.btn--active {
+      background-image: none;
+
+      &:hover {
+        background-image: url('../../images/arrow-right.png');
+      }
+    }
   }
 }

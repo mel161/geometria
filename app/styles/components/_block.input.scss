@@ -79,14 +79,16 @@
 
 span.input--error {
   position   : absolute;
-  top        : 0;
+  top        : 18px;
   right      : 0;
-  width      : 260px;
+  width      : 190px;
   color      : $brand;
   font-size  : 12px;
   font-weight: 400;
   line-height: 60px;
   @media (min-width: 1200px) {
+    top        : 0;
+    width      : 260px;
     font-size: 16px;
   }
 }

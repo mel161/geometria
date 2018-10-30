@@ -59,8 +59,8 @@
 
     &--card-active {
       @include clearfix;
-      width           : 100vw;
-      height          : 100%;
+      width           : calc(100vw - 60px);
+      height          : 367px;
       position        : absolute;
       top             : 0;
       left            : 0;

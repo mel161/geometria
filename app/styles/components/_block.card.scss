@@ -104,6 +104,10 @@
     background-color: inherit;
     color           : inherit;
 
+    .card--active & {
+      padding-bottom: 0;
+    }
+
     .card--news & {
       height : 115px;
       padding: 30px 21px 18px 30px;
@@ -139,17 +143,29 @@
     // Styles
     display: none;
 
-    .card--features & {
+    .card--active & {
       display         : block;
-      float           : left;
-      position        : absolute;
-      bottom          : 0;
-      right           : 0;
-      left            : 300px;
-      height          : 140px;
-      background-color: $white;
+      // position        : absolute;
+      // bottom          : 0;
+      // right           : 0;
+      background-color: inherit;
       box-sizing      : border-box;
-      border          : 1px solid $brand;
+      // border          : 1px solid $brand;
+      .text {
+        font-size: 10px;
+        line-height: 10px;
+      }
+
+      @media (min-width: 1200px) {
+        position        : absolute;
+        bottom          : 0;
+        right           : 0;
+        left            : 300px;
+        height          : 140px;
+        background-color: $white;
+        box-sizing      : border-box;
+        border          : 1px solid $brand;
+      }
     }
     // Media Queries
   }
@@ -194,6 +210,7 @@
     display         : block;
     width           : 126px;
     height          : 367px;
+    min-height: 367px;
     margin-right    : 8px;
     margin-bottom   : 20px;
     background-color: inherit;

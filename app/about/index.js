@@ -23,9 +23,28 @@ function cardListActive (obj) {
     .removeClass('card--active')
 }
 
+function checkMQ () {
+  var dw = $('.page').outerWidth()
+
+  if (dw >= 1200) {
+    return 'desktop'
+  } else {
+    return 'mobile'
+  }
+}
+
 jQuery(document).ready(() => {
   $('.card').click(function (event) {
     event.preventDefault()
+    var mq = checkMQ()
+    /* eslint no-console: 1 */
+    console.log(mq)
+    if (mq === 'mobile') {
+      // $(this).detach().prependTo($('.wrap--about-card-scroll'))
+      console.log($(this).parents('.scroll-wrapper')[0])
+    } else {
+      console.log(123)
+    }
 
     cardActive($(this))
     cardListActive($(this).parent())

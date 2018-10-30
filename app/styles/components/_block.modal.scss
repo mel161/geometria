@@ -1,21 +1,32 @@
 .modal {
   padding: 0;
+  // min-width: 320px;
+  width: 100%;
   @media (min-width: 1200px) {
     max-width: 660px;
   }
 
   &__inner {
-    padding: 123px 80px;
+    padding: 90px 16px;
     width  : auto;
     height : auto;
+
+    @media (min-width: 1200px) {
+      padding: 123px 80px;
+    }
   }
 
   &__close {
     width: 39px;
     height: 38px;
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 20px;
+    right: 20px;
+
+    @media (min-width: 1200px) {
+      top: 50px;
+      right: 50px;
+    }
   }
 
   &--form {

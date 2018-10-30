@@ -21,9 +21,17 @@
         // Nav Top Panel End
       .col.col--right
         // Button SideBar Trigger
-        button#js-sidebar-trigger.btn.btn--transparent(type='button', name='js-sidebar-trigger')
-          svg.icon.icon--hamburger(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 50 41')
+        button#js-sidebar-trigger.btn.btn--transparent.btn--nav-trigger.btn--nav-trigger-white(type='button', name='js-sidebar-trigger')
+          //- Hamburger
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 50 41').icon.icon--hamburger
             path.cls-1(d='M.011 3.713l.04-3.03L49.989.01l-.04 3.03z', data-name='Rectangle 2 copy 32')
             path.cls-1(d='M.011 22.851l.04-3.03 49.937-.673-.04 3.03z', data-name='Rectangle 2 copy 30')
             path.cls-1(d='M.011 40.989l.04-3.03 49.937-.673-.04 3.03z', data-name='Rectangle 2 copy 29')
+          //- Arrow
+          svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 31.49 31.49').icon.icon--arrow-full
+            path(d='M21.205 5.007a1.112 1.112 0 0 0-1.587 0 1.12 1.12 0 0 0 0 1.571l8.047 8.047H1.111A1.106 1.106 0 0 0 0 15.737c0 .619.492 1.127 1.111 1.127h26.554l-8.047 8.032c-.429.444-.429 1.159 0 1.587a1.112 1.112 0 0 0 1.587 0l9.952-9.952a1.093 1.093 0 0 0 0-1.571l-9.952-9.953z')
+          //- Close
+          svg(xmlns='http://www.w3.org/2000/svg' viewBox='0 0 39 38').icon.icon--close
+            path(fill-rule='evenodd', d='M36.117.261l2.121 2.121L2.883 37.738.761 35.617 36.117.261z')
+            path(fill-rule='evenodd', d='M1.012 2.104L3.161.011l35.827 34.884-2.15 2.093L1.012 2.104z')
         // Button Nav SideBar End

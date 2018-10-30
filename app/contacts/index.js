@@ -2,6 +2,7 @@
 /* global jQuery */
 
 import '../scripts/_common'
+import '../scripts/_gallery'
 
 import mapInit from './../scripts/_map-contacts'
 import mapBigInit from './../scripts/_map-contacts-2'

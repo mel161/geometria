@@ -34,26 +34,37 @@ function checkMQ () {
 }
 
 jQuery(document).ready(() => {
+  var activeCard
   $('.card').click(function (event) {
     event.preventDefault()
     var mq = checkMQ()
-    /* eslint no-console: 1 */
-    console.log(mq)
     if (mq === 'mobile') {
-      // $(this).detach().prependTo($('.wrap--about-card-scroll'))
-      console.log($(this).parents('.scroll-wrapper')[0])
+      activeCard = $(this)
+      $(this).find('.card__inner').detach().prependTo($('.modal--card').find('.modal__inner'))
+      $('#js-modal-card').modal()
     } else {
-      console.log(123)
+      cardActive($(this))
+      cardListActive($(this).parent())
     }
-
-    cardActive($(this))
-    cardListActive($(this).parent())
   })
 
   let urlBase = window.location.href
   let hashPosition = urlBase.search('#')
   let idBlock = urlBase.slice(hashPosition)
 
-  cardActive($(idBlock).find('.card'))
-  cardListActive($(idBlock))
+  if (hashPosition > 0) {
+    var mq = checkMQ()
+    if (mq === 'mobile') {
+      activeCard = $($(idBlock).find('.card'))
+      $($(idBlock).find('.card')).find('.card__inner').detach().prependTo($('.modal--card').find('.modal__inner'))
+      $('#js-modal-card').modal()
+    } else {
+      cardActive($(idBlock).find('.card'))
+      cardListActive($(idBlock))
+    }
+  }
+
+  $('#js-modal-card').on($.modal.BEFORE_CLOSE, function (event, modal) {
+    $('.modal--card').find('.card__inner').detach().prependTo(activeCard)
+  })
 })

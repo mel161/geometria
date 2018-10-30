@@ -53,6 +53,7 @@
     height: 70px;
     width : 30px;
     top   : 50%;
+    background-color: $brand;
     // margin-top: -35px;
     @media (min-width: 1200px) {
       width      : 110px;
@@ -62,6 +63,17 @@
       margin-left: -55px;
       margin-top : 0;
       position   : absolute;
+    }
+    &:hover {
+      > .icon {
+        fill: $grey-dark;
+      }
+    }
+    &:active {
+      background-color: $grey-dark;
+      > .icon {
+        fill: $white;
+      }
     }
   }
 

@@ -12,7 +12,7 @@ block content
   // SideBar End
 
   // Main
-  main.main
+  main.main.main--contacts
     // Section About
     section.section.slide(data-hash='about')
       .grid
@@ -37,12 +37,19 @@ block content
                     | sales@geometria.ru
 
               li.list__item.list__item--border-bottom
-                span.text.text--normal.text-regular.text--gray-dark
-                  | пн-пт	с 9 до 20
-                  br
-                  | сб	с 10 до 17
-                  br
-                  | вс	выходной
+                dl.list.list--description
+                  dt.list__item.list__item--termin
+                    span.text.text--normal.text-regular.text--gray-dark пн-пт
+                  dd.list__item.list__item--description
+                    span.text.text--normal.text-regular.text--gray-dark с 9 до 20
+                  dt.list__item.list__item--termin
+                    span.text.text--normal.text-regular.text--gray-dark сб
+                  dd.list__item.list__item--description
+                    span.text.text--normal.text-regular.text--gray-dark с 10 до 17
+                  dt.list__item.list__item--termin
+                    span.text.text--normal.text-regular.text--gray-dark вс
+                  dd.list__item.list__item--description
+                    span.text.text--normal.text-regular.text--gray-dark выходной
 
           .col.col--center.col--margin-vertical.col--margin-left
             h3.heading.heading--secondary Оставьте заявку
@@ -111,8 +118,8 @@ block content
       a(href='#' rel="modal:close").link.btn.btn--base Хорошо
 
 block scripts
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js')
-  script(src='http://www.stripjs.com/bower_components/strip/dist/js/strip.pkgd.min.js')
-  script(src='https://d4nyll.github.io/smartscroll/EventEmitter.min.js')
-  script(src='https://d4nyll.github.io/smartscroll/lethargy.min.js')
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
+  script(src='./app/scripts/vendor/EventEmitter.min.js')
+  script(src='./app/scripts/vendor/lethargy.min.js')
+  script(src='./app/scripts/vendor/jquery.min.js')
+  script(src='./app/scripts/vendor/strip.pkgd.min.js')

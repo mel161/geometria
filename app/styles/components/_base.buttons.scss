@@ -4,7 +4,7 @@
   outline    : none;
   font-family: $font-sans;
   text-align : center;
-  box-sizing: border-box;
+  box-sizing : border-box;
   // Modifiers
   &--transparent {
     padding         : 0;
@@ -32,11 +32,20 @@
 
     &:visited {}
 
-    &:hover {}
+    &:hover {
+      color: $grey-dark;
+      > .icon {
+        fill: $brand;
+      }
+    }
 
     &:active {
       background-color: $grey-dark;
       color           : $white;
+
+      > .icon {
+        fill: $brand;
+      }
     }
 
     &:disabled {
@@ -64,12 +73,12 @@
       padding : 16px 0;
     }
     @media (min-width: 1600px) {
-      bottom  : 71px;
-      left    : 46px;
+      bottom: 71px;
+      left  : 46px;
     }
     @media (min-width: 1920px) {
-      bottom  : 71px;
-      left    : 150px;
+      bottom: 71px;
+      left  : 150px;
     }
   }
 
@@ -103,58 +112,157 @@
     z-index        : 10;
 
     &.btn--active {
+      background-color: $grey-dark;
       .icon {
         transform: scale(1, -1);
+        fill: $brand;
       }
     }
     @media (min-width: 1200px) {
       display: none;
     }
   }
-}
 
-#js-sidebar-trigger {
-  z-index : 55;
-  position: absolute;
-  top     : 16px;
-  right   : 25px;
-  background-image: url('../../images/arrow-left.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 40px;
-  height: 40px;
-
-  > .icon {
-    display: none;
-  }
-
-  &.btn--active {
-    background-image: url('../../images/arrow-right.png');
-  }
-
-  @media (min-width: 1200px) {
-    top  : 70px;
-    right: 50px;
-    background-image: none;
+  &--nav-trigger {
+    z-index   : 55;
+    position  : absolute;
+    top       : 16px;
+    right     : 25px;
+    width     : 50px;
+    height    : 50px;
+    transition: all 500ms ease-in-out;
 
     > .icon {
-      display: block;
+      fill    : $grey-dark;
+      position: absolute;
+      top     : 0;
+      right   : 0;
+      bottom  : 0;
+      left    : 0;
     }
 
-    &:hover {
-      background-image: url('../../images/arrow-left.png');
+    > .icon--hamburger {
+      display: none;
+    }
 
+    > .icon--arrow-full {
+      transform: scale(-1, -1);
+      width: 38px;
+    }
+
+    > .icon--close {
+      display: none;
+    }
+    // States
+    &:hover {
       > .icon {
-        display: none;
+        fill: $brand;
+      }
+    }
+
+    &:active {
+      > .icon {
+        fill: $brand;
       }
     }
 
     &.btn--active {
-      background-image: none;
-
-      &:hover {
-        background-image: url('../../images/arrow-right.png');
+      > .icon--arrow-full {
+        transform: none;
       }
+    }
+    @media (min-width: 1200px) {
+      top  : 60px;
+      right: 50px;
+
+      > .icon {
+        display: block;
+      }
+
+      > .icon--hamburger {
+        height: auto;
+      }
+
+      > .icon--arrow-full {
+        height: 0;
+      }
+
+      > .icon--close {
+        height: 0;
+      }
+      // States
+      &:hover {
+        > .icon--hamburger {
+          height: 0;
+        }
+
+        > .icon--arrow-full {
+          height: auto;
+        }
+      }
+
+      &:active {
+        > .icon--hamburger {
+          height: 0;
+        }
+
+        > .icon--arrow-full {
+          height: auto;
+        }
+      }
+
+      &.btn--active {
+        right: 231px;
+
+        > .icon--hamburger {
+          height: 0;
+        }
+
+        > .icon--arrow-full {
+          height: 0;
+        }
+
+        > .icon--close {
+          height: auto;
+        }
+        // States
+        &:hover {
+          > .icon--arrow-full {
+            height: auto;
+            // transform: scale(-1, -1);
+          }
+
+          > .icon--close {
+            height: 0;
+          }
+        }
+
+        &:active {
+          > .icon--arrow-full {
+            height: auto;
+            // transform: scale(-1, -1);
+          }
+
+          > .icon--close {
+            height: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &--nav-trigger-white {
+    > .icon {
+      fill: $white;
+    }
+
+    &.btn--active > .icon {
+      fill: $grey-dark;
+    }
+  }
+  &--nav-trigger-brand {
+    > .icon {
+      fill: $brand;
     }
   }
 }

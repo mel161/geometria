@@ -20,15 +20,20 @@ var scrollStartListenerIndex = function (slideNumber) {
     $('.logo--top').removeClass('logo--top-dark')
     $('.nav__item--top').removeClass('nav__item--top-scroll')
     $('.sidebar').addClass('sidebar--active')
-    $('#js-sidebar-trigger').addClass('btn--active')
+    $('#js-sidebar-trigger').addClass('btn--active').addClass('btn--nav-trigger-white')
   } else if (slideNumber % 2 === 0 || slideNumber > 4) {
     $('.logo--top').addClass('logo--top-dark')
     $('.nav__item--top').addClass('nav__item--top-scroll')
+    if (slideNumber === 2) {
+      $('#js-sidebar-trigger').addClass('btn--nav-trigger-white')
+    }
   } else if (slideNumber % 3 === 0) {
     $('.logo--top').removeClass('logo--top-dark')
+    $('#js-sidebar-trigger').removeClass('btn--nav-trigger-white')
   } else {
     $('.logo--top').removeClass('logo--top-dark')
     $('.nav__item--top').removeClass('nav__item--top-scroll')
+    $('#js-sidebar-trigger').removeClass('btn--nav-trigger-white')
   }
 }
 
@@ -94,6 +99,7 @@ $(document).ready(() => {
       })
     } else {
       $('.sidebar').removeClass('sidebar--active')
+      $('#js-sidebar-trigger').removeClass('btn--active').removeClass('btn--nav-trigger-white')
       var rafTimer
 
       window.onscroll = function (event) {

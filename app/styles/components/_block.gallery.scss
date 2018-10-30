@@ -78,8 +78,28 @@
   }
 }
 
-.strp-close {
+.strp-side-right .strp-close {
+  top       : 16px;
+  right     : 25px;
 
+  > .icon {
+    fill: $white;
+
+    &.icon--dark-grey {
+      fill: $grey-dark;
+    }
+  }
+
+  &:hover {
+    > .icon {
+      fill: $brand;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    top  : 60px;
+    right: 50px;
+  }
 }
 
 .strp-content-element {

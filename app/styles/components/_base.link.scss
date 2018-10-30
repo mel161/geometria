@@ -15,7 +15,7 @@
   }
 
   &:hover {
-    color: inherit;
+    color: $brand;
   }
 
   &:active {
@@ -110,6 +110,7 @@
 
     &:hover {
       background-color: $brand;
+      color: $grey-dark;
     }
 
     &:active {}

@@ -61,6 +61,10 @@
       width : 100%;
       height: 100%;
     }
+
+    .modal__inner & {
+      position: relative;
+    }
   }
 
   &__image {
@@ -93,6 +97,23 @@
       width        : 100%;
       margin-bottom: 6px;
     }
+
+    .modal__inner & {
+      overflow  : hidden;
+      height    : 255px;
+      // max-width : 100vw;
+      max-height: 255px;
+
+      .is-visible {
+        display: none;
+      }
+
+      .is-hidden {
+        width     : auto;
+        max-height: inherit;
+        max-width : inherit;
+      }
+    }
     // Media Queries
   }
 
@@ -106,6 +127,8 @@
 
     .card--active & {
       padding-bottom: 0;
+      // border        : 1px solid $brand;
+      // border-right: 0;
     }
 
     .card--news & {
@@ -124,6 +147,11 @@
         bottom      : 0;
         right       : 21px;
       }
+    }
+
+    .modal__inner & {
+      font-size: 14px;
+      color    : $brand;
     }
     // Media Queries
     @media (min-width: 1200px) {
@@ -145,17 +173,10 @@
 
     .card--active & {
       display         : block;
-      // position        : absolute;
-      // bottom          : 0;
-      // right           : 0;
       background-color: inherit;
       box-sizing      : border-box;
-      // border          : 1px solid $brand;
-      .text {
-        font-size: 10px;
-        line-height: 10px;
-      }
-
+      border          : 1px solid $brand;
+      padding         : 32px 35px 35px;
       @media (min-width: 1200px) {
         position        : absolute;
         bottom          : 0;
@@ -165,6 +186,16 @@
         background-color: $white;
         box-sizing      : border-box;
         border          : 1px solid $brand;
+      }
+    }
+
+    .modal__inner & {
+      display  : block;
+      font-size: 11px;
+      padding  : 20px;
+
+      .text {
+        color: $white;
       }
     }
     // Media Queries
@@ -210,7 +241,7 @@
     display         : block;
     width           : 126px;
     height          : 367px;
-    min-height: 367px;
+    min-height      : 367px;
     margin-right    : 8px;
     margin-bottom   : 20px;
     background-color: inherit;
@@ -269,7 +300,6 @@
     .text--normal {
       margin-bottom: 37px;
     }
-
     // Hover
     &:hover {
       background-color: $brand;

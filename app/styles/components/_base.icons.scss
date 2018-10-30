@@ -38,13 +38,18 @@
     margin-top: -3px;
   }
 
+  &--arrow-full {
+    fill      : $grey-dark;
+    width     : 48px;
+    height    : auto;
+  }
+
   &--close {
     fill: $grey-dark;
-
-    .btn & {
-      &:hover {
-        fill: $brand;
-      }
-    }
+    width: 39px;
+    height: 38px;
+  }
+  &--dark-grey {
+    fill: $grey-dark;
   }
 }

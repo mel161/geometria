@@ -3,6 +3,7 @@
 
 import './scripts/_common'
 import './scripts/_tab'
+import './scripts/_gallery'
 
 import mapInit from './scripts/_map'
 

@@ -51,14 +51,20 @@ jQuery(document).ready(() => {
   let urlBase = window.location.href
   let hashPosition = urlBase.search('#')
   let idBlock = urlBase.slice(hashPosition)
+  let idParent = '#' + $(idBlock).parents('.section').attr('id')
 
   if (hashPosition > 0) {
     var mq = checkMQ()
     if (mq === 'mobile') {
       activeCard = $($(idBlock).find('.card'))
-      $($(idBlock).find('.card')).find('.card__inner').detach().prependTo($('.modal--card').find('.modal__inner'))
+      $($(idBlock)
+        .find('.card'))
+        .find('.card__inner')
+        .detach()
+        .prependTo($('.modal--card').find('.modal__inner'))
       $('#js-modal-card').modal()
     } else {
+      $('html, body').animate({ scrollTop: $(idParent).offset().top }, 1000)
       cardActive($(idBlock).find('.card'))
       cardListActive($(idBlock))
     }

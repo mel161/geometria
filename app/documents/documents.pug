@@ -1,7 +1,7 @@
 extends ../layout/_layout.pug
 block vars
   - var pageTitle = 'Документы'
-  - var bodyClass = ''
+  - var bodyClass = 'page page--inner'
 
 block content
   // Top Panel
@@ -19,7 +19,8 @@ block content
         .row.row--full
           .col.col--left.col--margin-left.col--margin-vertical.col--left-no-border
             h2.heading.heading--primary.heading--border Документация
-            span.text.text--normal.text--regular Здесь вы найдете все необоходимые документы.
+            p.paragraph
+              span.text.text--normal.text--regular Здесь вы найдете все необоходимые документы.
           .col.col--center.col--margin-vertical
             .scrollbar-rail.wrap.wrap--scroll
               ul.list.list--unstyled.list--cards.list--scroll.list--docs

@@ -53,11 +53,13 @@ $(document).ready(() => {
 
   var resizing = false
 
-  $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id()
   $('.nav__item--submenu .link--nav').click(function (event) {
     var mq = checkMQ()
     if (mq === 'mobile') {
+      $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id({offset: 140})
       $(this).parent().addClass('nav__item--active').siblings().removeClass('nav__item--active')
+    } else {
+      $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id()
     }
   })
 

@@ -23,9 +23,16 @@
     padding         : 16px 0;
     // Media Queries
     @media (min-width: 1200px) {
-      font-size: 18px;
-      padding  : 20px 45px;
+      font-size: 16px;
+      padding  : 17px 45px;
       width    : 250px;
+    }
+    @media (min-width: 1600px) {
+      padding  : 20px 45px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 18px;
+      // padding  : 20px 45px;
     }
     // States
     &:link {}
@@ -34,6 +41,7 @@
 
     &:hover {
       color: $grey-dark;
+
       > .icon {
         fill: $brand;
       }
@@ -65,20 +73,18 @@
     margin  : 0 30px;
     padding : 15px 0;
     @media (min-width: 1200px) {
-      position: absolute;
-      bottom  : 71px;
-      left    : 150px;
-      width   : 250px;
-      margin  : 0;
-      padding : 16px 0;
+      position   : absolute;
+      bottom     : 71px;
+      left       : 75px;
+      width      : 250px;
+      margin     : 0;
+      padding    : 16px 0;
     }
     @media (min-width: 1600px) {
-      bottom: 71px;
-      left  : 46px;
+      left: 100px;
     }
     @media (min-width: 1920px) {
-      bottom: 71px;
-      left  : 150px;
+      left: 150px;
     }
   }
 
@@ -113,9 +119,10 @@
 
     &.btn--active {
       background-color: $grey-dark;
+
       .icon {
         transform: scale(1, -1);
-        fill: $brand;
+        fill     : $brand;
       }
     }
     @media (min-width: 1200px) {
@@ -147,7 +154,7 @@
 
     > .icon--arrow-full {
       transform: scale(-1, -1);
-      width: 38px;
+      width    : 38px;
     }
 
     > .icon--close {
@@ -212,7 +219,8 @@
       }
 
       &.btn--active {
-        right: 231px;
+        // right: 231px;
+        right: 65%;
 
         > .icon--hamburger {
           height: 0;
@@ -249,6 +257,11 @@
         }
       }
     }
+    @media (min-width: 1920px) {
+      &.btn--active {
+        right: 231px;
+      }
+    }
   }
 
   &--nav-trigger-white {
@@ -260,6 +273,7 @@
       fill: $grey-dark;
     }
   }
+
   &--nav-trigger-brand {
     > .icon {
       fill: $brand;

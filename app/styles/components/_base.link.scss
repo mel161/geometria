@@ -80,7 +80,7 @@
     font-weight: 500;
     // States
     &:link {
-      background-color: $grey-dark;
+      // background-color: $grey-dark;
       color           : $brand;
     }
 
@@ -101,7 +101,7 @@
     height    : 100%;
     top       : 0;
     left      : 0;
-    padding   : 21px 20px;
+    padding   : 21px 14px;
     text-align: center;
 
     &:link {}
@@ -114,7 +114,8 @@
     }
 
     &:active {}
-    @media (min-width: 1200px) {
+
+    @media (min-width: 1620px) {
       padding: 32px 25px;
     }
   }

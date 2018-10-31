@@ -19,8 +19,14 @@
     @media (min-width: 1200px) {
       display         : flex;
       margin-top      : 0;
-      padding         : 0 150px 99px;
+      padding         : 0 75px 50px;
       background-image: url('../../images/hero-bg-big.jpg');
+    }
+    @media (min-width: 1600px) {
+      padding         : 0 100px 75px;
+    }
+    @media (min-width: 1920px) {
+      padding         : 0 150px 99px;
     }
 
     &::before {

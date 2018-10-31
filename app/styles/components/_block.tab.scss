@@ -10,6 +10,11 @@
     height: 100px;
 
     @media (min-width: 1200px) {
+      width: auto;
+      margin: 0 20px;
+    }
+
+    @media (min-width: 1620px) {
       height: auto;
     }
   }
@@ -40,6 +45,9 @@
 
   // Modifiers
   &--index {
-    height: 414px;
+    @include aspect-ratio(20, 13);
+    // min-height: 414px;
+    height: auto;
+    // height: 780px;
   }
 }

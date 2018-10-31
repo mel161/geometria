@@ -27,22 +27,26 @@
 
     &--card {
       @include clearfix;
-      position  : relative;
-      float     : left;
-      transition: all 0.5s ease-in-out;
-      overflow  : hidden;
-      @media (min-width: 1200px) {
-        width        : 300px;
-        margin-right : 14px;
-        margin-bottom: 14px;
+      position     : relative;
+      float        : left;
+      transition   : all 0.5s ease-in-out;
+      overflow     : hidden;
+      width        : 23%;
+      margin-bottom: 0;
+      margin-right : 14px;
 
+      &:last-of-type {
+        margin-right: 0;
+      }
+      @media (min-width: 1200px) {
+        // width        : 300px;
         &:nth-child(2n) {
           margin-right: 14px;
         }
+      }
 
-        &:last-of-type {
-          margin-right: 0;
-        }
+      .list--scroll & {
+        width: auto;
       }
 
       .main--buy & {
@@ -54,6 +58,10 @@
         @media (min-width: 1200px) {
           width: 300px;
         }
+      }
+
+      .list--docs & {
+        width: 300px;
       }
     }
 
@@ -70,9 +78,16 @@
       background-color: $grey-dark;
       transition      : all 0.7s ease-in-out;
       @media (min-width: 1200px) {
-        width : 100%;
+        width     : 100%;
+        height    : auto;
+        max-height: 485px;
+        margin    : 0;
+      }
+      @media (min-width: 1600px) {
         height: 690px;
-        margin: 0;
+      }
+      @media (min-width: 1920px) {
+        max-height: 690px;
       }
     }
 
@@ -112,7 +127,7 @@
         width      : 100%;
         padding-top: 100%;
       }
-      @media (min-width: 1200px) {
+      @media (min-width: 1620px) {
         flex     : 1 1 100px;
         max-width: 100px;
       }
@@ -122,6 +137,7 @@
       float: left;
       width: 80px;
     }
+
     &--description {
       // float: left;
     }
@@ -133,10 +149,22 @@
     padding        : 0;
 
     .list__item {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      @media (min-width: 1200px) {
+        margin-bottom: 15px;
+      }
+      @media (min-width: 1600px) {
+        margin-bottom: 15px;
+      }
+      @media (min-width: 1920px) {
+        margin-bottom: 20px;
+      }
 
       &:last-of-type {
-        margin-bottom: 0;
+        margin-bottom: 20px;
+        @media (min-width: 1200px) {
+          margin-bottom: 0;
+        }
       }
     }
   }
@@ -157,6 +185,9 @@
     width : 536px;
     height: 100%;
     margin: 0 auto;
+    @media (min-width: 700px) {
+      width: 100%;
+    }
     @media (min-width: 1200px) {
       width: 100%;
     }
@@ -179,6 +210,7 @@
     flex-wrap  : wrap;
     width      : 100%;
     margin-left: 2px;
+    max-width  : 300px;
   }
 
   &--scroll {
@@ -202,7 +234,7 @@
         }
       }
       @media (min-width: 1200px) {
-        width: 3770px;
+        width: 5800px;
 
         .list__item--card {
           display: block;
@@ -210,8 +242,12 @@
         }
       }
     }
-    @media (min-width: 1200px) {
+    @media (min-width: 1920px) {
       width: 3770px;
+    }
+
+    &.list--news {
+      width: 1260px;
     }
   }
 }

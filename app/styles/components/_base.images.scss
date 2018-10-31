@@ -27,27 +27,39 @@
   }
 
   &--card {
-    height   : 100%;
+    height   : auto;
     width    : 100%;
     position : absolute;
-    top      : 50%;
-    left     : 50%;
-    transform: translate(-50%, -50%);
+    top      : 0;
+    left     : 0;
 
     &.is-visible {
-      width: 100%;
+      width: auto;
     }
     &.is-hidden {
       width: 0;
+    }
+
+    @media (min-width: 1200px) {
+      height: auto;
+      width: 100%;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &.is-visible {
+        top: 25%;
+      }
     }
   }
 
   &--news {
     width    : 100%;
     height   : auto;
-    top      : 0;
-    left     : 0;
-    transform: none;
+    position : absolute;
+    top      : 0%;
+    left     : 50%;
+    transform: translate(-50%, -20%);
   }
 
   &--slider {

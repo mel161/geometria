@@ -1,7 +1,7 @@
 extends ../layout/_layout.pug
 block vars
   - var pageTitle = 'Ход строительства'
-  - var bodyClass = ''
+  - var bodyClass = 'page page--inner'
 
 block content
   // Top Panel
@@ -194,7 +194,7 @@ block content
     section.section.slide(data-hash='news')#news
       .grid
         .row.row--full
-          .col.col--left.col--left-no-border.col--margin-left.col--margin-vertical
+          .col.col--left.col--margin-left.col--margin-vertical
             h2.heading.heading--primary Ход строительства
             nav.nav.nav--submenu
               ul.nav__list.nav__list--horizontal
@@ -208,9 +208,9 @@ block content
                   a.link.link--nav(href='#news') Новости
             h3.heading.heading--secondary.heading--secondary-inner Новости
 
-          .col.col--center.col--center-full.col--vertical-center
-            .scrollbar-rail
-              ul.list.list--unstyled.list--cards.list--news
+          .col.col--center.col--margin-vertical
+            .scrollbar-rail.wrap.wrap--scroll.wrap--news
+              ul.list.list--unstyled.list--cards.list--scroll.list--news
                 li.list__item.list__item--card
                   a.link.link--card.card.card--news(href='./news')
                     span.card__image

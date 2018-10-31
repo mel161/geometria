@@ -7,6 +7,13 @@
   &--hamburger {
     width : 50px;
     height: 41px;
+
+    @media (min-width: 1200px) {
+      width: 40px;
+    }
+    @media (min-width: 1920px) {
+      width: 50px;
+    }
   }
 
   &--social {
@@ -42,12 +49,26 @@
     fill      : $grey-dark;
     width     : 48px;
     height    : auto;
+
+    @media (min-width: 1200px) {
+      width: 34px;
+    }
+    @media (min-width: 1920px) {
+      width: 39px;
+    }
   }
 
   &--close {
     fill: $grey-dark;
     width: 39px;
     height: 38px;
+
+    @media (min-width: 1200px) {
+      width: 34px;
+    }
+    @media (min-width: 1920px) {
+      width: 39px;
+    }
   }
   &--dark-grey {
     fill: $grey-dark;

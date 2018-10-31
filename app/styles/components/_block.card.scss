@@ -58,8 +58,11 @@
     }
 
     .card--features & {
-      width : 100%;
-      height: 100%;
+      width   : 100%;
+      height  : 100%;
+      position: absolute;
+      top     : 0;
+      left    : 0;
     }
 
     .modal__inner & {
@@ -77,7 +80,7 @@
     background-repeat  : no-repeat;
     // transition: all 0.5s ease-in-out;
     .card--features & {
-      height  : 247px;
+      height  : calc(100% - 120px);
       overflow: hidden;
       // Media Queries
       @media (min-width: 1200px) {
@@ -122,8 +125,12 @@
     display         : block;
     max-height      : 120px;
     padding         : 20px;
-    background-color: inherit;
+    background-color: $grey-dark;
     color           : inherit;
+
+    .card--features:hover & {
+      background-color: $brand;
+    }
 
     .card--active & {
       padding-bottom: 0;
@@ -134,6 +141,16 @@
     .card--news & {
       height : 115px;
       padding: 30px 21px 18px 30px;
+      @media (min-width: 1200px) {
+        height : 100px;
+        padding: 20px;
+      }
+      @media (min-width: 1600px) {
+        padding: 20px;
+      }
+      @media (min-width: 1920px) {
+        padding: 30px 21px 18px 30px;
+      }
 
       .text {
         display     : block;
@@ -157,13 +174,25 @@
     @media (min-width: 1200px) {
       left            : 0;
       width           : 100%;
-      max-height      : 140px;
-      height          : 140px;
+      max-height      : 120px;
+      height          : 120px;
       max-width       : 300px;
       padding         : 37px 39px;
       position        : absolute;
       bottom          : 0;
-      background-color: inherit;
+      // background-color: inherit;
+
+      .card--features & {
+        padding: 20px;
+      }
+    }
+    @media (min-width: 1920px) {
+      max-height: 140px;
+      height    : 140px;
+
+      .card--features & {
+        padding: 37px 39px;
+      }
     }
   }
 
@@ -182,10 +211,17 @@
         bottom          : 0;
         right           : 0;
         left            : 300px;
-        height          : 140px;
+        height          : 120px;
+        padding         : 18px 20px 20px;
         background-color: $white;
         box-sizing      : border-box;
         border          : 1px solid $brand;
+      }
+      @media (min-width: 1600px) {
+        height: 140px;
+      }
+      @media (min-width: 1920px) {
+        padding: 32px 35px 35px;
       }
     }
 
@@ -238,26 +274,33 @@
 
   &--features {
     // Styles
+    @include aspect-ratio(126, 367);
     display         : block;
-    width           : 126px;
-    height          : 367px;
+    // width           : 126px;
+    // height          : 367px;
     min-height      : 367px;
     margin-right    : 8px;
-    margin-bottom   : 20px;
+    margin-bottom   : 0;
     background-color: inherit;
     color           : inherit;
     overflow        : hidden;
 
     &.card--active {
-      width : 100%;
-      height: 100%;
-      margin: 0;
+      width   : 100%;
+      height  : 100%;
+      margin  : 0;
+      overflow: hidden;
     }
     // Media Queries
     @media (min-width: 1200px) {
-      height: 690px;
-      width : 300px;
-      float : left;
+      @include aspect-ratio(10, 23);
+      // max-height: 690px;
+      max-height: 485px;
+      width     : 100%;
+      float     : left;
+    }
+    @media (min-width: 1920px) {
+      max-height: 690px;
     }
   }
 
@@ -269,6 +312,12 @@
     overflow: hidden;
     // Media Queries
     @media (min-width: 1200px) {
+      height: 230px;
+    }
+    @media (min-width: 1600px) {
+      height: 250px;
+    }
+    @media (min-width: 1920px) {
       height: 335px;
     }
   }

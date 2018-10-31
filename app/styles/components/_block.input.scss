@@ -1,6 +1,6 @@
 .input {
-  width  : 100%;
-  outline: none;
+  width      : 100%;
+  outline    : none;
   font-family: $font-sans;
 
   &:active {
@@ -16,7 +16,18 @@
     font-weight  : 400;
     line-height  : 1;
     @media (min-width: 1200px) {
+      font-size  : 14px;
+      line-height: 16px;
+      padding    : 16px 24px;
+      margin-bottom: 10px;
+    }
+    @media (min-width: 1600px) {
       font-size: 16px;
+    }
+    @media (min-width: 1920px) {
+      font-size: 16px;
+      padding  : 20px 24px;
+      margin-bottom: 15px;
     }
 
     ::-webkit-input-placeholder {
@@ -33,6 +44,13 @@
 
     :-moz-placeholder {
       color: $grey-light;
+    }
+
+    & {
+      max-height: 100px;
+      @media (min-width: 1920px) {
+        max-height: auto;
+      }
     }
   }
 
@@ -54,7 +72,7 @@
       border  : 1px solid $brand;
       content : '';
       @media (min-width: 1200px) {
-        left: 5px;
+        left  : 5px;
         width : 30px;
         height: 30px;
       }
@@ -69,9 +87,8 @@
       height          : 20px;
       background-color: $brand;
       content         : '';
-
       @media (min-width: 1200px) {
-        top: 10px;
+        top : 10px;
         left: 10px;
       }
     }
@@ -89,8 +106,15 @@ span.input--error {
   line-height: 60px;
   @media (min-width: 1200px) {
     top        : 0;
+    width      : 240px;
+    font-size  : 14px;
+    line-height: 50px;
+  }
+  @media (min-width: 1920px) {
+    top        : 0;
     width      : 260px;
-    font-size: 16px;
+    font-size  : 16px;
+    line-height: 60px;
   }
 }
 
@@ -108,6 +132,10 @@ span.input--error {
     cursor       : pointer;
     @media (min-width: 1200px) {
       padding-left: 45px;
+      margin-bottom: 10px;
+    }
+    @media (min-width: 1920px) {
+      margin-bottom: 25px;
     }
   }
 

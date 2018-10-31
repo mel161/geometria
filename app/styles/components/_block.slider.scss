@@ -83,6 +83,10 @@
       right: auto;
       top: 725px;
     }
+    @media (min-width: 1366px) {
+      right: auto;
+      top: 612px;
+    }
     @media (min-width: 1600px) {
       top: 858px;
     }
@@ -112,6 +116,18 @@
     background-color: $brand;
   }
 
+  .list--years & {
+    // left: -18px;
+    &:hover {
+      background-color: transparent;
+    }
+    .icon {
+      transform: rotate(90deg);
+      width    : 18px;
+      height   : 10px;
+    }
+  }
+
   .icon {
     transform: rotate(90deg);
     width    : 18px;
@@ -132,6 +148,13 @@
     transform: rotate(-90deg);
     @media (min-width: 1200px) {
       transform: rotate(0) translate(-8%, -30%);
+    }
+  }
+  .list--years & {
+    right: -5px;
+    left: auto;
+    .icon {
+      transform: rotate(-90deg);
     }
   }
 }

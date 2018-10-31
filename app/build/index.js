@@ -66,20 +66,23 @@ $(document).ready(() => {
     }
   })
 
-  function checkMQ () {
-    var dw = $('.page').outerWidth()
-
-    if (dw >= 1200) {
-      return 'desktop'
-    } else {
-      return 'mobile'
-    }
-  }
+  // function checkMQ () {
+  //   var dw = $('.page').outerWidth()
+  //   if (dw >= 1600) {
+  //     return 'desktop'
+  //   } else {
+  //     return 'mobile'
+  //   }
+  // }
 
   function scrollInit () {
-    var mq = checkMQ()
+    // var mq = checkMQ()
 
-    if (mq === 'mobile') {
+    var dw = $('.page').outerWidth()
+
+    if (dw >= 1620) {
+      $('.slick-next').css('top', $('.slick-initialized').height() - 45 + 'px')
+    } else {
       $('.list--years').slick({
         arrows: true,
         dots: false,
@@ -88,8 +91,6 @@ $(document).ready(() => {
         prevArrow: "<button class='btn btn--transparent btn--prev slick-prev'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>",
         nextArrow: "<button class='btn btn--transparent btn--next slick-next'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>"
       })
-    } else {
-      $('.slick-next').css('top', $('.slick-initialized').height() - 45 + 'px')
     }
     resizing = false
   }

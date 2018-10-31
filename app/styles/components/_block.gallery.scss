@@ -66,16 +66,16 @@
 .strp-window {
   @media (min-width: 1200px) {
     width: 0;
-    max-width: calc(100vw - 660px) !important;
+    max-width: calc(100vw - 34.375%) !important;
   }
-  @media (min-width: 1600px) {
-    width: 0;
-    max-width: calc(100vw - 345px) !important;
-  }
-  @media (min-width: 1920px) {
-    width: 0;
-    max-width: calc(100vw - 660px) !important;
-  }
+  // @media (min-width: 1600px) {
+  //   width: 0;
+  //   max-width: calc(100vw - 345px) !important;
+  // }
+  // @media (min-width: 1920px) {
+  //   width: 0;
+  //   max-width: calc(100vw - 660px) !important;
+  // }
 }
 
 .strp-side-right .strp-close {

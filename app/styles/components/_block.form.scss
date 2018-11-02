@@ -1,6 +1,7 @@
 .form {
-  
+  padding-top: 10px;
   @media (min-width: 1200px) {
+    padding-top: 0;
     max-width: 450px;
   }
   @media (min-width: 1600px) {

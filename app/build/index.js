@@ -46,7 +46,7 @@ $(document).ready(() => {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '38px',
+          centerPadding: '36px',
           slidesToShow: 1,
           vertical: false,
           useTransform: false,

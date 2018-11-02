@@ -58,6 +58,10 @@ body {
   &--xsmall {
     font-size: 12px;
 
+    .main--build & {
+      font-size: 10px;
+    }
+
     &.label {
       font-size: 10px;
 
@@ -72,14 +76,14 @@ body {
   }
 
   &--small {
-    font-size: 12px;
+    font-size: 11px;
     @media (min-width: 1920px) {
       font-size: 14px;
     }
   }
 
   &--normal {
-    font-size: 14px;
+    font-size: 12px;
     @media (min-width: 1920px) {
       font-size: 16px;
     }
@@ -88,6 +92,19 @@ body {
       display: inline-block;
       @media (min-width: 1920px) {
         width: 150px;
+      }
+    }
+
+    .main--parking & {
+      font-size: 12px;
+      @media (min-width: 1920px) {
+        font-size: 16px;
+      }
+    }
+    .main--docs & {
+      font-size: 12px;
+      @media (min-width: 1920px) {
+        font-size: 16px;
       }
     }
   }
@@ -197,6 +214,20 @@ body {
 
 .paragraph {
   margin-bottom: 17px;
+
+  .main--docs & {
+    line-height: 14px;
+    @media (min-width: 1920px) {
+      font-size: 16px;
+    }
+  }
+
+  .main--buy & {
+    margin-bottom: 12px;
+    @media (min-width: 1920px) {
+      font-size: 16px;
+    }
+  }
 
   @media (min-width: 1200px) {
     margin-bottom: 20px;

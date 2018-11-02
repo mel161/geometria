@@ -10,18 +10,29 @@
     &--border-bottom {
       margin-bottom : 16px;
       border-bottom : 1px solid #cfd11a;
-      padding-bottom: 14px;
+      padding-bottom: 18px;
+      padding-top   : 10px;
       @media (min-width: 1200px) {
         margin-bottom : 33px;
         padding-bottom: 28px;
         margin-top    : 28px;
       }
 
+      &:first-of-type {
+        margin-bottom: 35px;
+        padding-top  : 0;
+        @media (min-width: 1200px) {
+          margin-bottom: 0;
+        }
+      }
+
       &:last-of-type {
         border       : 0;
         margin-bottom: 35px;
+        padding-top  : 6px;
         @media (min-width: 1200px) {
           margin-bottom: 0;
+          padding-top  : 0;
         }
       }
     }
@@ -51,14 +62,34 @@
         margin-right: 14px;
       }
 
+      .list--unstyled > & {
+        margin-bottom: 7px;
+        line-height  : 14px;
+        @media (min-width: 1200px) {
+          margin-bottom: 14px;
+
+          &.list__item--description,
+          &.list__item--termin {
+            margin-bottom: 0;
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+          @media (min-width: 1200px) {
+            margin-bottom: 0;
+          }
+        }
+      }
+
       .list--scroll & {
         width: auto;
       }
 
       .main--buy & {
-        float: none;
+        float       : none;
         margin-right: 0;
-
+        margin-bottom: 14px;
         @media (min-width: 1200px) {
           margin-right: 14px;
         }
@@ -71,8 +102,16 @@
         }
       }
 
-      .list--docs & {
-        width: 300px;
+      .list--docs > & {
+        margin: 0 0 14px;
+        padding: 0;
+        @media (min-width: 480px) {
+          width: 300px;
+        }
+
+        @media (min-width: 1200px) {
+          margin-right: 14px;
+        }
       }
     }
 
@@ -105,8 +144,9 @@
     &--dot {
       position     : relative;
       padding-left : 18px;
-      margin-bottom: 19px;
+      margin-bottom: 12px;
       line-height  : 1;
+      padding-right: 20px;
 
       &::before {
         content  : '•';
@@ -128,9 +168,12 @@
       max-width    : 80px;
       min-width    : 80px;
       position     : relative;
-      border       : 1px solid $brand;
       margin-right : 10px;
       margin-bottom: 10px;
+      outline: none;
+
+      &.is-active {
+      }
 
       &::before {
         content    : '';
@@ -145,11 +188,12 @@
     }
 
     &--termin {
-      float: left;
-      width: 69px;
+      float        : left;
+      width        : 65px;
       margin-bottom: 0;
       @media (min-width: 1200px) {
-        margin-bottom: 0 ;
+        margin-bottom: 0;
+        width        : 69px;
       }
     }
 
@@ -166,22 +210,11 @@
     margin         : 0;
     padding        : 0;
 
-    .list__item {
-      margin-bottom: 10px;
-      @media (min-width: 1200px) {
-        margin-bottom: 14px;
+    .text--normal {
+      font-size: 12px;
 
-        &.list__item--termin,
-        &.list__item--description {
-          margin-bottom: 0;
-        }
-      }
-
-      &:last-of-type {
-        margin-bottom: 20px;
-        @media (min-width: 1200px) {
-          margin-bottom: 0;
-        }
+      @media (min-width: 1920px) {
+        font-size: 16px;
       }
     }
   }
@@ -191,7 +224,7 @@
     width        : 100%;
     height       : 100%;
     position     : relative;
-    margin-bottom: 10px;
+    margin-bottom: 6px;
     @media (min-width: 1200px) {
       margin-bottom: 0;
     }
@@ -215,7 +248,7 @@
   }
 
   &--docs {
-    margin-top: 30px;
+    margin-top: 11px;
     @media (min-width: 1200px) {
       margin-top: 0;
     }
@@ -276,5 +309,14 @@
 
   &--news {
     width: 1270px;
+  }
+
+  &--description {
+    padding-top: 5px;
+    line-height: 14px;
+    @media (min-width: 1200px) {
+      padding-top: 0;
+      line-height: inherit;
+    }
   }
 }

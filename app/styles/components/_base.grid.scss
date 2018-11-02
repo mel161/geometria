@@ -21,10 +21,14 @@ body {
   top: 0;
   width: 100%;
   padding: 0;
+  box-shadow: 0 1px 2px 0 rgba($grey-dark, 0.14);
+
   // display: none;
   @media (min-width: 1200px) {
     height: 133px;
     background-color: transparent;
+    box-shadow: none;
+
 
     &.is-first {
       z-index: 100;
@@ -47,7 +51,7 @@ body {
 
 .sidebar {
   display: flex;
-  z-index: 50;
+  z-index: 80;
   position: absolute;
   top: 0;
   right: 0;
@@ -66,6 +70,10 @@ body {
     width: 100%;
     transition: all 500ms ease-in-out;
 
+    & + .main .row--full {
+      filter: blur(2px);
+    }
+
     .sidebar__inner {
       width: 100%;
       display: block;
@@ -75,6 +83,10 @@ body {
     @media (min-width: 1200px) {
       width: 17.188%;
       right: 0;
+
+      & + .main .row--full {
+        filter: none;
+      }
 
       .sidebar__inner {
         width: 17.188%;
@@ -213,6 +225,12 @@ body {
       width: 100vw;
       @media (min-width: 1200px) {
         position: absolute;
+        margin: 0 -75px;
+      }
+      @media (min-width: 1600px) {
+        margin: 0 -100px;
+      }
+      @media (min-width: 1920px) {
         margin: 0 -150px;
       }
     }
@@ -283,7 +301,7 @@ body {
     }
 
     .main & {
-      margin-bottom: 70px;
+      margin-bottom: 125px;
       @media (min-width: 1200px) {
         margin: 0;
       }
@@ -291,6 +309,13 @@ body {
 
     .main--index & {
       margin: 0;
+    }
+    .main--build & {
+      margin: 0;
+    }
+
+    #credit & {
+      margin-bottom: 1px;
     }
   }
 
@@ -314,8 +339,12 @@ body {
 
     .main & {
       height: 330px;
+      background-size: 100%;
+      background-position: center bottom;
       @media (min-width: 1200px) {
         height: 100%;
+        background-size: cover;
+        background-position: center;
       }
     }
 
@@ -354,7 +383,7 @@ body {
         padding-top: 200px;
 
         &:last-of-type {
-          padding-top: 135px;
+          padding-top: 133px;
           padding-left: 1px;
         }
       }
@@ -432,7 +461,15 @@ body {
     flex: 0 1 calc(50%);
 
     .card--banks & {
-      flex: 0 1 calc(50% - 21px);
+      flex: 0 1 calc(50% - 6px);
+
+      .text--xsmall {
+        margin-bottom: 20px;
+      }
+
+      @media (min-width: 1200px) {
+        flex: 0 1 calc(50% - 21px);
+      }
     }
   }
 
@@ -486,6 +523,8 @@ body {
     top: 0;
     left: 0;
     z-index: 5;
+    opacity: 0;
+    transition: all 500ms ease-out;
   }
 }
 
@@ -493,6 +532,10 @@ body {
   //Styles
   @include clearfix;
   width: 100%;
+
+  @media (min-width: 1200px) {
+    margin-left: -1px;
+  }
 
   &--index-card-scroll {
     width: auto;

@@ -33,8 +33,15 @@
 
   &--docs {
     fill  : $grey-dark;
-    width : 44px;
-    height: 44px;
+    width : 28px;
+    height: auto;
+    margin-left: 5px;
+
+    @media (min-width: 1200px) {
+      width : 44px;
+      height: 44px;
+      margin-left: 0;
+    }
   }
 
   &--arrow {
@@ -73,7 +80,7 @@
   }
 
   &--zoom {
-    fill  : $grey-dark;
+    fill  : $white;
     width : 60px;
     height: 60px;
   }

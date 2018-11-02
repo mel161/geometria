@@ -51,7 +51,7 @@
   &--primary-inner {
     display: none;
     @media (min-width: 1200px) {
-      display: block;
+      display      : block;
       margin-bottom: 20px;
       font-size    : 40px;
     }
@@ -65,7 +65,27 @@
   }
 
   &--primary-first {
-    display: block;
+    display      : block;
+    margin-top   : 56px;
+    margin-bottom: 7px;
+    @media (min-width: 1200px) {
+      margin-top   : 0;
+      margin-bottom: 27px;
+    }
+
+    .main--parking & {
+      margin-bottom: 28px;
+      padding-bottom: 15px;
+    }
+
+    .main--docs & {
+      margin-bottom: 28px;
+      padding-bottom: 14px;
+
+      @media (min-width: 1200px) {
+        padding-bottom: 25px;
+      }
+    }
   }
 
   &--secondary {
@@ -83,6 +103,10 @@
       width        : 500px;
       margin-bottom: 45px;
       font-size    : 32px;
+    }
+
+    .main--contacts & {
+      margin-top: 36px;
     }
   }
 
@@ -184,6 +208,10 @@
   }
 
   &--contacts {
-    margin-bottom: 64px;
+
+    @media (min-width: 1200px) {
+      margin-bottom: 64px;
+
+    }
   }
 }

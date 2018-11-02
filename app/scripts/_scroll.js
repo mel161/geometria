@@ -122,8 +122,10 @@ $(document).ready(() => {
     resizing = false
   }
   var subnav = $('.nav--submenu-first')
+  var navPosition = $('.nav--submenu-first').offset().top - 60
+
   function toggleHeaderFloating () {
-    if (window.scrollY > 170) {
+    if (window.scrollY > navPosition) {
       subnav.addClass('nav--subheader-sticky')
     } else {
       subnav.removeClass('nav--subheader-sticky')

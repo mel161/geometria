@@ -35,7 +35,7 @@ function init () {
   $('.map').click(function () {
     var elem = $('#map-big')
 
-    var windowSize = ($('.page').width() - 660) + 'x' + $('.page').height()
+    var windowSize = ($('.page').width() - $('.col--left').outerWidth()) + 'x' + $('.page').height()
 
     Strip.show('https://dummyimage.com/' + windowSize + '+/000/fff', {
       maxWidth: 1260,

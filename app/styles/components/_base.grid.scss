@@ -8,26 +8,40 @@ body {
 }
 
 .page {
-  width   : 100%;
-  height  : 100%;
-  overflow: hidden;
+  width : 100%;
+  height: 100%;
+  @media (min-width: 1200px) {
+    overflow: hidden;
+  }
 }
 
 .top-panel {
-  z-index         : 55;
-  position        : fixed;
-  top             : 0;
-  width           : 100%;
-  height          : 75px;
-  background-color: $white;
+  z-index : 55;
+  position: fixed;
+  top     : 0;
+  width   : 100%;
+  padding : 0;
   // display: none;
   @media (min-width: 1200px) {
     height          : 133px;
     background-color: transparent;
-  }
 
-  .row {
-    padding: 0;
+    &.is-first {
+      z-index: 100;
+    }
+
+    &.is-gradient {
+      &::before {
+        content   : '';
+        display   : block;
+        width     : 100%;
+        height    : 200%;
+        position  : absolute;
+        top       : 0;
+        left      : 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
+      }
+    }
   }
 }
 
@@ -43,9 +57,9 @@ body {
   height        : 100%;
   transition    : all 500ms ease-in-out;
   @media (min-width: 1200px) {
-    width  : 17.188%;
-    right  : -17.188%;
-    padding: 0 48px;
+    width: 17.188%;
+    right: -17.188%;
+    // padding: 0 48px;
   }
   // Modifiers
   &--active {
@@ -90,13 +104,11 @@ body {
       justify-content: flex-end;
       overflow       : hidden;
     }
-
     @media (min-width: 1600px) {
-      padding        : 0 40px;
+      padding: 0 40px;
     }
-
     @media (min-width: 1920px) {
-      padding        : 0 48px;
+      padding: 0 48px;
     }
   }
 }
@@ -132,8 +144,9 @@ body {
 }
 
 .grid {
-  width : 100%;
-  height: 100%;
+  width   : 100%;
+  height  : 100%;
+  position: relative;
 }
 
 .row {
@@ -141,7 +154,7 @@ body {
   flex-direction: column;
   align-items   : stretch;
   width         : 100%;
-  height        : 100%;
+  // height        : 100%;
   padding       : 0 30px;
   @media (min-width: 1200px) {
     flex-direction: row;
@@ -164,6 +177,39 @@ body {
 
   .main & {
     position: relative;
+    height  : 100%;
+
+    &.top-panel {
+      position        : fixed;
+      height          : 75px;
+      background-color: $white;
+      @media (min-width: 1200px) {
+        position        : absolute;
+        height          : 133px;
+        background-color: transparent;
+      }
+    }
+  }
+
+  .main--index & {
+    // position: absolute;
+    &.top-panel {
+      // position: absolute;
+      display: none;
+      @media (min-width: 1200px) {
+        display: flex;
+      }
+    }
+
+    &.is-first {
+      display: flex;
+      margin : 0 -30px;
+      width  : 100vw;
+      @media (min-width: 1200px) {
+        position: absolute;
+        margin  : 0 -150px;
+      }
+    }
   }
 }
 
@@ -172,6 +218,7 @@ body {
   @include clearfix;
   position: relative;
   flex    : 1 1 auto;
+  width   : auto;
 
   .main & {
     position: initial;
@@ -195,11 +242,9 @@ body {
         content         : '';
       }
     }
-
     @media (min-width: 1920px) {
       flex: 0 0 660px;
     }
-
   }
 
   &--left-no-border {
@@ -271,6 +316,18 @@ body {
     .main--index & {
       height: auto;
     }
+
+    .is-first & {
+      z-index : 100;
+      position: fixed;
+      top     : 0;
+      right   : 0;
+      width   : 17.188%;
+      height  : 55px;
+      @media (min-width: 1200px) {
+        height: 133px;
+      }
+    }
   }
 
   &--vertical-center {
@@ -296,7 +353,6 @@ body {
         }
       }
     }
-
     @media (min-width: 1920px) {
       padding-top: 263px;
 
@@ -327,7 +383,6 @@ body {
         padding-left: 75px;
       }
     }
-
     @media (min-width: 1600px) {
       padding-left: 100px;
 
@@ -339,7 +394,6 @@ body {
         padding-left: 100px;
       }
     }
-
     @media (min-width: 1920px) {
       padding-left: 147px;
 
@@ -407,11 +461,26 @@ body {
   &--no-padding {
     padding: 0;
     margin : 0 -30px;
+    @media (min-width: 1200px) {
+      margin: 0;
+    }
   }
 }
 
 .block {
   @include clearfix;
+
+  &--gallery {
+    display        : flex;
+    width          : 100%;
+    height         : 100%;
+    justify-content: center;
+    align-items    : center;
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    z-index        : 5;
+  }
 }
 
 .wrap {
@@ -434,25 +503,29 @@ body {
       margin: 0 17px 0 0;
     }
   }
-
-  @media (min-width: 1200px) {
-    &--scroll {
-      width: calc(100vw - 8.5%);
-    }
-
-    &--news {
-      margin-top: -17px;
-      width: calc(100vw - 40%);
-    }
-  }
-  @media (min-width: 1600px) {
-    &--scroll {
-      max-width: 1250px;
-    }
-    &--news {
-      margin-top: 0;
-    }
-  }
+  // @media (min-width: 1200px) {
+  //   &--scroll {
+  //     width: calc(100vw - 8.5%);
+  //   }
+  //
+  //   &--news {
+  //     margin-top: -17px;
+  //     width: calc(100vw - 40%);
+  //   }
+  // }
+  // @media (min-width: 1600px) {
+  //   &--scroll {
+  //     max-width: 1040px;
+  //   }
+  //   &--news {
+  //     margin-top: 0;
+  //   }
+  // }
+  // @media (min-width: 1920px) {
+  //   &--scroll {
+  //     max-width: 1250px;
+  //   }
+  // }
 }
 
 .date {

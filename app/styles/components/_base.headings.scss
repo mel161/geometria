@@ -24,8 +24,8 @@
       @media (min-width: 1200px) {
         margin-bottom: 30px;
         font-size    : 40px;
-        margin-right: 35px;
-        padding: 0;
+        margin-right : 35px;
+        padding      : 0;
       }
       @media (min-width: 1920px) {
         margin-bottom: 30px;
@@ -51,6 +51,7 @@
   &--primary-inner {
     display: none;
     @media (min-width: 1200px) {
+      display: block;
       margin-bottom: 20px;
       font-size    : 40px;
     }
@@ -103,16 +104,24 @@
       }
     }
     @media (min-width: 1600px) {
-      font-size     : 32px;
+      font-size: 32px;
     }
     @media (min-width: 1920px) {
-      font-size     : 36px;
+      font-size : 36px;
+      margin-top: 71px;
     }
   }
 
   &--border {
     @media (min-width: 1200px) {
       padding-bottom: 15px;
+      margin-bottom : 38px;
+    }
+    @media (min-width: 1600px) {
+      padding-bottom: 20px;
+    }
+    @media (min-width: 1920px) {
+      padding-bottom: 25px;
     }
     border-bottom: 1px solid $brand;
   }
@@ -124,7 +133,6 @@
     .card--news & {
       margin-bottom: 10px;
     }
-
     @media (min-width: 1200px) {
       font-size: 18px;
 
@@ -167,11 +175,15 @@
   &--index-location {
     display: none;
     @media (min-width: 1200px) {
-      display: inline-block;
+      display      : inline-block;
       margin-bottom: 0;
     }
     @media (min-width: 1920px) {
       margin-bottom: 69px;
     }
+  }
+
+  &--contacts {
+    margin-bottom: 64px;
   }
 }

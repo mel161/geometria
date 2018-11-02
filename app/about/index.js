@@ -15,6 +15,11 @@ function cardActive (obj) {
 }
 
 function cardListActive (obj) {
+  var cardWidth = obj.siblings().find('.card__inner').outerWidth()
+  console.log(cardWidth)
+
+  obj.find('.card__title').outerWidth(cardWidth)
+  obj.find('.card__text').css('left', cardWidth + 'px')
   obj
     .toggleClass('list__item--card-active')
     .siblings()

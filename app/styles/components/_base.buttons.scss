@@ -5,6 +5,7 @@
   font-family: $font-sans;
   text-align : center;
   box-sizing : border-box;
+  cursor     : pointer;
   // Modifiers
   &--transparent {
     padding         : 0;
@@ -28,7 +29,7 @@
       width    : 250px;
     }
     @media (min-width: 1600px) {
-      padding  : 20px 45px;
+      padding: 20px 45px;
     }
     @media (min-width: 1920px) {
       font-size: 18px;
@@ -73,12 +74,12 @@
     margin  : 0 30px;
     padding : 15px 0;
     @media (min-width: 1200px) {
-      position   : absolute;
-      bottom     : 71px;
-      left       : 75px;
-      width      : 250px;
-      margin     : 0;
-      padding    : 16px 0;
+      position: absolute;
+      bottom  : 71px;
+      left    : 75px;
+      width   : 250px;
+      margin  : 0;
+      padding : 16px 0;
     }
     @media (min-width: 1600px) {
       left: 100px;
@@ -95,11 +96,24 @@
     }
   }
 
+  &--order-credit {
+    position: relative;
+    margin  : 40px 0;
+    width   : 100%;
+
+    @media (min-width: 1200px) {
+      width: 250px;
+      position: absolute;
+      margin: 0;
+    }
+  }
+
   &--load-more {
     width  : 110px;
     height : 40px;
     display: block;
     margin : 0 auto;
+
     @media (min-width: 1200px) {
       display: none;
     }
@@ -132,12 +146,12 @@
 
   &--nav-trigger {
     z-index   : 55;
-    position  : absolute;
+    position  : fixed;
     top       : 16px;
     right     : 25px;
     width     : 50px;
     height    : 50px;
-    transition: all 500ms ease-in-out;
+    transition: all 700ms ease-in-out;
 
     > .icon {
       fill    : $grey-dark;
@@ -220,7 +234,8 @@
 
       &.btn--active {
         // right: 231px;
-        right: 65%;
+        // right: 65%;
+        right: 11.6%;
 
         > .icon--hamburger {
           height: 0;

@@ -1,13 +1,12 @@
 .icon {
   // Styles
-  border : 0;
-  outline: none;
-  transition      : all 500ms ease-in-out;
+  border    : 0;
+  outline   : none;
+  transition: all 500ms ease-in-out;
   // Modifiers
   &--hamburger {
     width : 50px;
     height: 41px;
-
     @media (min-width: 1200px) {
       width: 40px;
     }
@@ -46,10 +45,9 @@
   }
 
   &--arrow-full {
-    fill      : $grey-dark;
-    width     : 48px;
-    height    : auto;
-
+    fill  : $grey-dark;
+    width : 48px;
+    height: auto;
     @media (min-width: 1200px) {
       width: 34px;
     }
@@ -59,10 +57,9 @@
   }
 
   &--close {
-    fill: $grey-dark;
-    width: 39px;
+    fill  : $grey-dark;
+    width : 39px;
     height: 38px;
-
     @media (min-width: 1200px) {
       width: 34px;
     }
@@ -70,7 +67,14 @@
       width: 39px;
     }
   }
+
   &--dark-grey {
     fill: $grey-dark;
+  }
+
+  &--zoom {
+    fill  : $grey-dark;
+    width : 60px;
+    height: 60px;
   }
 }

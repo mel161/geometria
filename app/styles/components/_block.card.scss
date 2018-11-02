@@ -53,7 +53,7 @@
     .card--docs & {
       padding: 22px 20px;
       @media (min-width: 1200px) {
-        padding: 30px 40px 30px 30px;
+        padding: 20px 40px 30px 25px;
       }
     }
 
@@ -149,6 +149,7 @@
         padding: 20px;
       }
       @media (min-width: 1920px) {
+        height : 115px;
         padding: 30px 21px 18px 30px;
       }
 
@@ -172,24 +173,24 @@
     }
     // Media Queries
     @media (min-width: 1200px) {
-      left            : 0;
-      width           : 100%;
-      max-height      : 120px;
-      height          : 120px;
-      max-width       : 300px;
-      padding         : 37px 39px;
-      position        : absolute;
-      bottom          : 0;
+      left      : 0;
+      width     : 100%;
+      max-height: 120px;
+      height    : 120px;
+      max-width : 300px;
+      padding   : 37px 39px;
+      position  : absolute;
+      bottom    : 0;
       // background-color: inherit;
-
       .card--features & {
         padding: 20px;
       }
     }
-    @media (min-width: 1920px) {
+    @media (min-width: 1600px) {
       max-height: 140px;
       height    : 140px;
-
+    }
+    @media (min-width: 1920px) {
       .card--features & {
         padding: 37px 39px;
       }
@@ -219,6 +220,7 @@
       }
       @media (min-width: 1600px) {
         height: 140px;
+        min-width: 900px;
       }
       @media (min-width: 1920px) {
         padding: 32px 35px 35px;
@@ -244,6 +246,7 @@
 
     .card--docs & {
       margin-left: 3px;
+      margin-top : 6px;
     }
   }
 

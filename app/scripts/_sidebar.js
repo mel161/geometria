@@ -2,10 +2,10 @@
 import './vendor/jquery.min'
 
 $(document).ready(function () {
-  var topNav = $('.nav--top')
+  var topNav = $('.is-first .nav--top')
   var sidebar = $('.sidebar')
   var sidebarInner = $('.sidebar__inner')
-  var topPanelInner = $('.top-panel').find('.col--center')
+  var topPanelInner = $('.top-panel.is-first').find('.col--center')
 
   $('#js-sidebar-trigger').click(function () {
     $(this).toggleClass('btn--active')

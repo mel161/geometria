@@ -258,6 +258,11 @@
       flex-direction: row;
       flex-wrap     : wrap;
       height        : 66px;
+
+      @media (min-width: 1200px) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+      }
     }
   }
 
@@ -321,16 +326,17 @@
 
     .main--build & {
       // width: 100%;
-      margin-top: -9px;
       margin-bottom: 30px;
       @media (min-width: 1200px) {
         width: 89%;
+        margin-top: -9px;
       }
       @media (min-width: 1600px) {
         width: 85%;
       }
       @media (min-width: 1920px) {
         width: 447px;
+        margin-top: 0;
       }
     }
   }

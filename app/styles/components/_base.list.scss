@@ -13,7 +13,8 @@
       padding-bottom: 14px;
       @media (min-width: 1200px) {
         margin-bottom : 33px;
-        padding-bottom: 22px;
+        padding-bottom: 28px;
+        margin-top    : 28px;
       }
 
       &:last-of-type {
@@ -40,9 +41,14 @@
       }
       @media (min-width: 1200px) {
         // width        : 300px;
+        margin-right: 17px;
+
         &:nth-child(2n) {
-          margin-right: 14px;
+          margin-right: 17px;
         }
+      }
+      @media (min-width: 1920px) {
+        margin-right: 14px;
       }
 
       .list--scroll & {
@@ -51,6 +57,11 @@
 
       .main--buy & {
         float: none;
+        margin-right: 0;
+
+        @media (min-width: 1200px) {
+          margin-right: 14px;
+        }
       }
 
       .list--news & {
@@ -84,7 +95,7 @@
         margin    : 0;
       }
       @media (min-width: 1600px) {
-        height: 690px;
+        // height: 690px;
       }
       @media (min-width: 1920px) {
         max-height: 690px;
@@ -135,11 +146,18 @@
 
     &--termin {
       float: left;
-      width: 80px;
+      width: 69px;
+      margin-bottom: 0;
+      @media (min-width: 1200px) {
+        margin-bottom: 0 ;
+      }
     }
 
     &--description {
-      // float: left;
+      margin-bottom: 0;
+      @media (min-width: 1200px) {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -151,13 +169,12 @@
     .list__item {
       margin-bottom: 10px;
       @media (min-width: 1200px) {
-        margin-bottom: 15px;
-      }
-      @media (min-width: 1600px) {
-        margin-bottom: 15px;
-      }
-      @media (min-width: 1920px) {
-        margin-bottom: 20px;
+        margin-bottom: 14px;
+
+        &.list__item--termin,
+        &.list__item--description {
+          margin-bottom: 0;
+        }
       }
 
       &:last-of-type {
@@ -199,6 +216,9 @@
 
   &--docs {
     margin-top: 30px;
+    @media (min-width: 1200px) {
+      margin-top: 0;
+    }
   }
 
   &--dot {
@@ -211,6 +231,9 @@
     width      : 100%;
     margin-left: 2px;
     max-width  : 300px;
+    @media (min-width: 1920px) {
+      max-width: none;
+    }
   }
 
   &--scroll {
@@ -241,13 +264,13 @@
           float  : left;
         }
       }
-    }
-    @media (min-width: 1920px) {
-      width: 3770px;
+      @media (min-width: 1920px) {
+        width: 3800px;
+      }
     }
 
     &.list--news {
-      width: 1260px;
+      width: 1270px;
     }
   }
 }

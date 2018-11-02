@@ -1,5 +1,6 @@
 /* global $ */
 /* global EventEmitter */
+/* global Strip */
 // import './vendor/jquery.min'
 
 // import EventEmitter from './vendor/EventEmitter.min'
@@ -17,29 +18,30 @@ var scrollStartListenerIndex = function (slideNumber) {
   $('.sidebar').removeClass('sidebar--active')
   $('#js-sidebar-trigger').removeClass('btn--active')
   if (slideNumber <= 0 || slideNumber === 1) {
-    $('.logo--top').removeClass('logo--top-dark')
-    $('.nav__item--top').removeClass('nav__item--top-scroll')
     $('.sidebar').addClass('sidebar--active')
     $('#js-sidebar-trigger').addClass('btn--active').addClass('btn--nav-trigger-white')
   } else if (slideNumber % 2 === 0 || slideNumber > 4) {
-    $('.logo--top').addClass('logo--top-dark')
-    $('.nav__item--top').addClass('nav__item--top-scroll')
+    $('#js-sidebar-trigger').removeClass('btn--nav-trigger-white')
     if (slideNumber === 2) {
       $('#js-sidebar-trigger').addClass('btn--nav-trigger-white')
     }
   } else if (slideNumber % 3 === 0) {
-    $('.logo--top').removeClass('logo--top-dark')
-    $('#js-sidebar-trigger').removeClass('btn--nav-trigger-white')
+    // $('#js-sidebar-trigger').removeClass('btn--nav-trigger-white')
   } else {
-    $('.logo--top').removeClass('logo--top-dark')
-    $('.nav__item--top').removeClass('nav__item--top-scroll')
     $('#js-sidebar-trigger').removeClass('btn--nav-trigger-white')
   }
-}
 
+  if ($('div').is('.strp-window')) {
+    Strip.hide()
+  }
+}
 var scrollStartListener = function (slideNumber) {
   $('.sidebar').removeClass('sidebar--active')
   $('#js-sidebar-trigger').removeClass('btn--active')
+
+  if ($('div').is('.strp-window')) {
+    Strip.hide()
+  }
 }
 
 $(document).ready(() => {
@@ -90,15 +92,23 @@ $(document).ready(() => {
   function scrollInit () {
     var mq = checkMQ()
 
+
+
     if (mq !== 'mobile') {
       $.smartscroll({
-        autoHash: false,
+        autoHash: true,
         sectionScroll: true,
         sectionWrapperSelector: '.main',
         sectionClass: 'slide',
         eventEmitter: ee,
         bindSwipe: true
       })
+
+      if ($('.wrap').is('.scrollbar-rail')) {
+        var dw = $('.page').outerWidth()
+        var colLeftWidth = $('.scrollbar-rail').parent('.col--center').siblings('.col--left').outerWidth()
+        $('.scrollbar-rail').width(dw - colLeftWidth - 10)
+      }
     } else {
       $('.sidebar').removeClass('sidebar--active')
       $('#js-sidebar-trigger').removeClass('btn--active').removeClass('btn--nav-trigger-white')

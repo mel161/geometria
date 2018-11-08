@@ -8,7 +8,7 @@ body {
 }
 
 .page {
-  width: 100%;
+  width : 100%;
   height: 100%;
   @media (min-width: 1200px) {
     overflow: hidden;
@@ -16,19 +16,17 @@ body {
 }
 
 .top-panel {
-  z-index: 55;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 0;
+  z-index   : 55;
+  position  : fixed;
+  top       : 0;
+  width     : 100%;
+  padding   : 0;
   box-shadow: 0 1px 2px 0 rgba($grey-dark, 0.14);
-
   // display: none;
   @media (min-width: 1200px) {
-    height: 133px;
+    height          : 133px;
     background-color: transparent;
-    box-shadow: none;
-
+    box-shadow      : none;
 
     &.is-first {
       z-index: 100;
@@ -36,13 +34,13 @@ body {
 
     &.is-gradient {
       &::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 200%;
-        position: absolute;
-        top: 0;
-        left: 0;
+        content   : '';
+        display   : block;
+        width     : 100%;
+        height    : 200%;
+        position  : absolute;
+        top       : 0;
+        left      : 0;
         background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%,rgba(0,0,0,0) 100%);
       }
     }
@@ -50,16 +48,16 @@ body {
 }
 
 .sidebar {
-  display: flex;
-  z-index: 80;
-  position: absolute;
-  top: 0;
-  right: 0;
+  display       : flex;
+  z-index       : 50;
+  position      : absolute;
+  top           : 0;
+  right         : 0;
   flex-direction: row;
-  flex-wrap: wrap;
-  width: 0;
-  height: 100%;
-  transition: all 500ms ease-in-out;
+  flex-wrap     : wrap;
+  width         : 0;
+  height        : 100%;
+  transition    : all 500ms ease-in-out;
   @media (min-width: 1200px) {
     width: 17.188%;
     right: -17.188%;
@@ -67,7 +65,7 @@ body {
   }
   // Modifiers
   &--active {
-    width: 100%;
+    width     : 100%;
     transition: all 500ms ease-in-out;
 
     & + .main .row--full {
@@ -75,9 +73,9 @@ body {
     }
 
     .sidebar__inner {
-      width: 100%;
-      display: block;
-      right: 0;
+      width     : 100%;
+      display   : block;
+      right     : 0;
       transition: all 500ms ease-in-out;
     }
     @media (min-width: 1200px) {
@@ -89,32 +87,32 @@ body {
       }
 
       .sidebar__inner {
-        width: 17.188%;
+        width  : 17.188%;
         display: flex;
       }
     }
   }
 
   &__inner {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: block;
-    top: 0;
-    right: -100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    width           : 100%;
+    height          : 100%;
+    position        : fixed;
+    display         : block;
+    top             : 0;
+    right           : -100%;
+    overflow-y      : scroll;
+    overflow-x      : hidden;
     background-color: rgba($white, .9);
-    padding: 112px 30px 0;
-    transition: all 500ms ease-in-out;
+    padding         : 112px 30px 0;
+    transition      : all 500ms ease-in-out;
     @media (min-width: 1200px) {
-      padding: 0 30px;
-      width: 17.188%;
-      display: flex;
-      flex-direction: column;
-      align-items: baseline;
+      padding        : 0 30px;
+      width          : 17.188%;
+      display        : flex;
+      flex-direction : column;
+      align-items    : baseline;
       justify-content: flex-end;
-      overflow: hidden;
+      overflow       : hidden;
     }
     @media (min-width: 1600px) {
       padding: 0 40px;
@@ -127,11 +125,11 @@ body {
 
 .main {
   @include clearfix;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
+  position  : relative;
+  top       : 0;
+  left      : 0;
+  width     : 100%;
+  height    : auto;
   margin-top: 75px;
   @media (min-width: 1200px) {
     margin-top: 0;
@@ -150,27 +148,27 @@ body {
 }
 
 .slide {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
 }
 
 .grid {
-  width: 100%;
-  height: 100%;
+  width   : 100%;
+  height  : 100%;
   position: relative;
 }
 
 .row {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  align-items: stretch;
-  width: 100%;
+  align-items   : stretch;
+  width         : 100%;
   // height        : 100%;
-  padding: 0 30px;
+  padding       : 0 30px;
   @media (min-width: 1200px) {
     flex-direction: row;
-    padding: 0;
+    padding       : 0;
   }
 
   &--full {
@@ -179,8 +177,8 @@ body {
 
   &--space {
     justify-content: space-between;
-    flex-direction: row;
-    padding: 0;
+    flex-direction : row;
+    padding        : 0;
   }
 
   &--horizontal {
@@ -189,21 +187,21 @@ body {
 
   .main & {
     position: relative;
-    height: 100%;
+    height  : 100%;
 
     &.top-panel {
-      position: fixed;
-      height: 75px;
+      position        : fixed;
+      height          : 75px;
       background-color: $white;
-      display: none;
+      display         : none;
 
       &.is-first {
         display: flex;
       }
       @media (min-width: 1200px) {
-        display: flex;
-        position: absolute;
-        height: 133px;
+        display         : flex;
+        position        : absolute;
+        height          : 133px;
         background-color: transparent;
       }
     }
@@ -221,11 +219,11 @@ body {
 
     &.is-first {
       display: flex;
-      margin: 0 -30px;
-      width: 100vw;
+      margin : 0 -30px;
+      width  : 100vw;
       @media (min-width: 1200px) {
         position: absolute;
-        margin: 0 -75px;
+        margin  : 0 -75px;
       }
       @media (min-width: 1600px) {
         margin: 0 -100px;
@@ -241,8 +239,8 @@ body {
   // Styles
   @include clearfix;
   position: relative;
-  flex: 1 1 auto;
-  width: auto;
+  flex    : 1 1 auto;
+  width   : auto;
 
   .main & {
     position: initial;
@@ -256,14 +254,14 @@ body {
       flex: 0 0 34.375%;
 
       &::before {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: -1px;
-        width: 1px;
-        height: 100%;
+        display         : block;
+        position        : absolute;
+        top             : 0;
+        right           : -1px;
+        width           : 1px;
+        height          : 100%;
         background-color: $brand;
-        content: '';
+        content         : '';
       }
     }
     @media (min-width: 1920px) {
@@ -310,8 +308,21 @@ body {
     .main--index & {
       margin: 0;
     }
+
     .main--build & {
       margin: 0;
+    }
+
+    .main--about & {
+      margin: 0;
+    }
+
+    .main--contacts & {
+      margin-bottom: 60px;
+    }
+
+    .main--parking & {
+      margin-bottom: 93px;
     }
 
     #credit & {
@@ -328,8 +339,8 @@ body {
 
   &--center-full {
     flex-basis: auto;
-    padding: 0;
-    position: relative;
+    padding   : 0;
+    position  : relative;
   }
 
   &--right {
@@ -338,12 +349,12 @@ body {
     }
 
     .main & {
-      height: 330px;
-      background-size: 100%;
+      height             : 330px;
+      background-size    : 100%;
       background-position: center bottom;
       @media (min-width: 1200px) {
-        height: 100%;
-        background-size: cover;
+        height             : 100%;
+        background-size    : cover;
         background-position: center;
       }
     }
@@ -353,12 +364,12 @@ body {
     }
 
     .is-first & {
-      z-index: 100;
+      z-index : 100;
       position: fixed;
-      top: 0;
-      right: 0;
-      width: 17.188%;
-      height: 55px;
+      top     : 0;
+      right   : 0;
+      width   : 17.188%;
+      height  : 55px;
       @media (min-width: 1200px) {
         height: 133px;
       }
@@ -366,8 +377,8 @@ body {
   }
 
   &--vertical-center {
-    display: flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
   }
 
@@ -383,7 +394,7 @@ body {
         padding-top: 200px;
 
         &:last-of-type {
-          padding-top: 133px;
+          padding-top : 133px;
           padding-left: 1px;
         }
       }
@@ -399,7 +410,7 @@ body {
         padding-top: 275px;
 
         &:last-of-type {
-          padding-top: 212px;
+          padding-top : 212px;
           padding-left: 1px;
         }
       }
@@ -444,15 +455,15 @@ body {
 
   &--margin-logo {
     @media (min-width: 1200px) {
-      padding-top: 53px;
+      padding-top : 53px;
       padding-left: 75px;
     }
     @media (min-width: 1600px) {
-      padding-top: 53px;
+      padding-top : 53px;
       padding-left: 100px;
     }
     @media (min-width: 1920px) {
-      padding-top: 53px;
+      padding-top : 53px;
       padding-left: 150px;
     }
   }
@@ -466,7 +477,6 @@ body {
       .text--xsmall {
         margin-bottom: 20px;
       }
-
       @media (min-width: 1200px) {
         flex: 0 1 calc(50% - 21px);
       }
@@ -475,27 +485,27 @@ body {
 
   &--overlay {
     position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 330px;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 330px;
     @media (min-width: 1200px) {
       height: 100%;
     }
 
     &::after {
-      content: '';
-      display: block;
-      width: 80px;
-      height: 80px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-image: url("./../../images/play-image.png");
-      background-size: cover;
-      position: absolute;
+      content         : '';
+      display         : block;
+      width           : 80px;
+      height          : 80px;
+      top             : 50%;
+      left            : 50%;
+      transform       : translate(-50%, -50%);
+      background-image: url('./../../images/play-image.png');
+      background-size : cover;
+      position        : absolute;
       @media (min-width: 1200px) {
-        width: 145px;
+        width : 145px;
         height: 145px;
       }
     }
@@ -503,10 +513,20 @@ body {
 
   &--no-padding {
     padding: 0;
-    margin: 0 -30px;
+    margin : 0 -30px;
     @media (min-width: 1200px) {
       margin: 0;
     }
+  }
+
+  &--trade-in {
+    background-image: url('../../images/trade-in-right-small.jpg');
+
+    @media (min-width: 1200px) {
+      background-image: url('../../images/trade-in-right.jpg');
+      background-position: center;
+    }
+
   }
 }
 
@@ -514,17 +534,17 @@ body {
   @include clearfix;
 
   &--gallery {
-    display: flex;
-    width: 100%;
-    height: 100%;
+    display        : flex;
+    width          : 100%;
+    height         : 100%;
     justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 5;
-    opacity: 0;
-    transition: all 500ms ease-out;
+    align-items    : center;
+    position       : absolute;
+    top            : 0;
+    left           : 0;
+    z-index        : 5;
+    opacity        : 0;
+    transition     : all 500ms ease-out;
   }
 }
 
@@ -532,13 +552,13 @@ body {
   //Styles
   @include clearfix;
   width: 100%;
-
   @media (min-width: 1200px) {
     margin-left: -1px;
   }
 
   &--index-card-scroll {
     width: auto;
+
     &.scroll-wrapper {
       // padding: 0 30px !important;
     }
@@ -547,25 +567,31 @@ body {
   &--about-card-scroll {
     position: relative;
     @media (min-width: 1200px) {
-      margin: 0 17px 0 0;
+      margin: 0 24px 0 0;
+    }
+  }
+
+  &--news {
+    @media (min-width: 1200px) {
+      margin-top: -4px;
     }
   }
 }
 
 .date {
   position: absolute;
-  top: 21px;
-  right: 30px;
+  top     : 21px;
+  right   : 30px;
   @media (min-width: 1200px) {
     position: relative;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    top     : 0;
+    right   : 0;
+    bottom  : 0;
+    left    : 0;
   }
 
   &__small {
-    display: block;
+    display  : block;
     font-size: 11px;
     @media (min-width: 1200px) {
       display: none;

@@ -98,7 +98,7 @@
       @include aspect-ratio(26, 19);
       display      : block;
       width        : 100%;
-      margin-bottom: 6px;
+      // margin-bottom: 6px;
     }
 
     .modal__inner & {
@@ -131,6 +131,15 @@
 
     .card--features:hover & {
       background-color: $brand;
+    }
+
+    .card--news:hover & {
+      background-color: $brand;
+
+      .text {
+        color: $grey-dark;
+        border-color: $grey-dark;
+      }
     }
 
     .card--active & {
@@ -193,7 +202,7 @@
     }
     @media (min-width: 1920px) {
       .card--features & {
-        padding: 37px 39px;
+        padding: 47px 39px;
       }
     }
   }
@@ -287,8 +296,8 @@
     // width           : 126px;
     // height          : 367px;
     min-height      : 367px;
-    margin-right    : 8px;
-    margin-bottom   : 0;
+    // margin-right    : 8px;
+    // margin-bottom   : 0;
     background-color: inherit;
     color           : inherit;
     overflow        : hidden;

@@ -41,7 +41,7 @@ jQuery(document).ready(() => {
   var activeCard
 
   var cards = $('.card__text')
-  var cardsWidth1 = $('main .col--center').outerWidth() - $('.card__inner').outerWidth()
+  var cardsWidth1 = $('main .col--center').outerWidth() - $('.card__inner').outerWidth() - 17
   var mq = checkMQ()
   if (mq !== 'mobile') {
     cards.each(function (index, element) {
@@ -51,6 +51,7 @@ jQuery(document).ready(() => {
 
   $('.card').click(function (event) {
     event.preventDefault()
+    // $(this).animate({width: 'toggle', left: 'toggle'}, 600)
     var mq = checkMQ()
     if (mq === 'mobile') {
       activeCard = $(this)

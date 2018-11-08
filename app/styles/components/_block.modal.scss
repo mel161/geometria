@@ -34,7 +34,7 @@
   }
 
   &--form {
-    @media (min-width: 1200px) {
+    @media (min-width: 1600px) {
       height     : auto;
       max-height : 680px;
       margin-left: 62px;
@@ -43,10 +43,14 @@
   }
 
   &--success {
-    @media (min-width: 1200px) {
+    @media (min-width: 1600px) {
       height     : 500px;
       margin-left: 61px;
       margin-top : -152px;
+
+      .text {
+        line-height: 24px;
+      }
     }
   }
 

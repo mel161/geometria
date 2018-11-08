@@ -16,6 +16,10 @@
 
   &:hover {
     color: $brand;
+
+    .icon {
+      fill: $brand;
+    }
   }
 
   &:active {
@@ -77,6 +81,7 @@
       .block--gallery {
         opacity: 1;
       }
+
       .icon {
         fill: $brand;
       }
@@ -85,7 +90,7 @@
 
   &--card {
     // Styles
-    display: block;
+    display    : block;
     font-size  : 20px;
     font-weight: 500;
     // States
@@ -99,6 +104,10 @@
     &:hover {
       background-color: $brand;
       color           : $grey-dark;
+
+      .icon {
+        fill: $grey-dark;
+      }
     }
 
     &:active {}
@@ -114,8 +123,13 @@
     padding    : 21px 16px;
     text-align : center;
     line-height: 1;
-    border       : 1px solid $brand;
+    border     : 1px solid $brand;
+    outline    : none;
 
+    .is-active & {
+      background-color: $brand;
+      color           : $grey-dark;
+    }
 
     &:link {}
 
@@ -124,17 +138,15 @@
     &:hover {
       background-color: $brand;
       color           : $grey-dark;
-      border: 0;
-      outline: none;
+      outline         : none;
     }
 
     &:active {
       outline: none;
-      border: 0;
+      // border: 0;
     }
-
     @media (min-width: 1200px) {
-      padding    : 21px 14px;
+      padding: 21px 14px;
     }
     @media (min-width: 1620px) {
       padding: 32px 25px;

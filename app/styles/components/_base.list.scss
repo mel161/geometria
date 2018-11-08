@@ -12,15 +12,25 @@
       border-bottom : 1px solid #cfd11a;
       padding-bottom: 18px;
       padding-top   : 10px;
+      line-height   : 14px;
       @media (min-width: 1200px) {
         margin-bottom : 33px;
         padding-bottom: 28px;
         margin-top    : 28px;
+        line-height   : 1.2;
+
+        .main--contacts & {
+          margin-top: 18px;
+        }
       }
 
       &:first-of-type {
         margin-bottom: 35px;
         padding-top  : 0;
+
+        .main--contacts & {
+          margin-bottom: 7px;
+        }
         @media (min-width: 1200px) {
           margin-bottom: 0;
         }
@@ -30,7 +40,14 @@
         border       : 0;
         margin-bottom: 35px;
         padding-top  : 6px;
+
+        .main--contacts & {
+          margin-top   : -3px;
+          margin-bottom: 18px;
+          padding      : 0;
+        }
         @media (min-width: 1200px) {
+          margin-top   : 0;
           margin-bottom: 0;
           padding-top  : 0;
         }
@@ -43,9 +60,16 @@
       float        : left;
       transition   : initial;
       overflow     : hidden;
-      width        : 23%;
+      width        : 24%;
+      max-width    : 126px;
       margin-bottom: 0;
       margin-right : 14px;
+
+
+
+      @media (min-width: 1920px) {
+        max-width: 300px;
+      }
 
       &:last-of-type {
         margin-right: 0;
@@ -60,6 +84,14 @@
       }
       @media (min-width: 1920px) {
         margin-right: 14px;
+
+        &:nth-child(2n) {
+          margin-right: 14px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
+        }
       }
 
       .list--unstyled > & {
@@ -76,8 +108,10 @@
 
         &:last-of-type {
           margin-bottom: 0;
+          margin-right : 0;
           @media (min-width: 1200px) {
             margin-bottom: 0;
+            margin-right : 0;
           }
         }
       }
@@ -87,9 +121,10 @@
       }
 
       .main--buy & {
-        float       : none;
-        margin-right: 0;
+        float        : none;
+        margin-right : 0;
         margin-bottom: 14px;
+        max-width: none;
         @media (min-width: 1200px) {
           margin-right: 14px;
         }
@@ -97,18 +132,19 @@
 
       .list--news & {
         width: 100%;
+        max-width: none;
         @media (min-width: 1200px) {
           width: 300px;
         }
       }
 
       .list--docs > & {
-        margin: 0 0 14px;
+        margin : 0 0 14px;
         padding: 0;
+        max-width: none;
         @media (min-width: 480px) {
           width: 300px;
         }
-
         @media (min-width: 1200px) {
           margin-right: 14px;
         }
@@ -127,6 +163,10 @@
       z-index         : 100;
       background-color: $grey-dark;
       transition      : all 0.5s ease-in-out;
+
+      &::before {
+        display: none;
+      }
       @media (min-width: 1200px) {
         width     : 100%;
         height    : auto;
@@ -138,6 +178,7 @@
       }
       @media (min-width: 1920px) {
         max-height: 690px;
+        max-width : none;
       }
     }
 
@@ -170,9 +211,10 @@
       position     : relative;
       margin-right : 10px;
       margin-bottom: 10px;
-      outline: none;
+      outline      : none;
 
       &.is-active {
+        outline: none;
       }
 
       &::before {
@@ -212,7 +254,6 @@
 
     .text--normal {
       font-size: 12px;
-
       @media (min-width: 1920px) {
         font-size: 16px;
       }
@@ -232,7 +273,7 @@
 
   &--cards-index {
     @include clearfix;
-    width : 536px;
+    width : 550px;
     height: 100%;
     margin: 0 auto;
     @media (min-width: 700px) {
@@ -303,12 +344,16 @@
     }
 
     &.list--news {
-      width: 1270px;
+      @media (min-width: 1200px) {
+        width: 1270px;
+      }
     }
   }
 
   &--news {
-    width: 1270px;
+    @media (min-width: 1200px) {
+      width: 1270px;
+    }
   }
 
   &--description {

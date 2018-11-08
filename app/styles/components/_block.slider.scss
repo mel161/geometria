@@ -129,7 +129,9 @@
   }
 
   .main--build & {
-    top: 44%;
+    @media (max-width: 1200px) {
+      top: 44%;
+    }
   }
 
   .icon {
@@ -160,6 +162,10 @@
 
     .main--build & {
       right: -25px;
+
+      @media (min-width: 1920px) {
+        right: -9px;
+      }
     }
     .icon {
       transform: rotate(-90deg);

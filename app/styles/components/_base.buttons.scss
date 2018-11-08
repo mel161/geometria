@@ -1,5 +1,6 @@
 .btn {
   // Styles
+  display    : block;
   border     : 0;
   outline    : none;
   font-family: $font-sans;
@@ -10,6 +11,13 @@
   &--transparent {
     padding         : 0;
     background-color: transparent;
+
+    &:hover {
+
+      > .icon {
+        fill: $brand;
+      }
+    }
   }
 
   &--base {
@@ -22,6 +30,7 @@
     line-height     : 1;
     width           : 100%;
     padding         : 16px 0;
+    
     // Media Queries
     @media (min-width: 1200px) {
       font-size: 16px;
@@ -36,15 +45,23 @@
       // padding  : 20px 45px;
     }
     // States
-    &:link {}
+    &:link {
+      > .icon {
+        fill: $grey-dark;
+      }
+    }
 
-    &:visited {}
+    &:visited {
+      > .icon {
+        fill: $grey-dark;
+      }
+    }
 
     &:hover {
       color: $grey-dark;
 
       > .icon {
-        fill: $brand;
+        fill: $grey-dark;
       }
     }
 
@@ -62,7 +79,7 @@
     }
 
     .modal--success & {
-      margin-top: 74px;
+      margin-top: 66px;
     }
   }
 
@@ -73,6 +90,11 @@
     width   : calc(100% - 60px);
     margin  : 0 30px;
     padding : 17px 0;
+
+    .main--parking & {
+      bottom: 359px;
+    }
+
     @media (min-width: 1200px) {
       position: absolute;
       bottom  : 71px;
@@ -87,7 +109,6 @@
     @media (min-width: 1920px) {
       left: 150px;
     }
-
     // .main--parking & {
     //   bottom: 336px;
     // }
@@ -275,6 +296,7 @@
       }
     }
     @media (min-width: 1920px) {
+      top: 70px;
       &.btn--active {
         right: 231px;
       }

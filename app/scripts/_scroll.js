@@ -107,7 +107,7 @@ $(document).ready(() => {
       if ($('.wrap').is('.scrollbar-rail')) {
         var dw = $('.page').outerWidth()
         var colLeftWidth = $('.scrollbar-rail').parent('.col--center').siblings('.col--left').outerWidth()
-        $('.scrollbar-rail').width(dw - colLeftWidth - 10)
+        $('.scrollbar-rail').width(dw - colLeftWidth - 17)
       }
     } else {
       $('.sidebar').removeClass('sidebar--active')

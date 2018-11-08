@@ -36,6 +36,6 @@ $(document).ready(() => {
   //
 
   $('#js-modal-success').on($.modal.BEFORE_CLOSE, function (event, modal) {
-    $('a').attr('href', '#js-modal-success')
+    $('a[href="#js-modal-form"]').attr('href', '#js-modal-success')
   })
 })

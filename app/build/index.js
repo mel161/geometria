@@ -15,11 +15,13 @@ $(document).ready(() => {
   var resizing = false
 
   scrollInit()
+  // slide: '.slider__item',
 
   $('.slider').slick({
     autoplay: false,
     arrows: true,
     dots: false,
+    rows: 0,
     slidesToShow: 1,
     centerMode: true,
     mobileFirst: true,
@@ -54,6 +56,20 @@ $(document).ready(() => {
         }
       }
     ]
+  })
+
+  $('.link--years').click(function (event) {
+    event.preventDefault()
+    if ($(this).parent().hasClass('is-active')) {
+      $('.list--years').find('.is-active').removeClass('is-active')
+      $('.slider').slick('slickUnfilter')
+    } else {
+      let gallerySelect = '.' + $(this).attr('href')
+      $('.list--years').find('.is-active').removeClass('is-active')
+      $(this).parent().addClass('is-active')
+      $('.slider').slick('slickUnfilter')
+      $('.slider').slick('slickFilter', gallerySelect)
+    }
   })
 
   /* eslint no-console: 1 */

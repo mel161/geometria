@@ -38,23 +38,6 @@ var points = [{
   ]
 },
 {
-  name: 'Стоматологии',
-  style: 'islands#orangeIcon',
-  items: [{
-    center: [56.840672, 60.579893],
-    name: 'Поликлиника ЦГБ № 2'
-  },
-  {
-    center: [56.841299, 60.580226],
-    name: 'Аптечный мир'
-  },
-  {
-    center: [56.840943, 60.578556],
-    name: 'Стоматология Дар'
-  }
-  ]
-},
-{
   name: 'Салоны красоты',
   style: 'islands#blueIcon',
   items: [{

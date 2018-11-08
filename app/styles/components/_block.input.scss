@@ -16,17 +16,17 @@
     font-weight  : 400;
     line-height  : 1;
     @media (min-width: 1200px) {
-      font-size  : 14px;
-      line-height: 16px;
-      padding    : 16px 24px;
+      font-size    : 14px;
+      line-height  : 16px;
+      padding      : 16px 24px;
       margin-bottom: 10px;
     }
     @media (min-width: 1600px) {
       font-size: 16px;
     }
     @media (min-width: 1920px) {
-      font-size: 16px;
-      padding  : 20px 24px;
+      font-size    : 16px;
+      padding      : 21px 24px;
       margin-bottom: 15px;
     }
 
@@ -72,7 +72,8 @@
       border  : 1px solid $brand;
       content : '';
       @media (min-width: 1200px) {
-        left  : 5px;
+        left  : 0;
+        top   : 8px;
         width : 30px;
         height: 30px;
       }
@@ -88,8 +89,8 @@
       background-color: $brand;
       content         : '';
       @media (min-width: 1200px) {
-        top : 10px;
-        left: 10px;
+        top : 13px;
+        left: 5px;
       }
     }
   }
@@ -125,13 +126,15 @@ span.input--error {
 
   &--checkbox {
     height       : 40px;
-    margin-bottom: 25px;
+    margin-top   : 5px;
+    margin-bottom: 22px;
     padding-top  : 6px;
     padding-left : 37px;
     line-height  : 1.2;
     cursor       : pointer;
     @media (min-width: 1200px) {
-      padding-left: 45px;
+      padding-left : 45px;
+      margin-top   : 0;
       margin-bottom: 10px;
     }
     @media (min-width: 1920px) {

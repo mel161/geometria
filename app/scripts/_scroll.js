@@ -14,7 +14,7 @@ import 'jquery.scrollbar'
 
 let ee = new EventEmitter()
 
-var scrollStartListenerIndex = function (slideNumber) {
+var scrollStartListenerIndex = function(slideNumber) {
   $('.sidebar').removeClass('sidebar--active')
   $('#js-sidebar-trigger').removeClass('btn--active')
   if (slideNumber <= 0 || slideNumber === 1) {
@@ -35,12 +35,14 @@ var scrollStartListenerIndex = function (slideNumber) {
     Strip.hide()
   }
 }
-var scrollStartListener = function (slideNumber) {
+var scrollStartListener = function(slideNumber) {
   $('.sidebar').removeClass('sidebar--active')
   $('#js-sidebar-trigger').removeClass('btn--active')
 
-  if ($('div').is('.strp-window')) {
-    Strip.hide()
+  if (!$('.main').is('.main--contacts')) {
+    if ($('div').is('.strp-window')) {
+      Strip.hide()
+    }
   }
 }
 
@@ -55,10 +57,12 @@ $(document).ready(() => {
 
   var resizing = false
 
-  $('.nav__item--submenu .link--nav').click(function (event) {
+  $('.nav__item--submenu .link--nav').click(function(event) {
     var mq = checkMQ()
     if (mq === 'mobile') {
-      $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id({offset: 140})
+      $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id({
+        offset: 140
+      })
       $(this).parent().addClass('nav__item--active').siblings().removeClass('nav__item--active')
     } else {
       $(".nav__item--submenu .link--nav[href*='#']").mPageScroll2id()
@@ -70,16 +74,15 @@ $(document).ready(() => {
   }
 
   scrollInit()
-  $(window).on('resize', function () {
+  $(window).on('resize', function() {
     if (!resizing) {
-      (!window.requestAnimationFrame)
-        ? setTimeout(scrollInit, 300)
-        : window.requestAnimationFrame(scrollInit)
+      (!window.requestAnimationFrame) ?
+      setTimeout(scrollInit, 300): window.requestAnimationFrame(scrollInit)
       resizing = true
     }
   })
 
-  function checkMQ () {
+  function checkMQ() {
     var dw = $('.page').outerWidth()
 
     if (dw >= 1200) {
@@ -89,10 +92,8 @@ $(document).ready(() => {
     }
   }
 
-  function scrollInit () {
+  function scrollInit() {
     var mq = checkMQ()
-
-
 
     if (mq !== 'mobile') {
       $.smartscroll({
@@ -114,7 +115,7 @@ $(document).ready(() => {
       $('#js-sidebar-trigger').removeClass('btn--active').removeClass('btn--nav-trigger-white')
       var rafTimer
 
-      window.onscroll = function (event) {
+      window.onscroll = function(event) {
         cancelAnimationFrame(rafTimer)
         rafTimer = requestAnimationFrame(toggleHeaderFloating)
       }
@@ -124,7 +125,7 @@ $(document).ready(() => {
   var subnav = $('.nav--submenu-first')
   var navPosition = $('.nav--submenu-first').offset().top - 60
 
-  function toggleHeaderFloating () {
+  function toggleHeaderFloating() {
     if (window.scrollY > navPosition) {
       subnav.addClass('nav--subheader-sticky')
     } else {

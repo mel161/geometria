@@ -30,7 +30,7 @@
     line-height     : 1;
     width           : 100%;
     padding         : 16px 0;
-    
+
     // Media Queries
     @media (min-width: 1200px) {
       font-size: 16px;
@@ -93,6 +93,10 @@
 
     .main--parking & {
       bottom: 359px;
+
+      @media (min-width: 1200px) {
+        bottom: 71px;
+      }
     }
 
     @media (min-width: 1200px) {
@@ -107,7 +111,7 @@
       left: 100px;
     }
     @media (min-width: 1920px) {
-      left: 150px;
+      left: 147px;
     }
     // .main--parking & {
     //   bottom: 336px;

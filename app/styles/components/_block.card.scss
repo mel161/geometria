@@ -96,8 +96,8 @@
 
     .card--news & {
       @include aspect-ratio(26, 19);
-      display      : block;
-      width        : 100%;
+      display: block;
+      width  : 100%;
       // margin-bottom: 6px;
     }
 
@@ -137,7 +137,7 @@
       background-color: $brand;
 
       .text {
-        color: $grey-dark;
+        color       : $grey-dark;
         border-color: $grey-dark;
       }
     }
@@ -203,6 +203,10 @@
     @media (min-width: 1920px) {
       .card--features & {
         padding: 47px 39px;
+
+        &.card__title--wrap {
+          padding: 47px 80px 47px 39px;
+        }
       }
     }
   }
@@ -316,6 +320,22 @@
       width     : 100%;
       float     : left;
     }
+    @media (min-width: 1200px) and (max-device-aspect-ratio: 4/3) and (orientation: landscape) {
+      max-height: none;
+      height    : 690px;
+
+      .image--card {
+        max-width : 100%;
+        max-height: 100%;
+        height    : inherit !important;
+        top       : 0;
+        transform : translate(-50%, 0);
+      }
+
+      &::before {
+        display: none;
+      }
+    }
     @media (min-width: 1920px) {
       max-height: 690px;
     }
@@ -366,13 +386,12 @@
     .text--normal {
       margin-bottom: 50px;
       font-size    : 14px;
-      line-height: 16px;
-
+      line-height  : 16px;
       @media (min-width: 1200px) {
         margin-bottom: 37px;
       }
       @media (min-width: 1920px) {
-        font-size: 16px;
+        font-size  : 16px;
         line-height: 1.2;
       }
     }

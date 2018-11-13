@@ -2,13 +2,23 @@
 /* global $ */
 import './vendor/jquery.min'
 
+// function checkMQ () {
+//   var dw = $('.page').outerWidth()
+//
+//   if (dw >= 1200) {
+//     return [[60, 75], [-30, -75]]
+//   } else {
+//     return [[36, 45], [-15, -35]]
+//   }
+// }
+
 function init () {
   var myMap = new ymaps.Map('map', {
     center: [
       56.832403, 60.582798
     ],
     zoom: 17,
-    controls: []
+    controls: [60, 75]
   })
 
   var myPlacemark = new ymaps.Placemark([
@@ -29,6 +39,7 @@ function init () {
   })
 
   myMap.geoObjects.add(myPlacemark)
+  myMap.behaviors.disable(['scrollZoom'])
   // myMap.setBounds(myMap.geoObjects.getBounds())
 
   /* global Strip */
@@ -39,6 +50,9 @@ function init () {
 
     Strip.show('https://dummyimage.com/' + windowSize + '+/000/fff', {
       maxWidth: 1260,
+      hideOnClickOutside: false,
+      keyboard: false,
+      loop: false,
       onShow: function () {
         elem.detach().appendTo('.strp-container')
         myMap.container.fitToViewport()

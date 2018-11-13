@@ -17,6 +17,11 @@ jQuery(document).ready(() => {
   /* global ymaps */
   ymaps.ready(mapInit)
 
+  $('.block--gallery .icon').click(function () {
+
+    Strip.show($('.gallery__item--second .strip')[0]);
+  })
+
   $('#js-map-nav-toggle').click(function () {
     $(this).toggleClass('btn--active')
     $('#js-map-nav').toggleClass('nav__list--visible')

@@ -37,7 +37,7 @@ block content
             // Nav Top Panel End
           .col.col--right
             // Button SideBar Trigger
-            button#js-sidebar-trigger.btn.btn--transparent.btn--nav-trigger(type='button', name='js-sidebar-trigger')
+            button#js-sidebar-trigger.btn.btn--transparent.btn--nav-trigger.btn--nav-trigger-white(type='button', name='js-sidebar-trigger')
               //- Hamburger
               svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 50 41').icon.icon--hamburger
                 path.cls-1(d='M.011 3.713l.04-3.03L49.989.01l-.04 3.03z', data-name='Rectangle 2 copy 32')
@@ -93,11 +93,11 @@ block content
 
             form(action="", method="get").form
               label(for="nameForm").label
-                input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off').input.input--text
+                input(type="text", id=nameForm, name="name", value="", placeholder="Ваше Имя*", required='', autocomplete='off', maxlength="255").input.input--text
               label(for="phoneForm").label
                 input(type="text", id=phoneForm, name="phone", value="", placeholder="Ваш Телефон*", required='', autocomplete='off').input.input--text.input--phone
               label(for="msgForm").label
-                textarea(name="msg", id=msgForm, rows="8", cols="80", placeholder="Ваше Сообщение*", required='', autocomplete='off').input.input--text
+                textarea(name="msg", id=msgForm, rows="8", cols="80", maxlength="255", placeholder="Ваше Сообщение*", required='', autocomplete='off').input.input--text
               label(for="agreeForm").label.label--checkbox.text--xsmall.text--regular
                 | Согласен на обработку персональных данных.
                 br
@@ -106,10 +106,6 @@ block content
               input(type="submit", name="submit", value="Отправить", disabled='disabled').btn.btn--base#js-form-submit
 
           .col.col--right
-            //- ul.gallery.gallery--vertical
-            //-   li.gallery__item
-            //-     a.link.link--gallery.strip(href='https://dummyimage.com/1260x1000/000/fff' data-strip-options="width: 1260")
-            //-       img.image.image--gallery(src='../images/gallery-thumb-1.jpg', alt='')
             .map
               #map
             

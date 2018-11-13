@@ -357,10 +357,17 @@ body {
         background-size    : cover;
         background-position: center;
       }
+
+      &:hover {
+        .icon {
+          fill: $brand;
+        }
+      }
     }
 
     .main--index & {
-      height: auto;
+      height  : auto;
+      position: relative;
     }
 
     .is-first & {
@@ -412,6 +419,14 @@ body {
         &:last-of-type {
           padding-top : 212px;
           padding-left: 1px;
+
+          .main--build & {
+            padding-top: 214px;
+          }
+        }
+
+        .main--build &.col--build {
+          padding-top: 250px;
         }
       }
     }
@@ -507,6 +522,7 @@ body {
       @media (min-width: 1200px) {
         width : 145px;
         height: 145px;
+        transform       : translate(-54%, -93%);
       }
     }
   }
@@ -521,12 +537,10 @@ body {
 
   &--trade-in {
     background-image: url('../../images/trade-in-right-small.jpg');
-
     @media (min-width: 1200px) {
-      background-image: url('../../images/trade-in-right.jpg');
+      background-image   : url('../../images/trade-in-right.jpg');
       background-position: center;
     }
-
   }
 }
 
@@ -542,9 +556,23 @@ body {
     position       : absolute;
     top            : 0;
     left           : 0;
-    z-index        : 5;
-    opacity        : 0;
+    opacity        : 1;
     transition     : all 500ms ease-out;
+    cursor         : pointer;
+
+    > .icon {
+      fill   : $white;
+      z-index: 5;
+    }
+
+    &:hover + .gallery > .gallery__item--second .link {
+      transform: translate(-50%, -50%) scale(1.1);
+
+      &::before {
+        background-color: rgba($black, 0);
+        display         : none;
+      }
+    }
   }
 }
 

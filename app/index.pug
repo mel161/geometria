@@ -36,7 +36,7 @@ block content
             // Nav Top Panel End
           .col.col--right
             // Button SideBar Trigger
-            button#js-sidebar-trigger.btn.btn--transparent.btn--nav-trigger(type='button', name='js-sidebar-trigger')
+            button#js-sidebar-trigger.btn.btn--transparent.btn--nav-trigger.btn--nav-trigger-white(type='button', name='js-sidebar-trigger')
               //- Hamburger
               svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 50 41').icon.icon--hamburger
                 path.cls-1(d='M.011 3.713l.04-3.03L49.989.01l-.04 3.03z', data-name='Rectangle 2 copy 32')
@@ -109,31 +109,21 @@ block content
               | ЖК, где начинается новый отрезок жизни: самый счастливый и добрый.
           
           .col.col--right
+            .block.block--gallery
+              svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 98.46 98.46').icon.icon--zoom
+                g
+                  path(d='M97.52 92.79L72.21 67.48 74.58 64a39.94 39.94 0 0 0 7.19-23.16A40.35 40.35 0 0 0 78.55 25a41.18 41.18 0 0 0-8.71-13.08 41.06 41.06 0 0 0-13.08-8.7 40.74 40.74 0 0 0-31.76 0A40 40 0 0 0 3.22 25a40.73 40.73 0 0 0 0 31.74A40 40 0 0 0 25 78.56a40.34 40.34 0 0 0 15.87 3.22A39.91 39.91 0 0 0 64 74.58l3.43-2.37 25.43 25.31a2.79 2.79 0 0 0 2.25.94 3.46 3.46 0 0 0 3.34-3.34 3 3 0 0 0-.93-2.33zM65.05 65.05a33.07 33.07 0 0 1-24.16 10 33.09 33.09 0 0 1-24.16-10 33.08 33.08 0 0 1-10-24.16 33.07 33.07 0 0 1 10-24.17 33.08 33.08 0 0 1 24.16-10 33.08 33.08 0 0 1 24.16 10 33.07 33.07 0 0 1 10 24.17 33.08 33.08 0 0 1-10 24.16z')
             ul.gallery.gallery--vertical
               li.gallery__item.gallery__item--first
                 a.link.link--gallery.strip(href='./app/images/gallery-big-1.jpg', data-strip-group='mygroup', data-fancybox='gallery', data-caption='Caption #1')
-                  .block.block--gallery
-                    svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 98.46 98.46').icon.icon--zoom
-                      g
-                        path(d='M97.52 92.79L72.21 67.48 74.58 64a39.94 39.94 0 0 0 7.19-23.16A40.35 40.35 0 0 0 78.55 25a41.18 41.18 0 0 0-8.71-13.08 41.06 41.06 0 0 0-13.08-8.7 40.74 40.74 0 0 0-31.76 0A40 40 0 0 0 3.22 25a40.73 40.73 0 0 0 0 31.74A40 40 0 0 0 25 78.56a40.34 40.34 0 0 0 15.87 3.22A39.91 39.91 0 0 0 64 74.58l3.43-2.37 25.43 25.31a2.79 2.79 0 0 0 2.25.94 3.46 3.46 0 0 0 3.34-3.34 3 3 0 0 0-.93-2.33zM65.05 65.05a33.07 33.07 0 0 1-24.16 10 33.09 33.09 0 0 1-24.16-10 33.08 33.08 0 0 1-10-24.16 33.07 33.07 0 0 1 10-24.17 33.08 33.08 0 0 1 24.16-10 33.08 33.08 0 0 1 24.16 10 33.07 33.07 0 0 1 10 24.17 33.08 33.08 0 0 1-10 24.16z')
-
                   img.image.image--gallery(src='./images/gallery-thumb-1.jpg', alt='')
               li.gallery__item.gallery__item--second
                 a.link.link--gallery.strip(href='./app/images/gallery-big-2.jpg', data-strip-group='mygroup', data-fancybox='gallery', data-caption='Caption #2')
-                  .block.block--gallery
-                    svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 98.46 98.46').icon.icon--zoom
-                      g
-                        path(d='M97.52 92.79L72.21 67.48 74.58 64a39.94 39.94 0 0 0 7.19-23.16A40.35 40.35 0 0 0 78.55 25a41.18 41.18 0 0 0-8.71-13.08 41.06 41.06 0 0 0-13.08-8.7 40.74 40.74 0 0 0-31.76 0A40 40 0 0 0 3.22 25a40.73 40.73 0 0 0 0 31.74A40 40 0 0 0 25 78.56a40.34 40.34 0 0 0 15.87 3.22A39.91 39.91 0 0 0 64 74.58l3.43-2.37 25.43 25.31a2.79 2.79 0 0 0 2.25.94 3.46 3.46 0 0 0 3.34-3.34 3 3 0 0 0-.93-2.33zM65.05 65.05a33.07 33.07 0 0 1-24.16 10 33.09 33.09 0 0 1-24.16-10 33.08 33.08 0 0 1-10-24.16 33.07 33.07 0 0 1 10-24.17 33.08 33.08 0 0 1 24.16-10 33.08 33.08 0 0 1 24.16 10 33.07 33.07 0 0 1 10 24.17 33.08 33.08 0 0 1-10 24.16z')
-
                   img.image.image--gallery(src='./images/gallery-thumb-2.jpg', alt='')
               li.gallery__item.gallery__item--third
                 a.link.link--gallery.strip(href='./app/images/gallery-big-1.jpg', data-strip-group='mygroup', data-fancybox='gallery', data-caption='Caption #3')
-                  .block.block--gallery
-                    svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 98.46 98.46').icon.icon--zoom
-                      g
-                        path(d='M97.52 92.79L72.21 67.48 74.58 64a39.94 39.94 0 0 0 7.19-23.16A40.35 40.35 0 0 0 78.55 25a41.18 41.18 0 0 0-8.71-13.08 41.06 41.06 0 0 0-13.08-8.7 40.74 40.74 0 0 0-31.76 0A40 40 0 0 0 3.22 25a40.73 40.73 0 0 0 0 31.74A40 40 0 0 0 25 78.56a40.34 40.34 0 0 0 15.87 3.22A39.91 39.91 0 0 0 64 74.58l3.43-2.37 25.43 25.31a2.79 2.79 0 0 0 2.25.94 3.46 3.46 0 0 0 3.34-3.34 3 3 0 0 0-.93-2.33zM65.05 65.05a33.07 33.07 0 0 1-24.16 10 33.09 33.09 0 0 1-24.16-10 33.08 33.08 0 0 1-10-24.16 33.07 33.07 0 0 1 10-24.17 33.08 33.08 0 0 1 24.16-10 33.08 33.08 0 0 1 24.16 10 33.07 33.07 0 0 1 10 24.17 33.08 33.08 0 0 1-10 24.16z')
-
                   img.image.image--gallery(src='./images/gallery-thumb-3.jpg', alt='')
+            
     // Section About End
     // Section Location
     section.section.section--no-margin.slide(data-hash='location')
@@ -222,16 +212,22 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/1-1-playground.jpg', alt='Детские площадки')
-                          span.card__title
-                            h4.heading.heading--card Детские площадки
+                          span.card__title.card__title--wrap
+                            h4.heading.heading--card
+                              | Детские
+                              br
+                              | площадки
                     
                     li.list__item.list__item--card
                       a.link.link--card.card.card--features(href='./about#closed-area')
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/1-2-closed-area.jpg', alt='Детские площадки')
-                          span.card__title
-                            h4.heading.heading--card Закрытая территория
+                          span.card__title.card__title--wrap
+                            h4.heading.heading--card 
+                              | Закрытая
+                              br
+                              | территория
                     
                     li.list__item.list__item--card
                       a.link.link--card.card.card--features(href='./about#rest-zone')
@@ -257,7 +253,7 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/2-1-warm-and-cozy.jpg', alt='Детские площадки')
-                          span.card__title
+                          span.card__title.card__title--wrap
                             h4.heading.heading--card Тёплые и удобные
                     
                     li.list__item.list__item--card
@@ -273,15 +269,15 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/2-3-overhaul.jpg', alt='Детские площадки')
-                          span.card__title
-                            h4.heading.heading--card Ремонт «под ключ»
+                          span.card__title.card__title--wrap
+                            h4.heading.heading--card Ремонт «под&nbsp;ключ»
                     
                     li.list__item.list__item--card
                       a.link.link--card.card.card--features(href='./about#entresol')
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/2-4-entresol.jpg', alt='Детские площадки')
-                          span.card__title
+                          span.card__title.card__title--wrap
                             h4.heading.heading--card Антресоли в каждой квартире
               
               #tab3.tab__item
@@ -292,7 +288,7 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/3-1-first-floor-parking.jpg', alt='Детские площадки')
-                          span.card__title
+                          span.card__title.card__title--wrap
                             h4.heading.heading--card Первый уровень паркинга
                     
                     li.list__item.list__item--card
@@ -300,7 +296,7 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/3-2-second-floor-parking.jpg', alt='Детские площадки')
-                          span.card__title
+                          span.card__title.card__title--wrap
                             h4.heading.heading--card Второй уровень паркинга
                     
                     li.list__item.list__item--card
@@ -308,15 +304,15 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/3-3-by-the-house.jpg', alt='Детские площадки')
-                          span.card__title
-                            h4.heading.heading--card Прямо рядом с домом
+                          span.card__title.card__title--wrap
+                            h4.heading.heading--card Прямо рядом&nbsp;с&nbsp;домом
                     
                     li.list__item.list__item--card
                       a.link.link--card.card.card--features(href='./about#large-area')
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/3-4-large-area.jpg', alt='Детские площадки')
-                          span.card__title
+                          span.card__title.card__title--wrap
                             h4.heading.heading--card Большая территория
               
               #tab4.tab__item
@@ -336,7 +332,7 @@ block content
                           span.card__image
                             img.image.image--card(src='./images/features/4-2-bicycles-and-strollers.jpg', alt='Детские площадки')
                           span.card__title
-                            h4.heading.heading--card Места для хранения велосипедов и колясок
+                            h4.heading.heading--card Места для хранения велосипедов&nbsp;и&nbsp;колясок
                     
                     li.list__item.list__item--card
                       a.link.link--card.card.card--features(href='./about#dog-wash')
@@ -351,8 +347,8 @@ block content
                         span.card__inner
                           span.card__image
                             img.image.image--card(src='./images/features/4-4-hall.jpg', alt='Детские площадки')
-                          span.card__title
-                            h4.heading.heading--card Просторные светлые МОПы
+                          span.card__title.card__title--wrap
+                            h4.heading.heading--card Просторные светлые&nbsp;МОПы
     // Section Features End
   // Main End
   .modal.modal--form#js-modal-form

@@ -31,7 +31,7 @@
   &:hover {
     &::before {
       opacity: 0;
-      display: none;
+      // display: none;
     }
   }
   @media (min-width: 600px) {

@@ -24,6 +24,7 @@ $(document).ready(() => {
     rows: 0,
     slidesToShow: 1,
     centerMode: true,
+    centerPadding: '36px',
     mobileFirst: true,
     draggable: false,
     infinite: true,
@@ -48,7 +49,6 @@ $(document).ready(() => {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '36px',
           slidesToShow: 1,
           vertical: false,
           useTransform: false,
@@ -103,6 +103,7 @@ $(document).ready(() => {
         arrows: true,
         dots: false,
         slidesToShow: 3,
+        rows: 0,
         infinite: false,
         prevArrow: "<button class='btn btn--transparent btn--prev slick-prev'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>",
         nextArrow: "<button class='btn btn--transparent btn--next slick-next'><svg class='icon icon--arrow' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 27 15'><path fill-rule='evenodd' d='M26.144-.006l.858.917-13.136 14.094-.858-.916L26.144-.006z'></path><path fill-rule='evenodd' d='M-.005.915L.871.022l13.477 13.669-.876.892L-.005.915z'></path></svg></button>"

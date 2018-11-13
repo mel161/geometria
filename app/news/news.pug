@@ -12,7 +12,7 @@ block content
   // SideBar End
 
   // Main
-  main.main
+  main.main.main--news
     // Section About
     section.section.slide(data-hash='about')
       .grid
@@ -84,6 +84,10 @@ block content
             ul.gallery.gallery--vertical
               li.gallery__item
                 a.link.link--gallery.strip(href='./app/images/news-full.jpg', data-strip-group='mygroup', data-caption='Caption #1')
+                  .block.block--gallery
+                    svg(xmlns='http://www.w3.org/2000/svg', viewBox='0 0 98.46 98.46').icon.icon--zoom
+                      g
+                        path(d='M97.52 92.79L72.21 67.48 74.58 64a39.94 39.94 0 0 0 7.19-23.16A40.35 40.35 0 0 0 78.55 25a41.18 41.18 0 0 0-8.71-13.08 41.06 41.06 0 0 0-13.08-8.7 40.74 40.74 0 0 0-31.76 0A40 40 0 0 0 3.22 25a40.73 40.73 0 0 0 0 31.74A40 40 0 0 0 25 78.56a40.34 40.34 0 0 0 15.87 3.22A39.91 39.91 0 0 0 64 74.58l3.43-2.37 25.43 25.31a2.79 2.79 0 0 0 2.25.94 3.46 3.46 0 0 0 3.34-3.34 3 3 0 0 0-.93-2.33zM65.05 65.05a33.07 33.07 0 0 1-24.16 10 33.09 33.09 0 0 1-24.16-10 33.08 33.08 0 0 1-10-24.16 33.07 33.07 0 0 1 10-24.17 33.08 33.08 0 0 1 24.16-10 33.08 33.08 0 0 1 24.16 10 33.07 33.07 0 0 1 10 24.17 33.08 33.08 0 0 1-10 24.16z')
                   picture.image.image--gallery
                     source(media='(min-width: 1200px)', srcset='./app/images/news-right.jpg')
                     img(src='../images/news-small.jpg')

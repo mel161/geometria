@@ -25,8 +25,12 @@
       }
 
       &:first-of-type {
-        margin-bottom: 35px;
+        margin-bottom: 7px;
         padding-top  : 0;
+
+        @media (min-width: 1200px) {
+          margin-bottom: 35px;
+        }
 
         .main--contacts & {
           margin-bottom: 7px;
@@ -40,6 +44,10 @@
         border       : 0;
         margin-bottom: 35px;
         padding-top  : 6px;
+
+        .main--index & {
+          padding-top: 9px;
+        }
 
         .main--contacts & {
           margin-top   : -3px;
@@ -64,11 +72,17 @@
       max-width    : 126px;
       margin-bottom: 0;
       margin-right : 14px;
-
-
-
+      @media (min-width: 1200px) {
+        max-width: none;
+        min-width: 167px;
+        width    : 23%;
+      }
+      @media (min-width: 1600px) {
+        min-width: 240px;
+      }
       @media (min-width: 1920px) {
-        max-width: 300px;
+        min-width: 300px;
+        width    : 23%;
       }
 
       &:last-of-type {
@@ -80,6 +94,10 @@
 
         &:nth-child(2n) {
           margin-right: 17px;
+        }
+
+        &:last-of-type {
+          margin-right: 0;
         }
       }
       @media (min-width: 1920px) {
@@ -124,14 +142,14 @@
         float        : none;
         margin-right : 0;
         margin-bottom: 14px;
-        max-width: none;
+        max-width    : none;
         @media (min-width: 1200px) {
           margin-right: 14px;
         }
       }
 
       .list--news & {
-        width: 100%;
+        width    : 100%;
         max-width: none;
         @media (min-width: 1200px) {
           width: 300px;
@@ -139,8 +157,8 @@
       }
 
       .list--docs > & {
-        margin : 0 0 14px;
-        padding: 0;
+        margin   : 0 0 14px;
+        padding  : 0;
         max-width: none;
         @media (min-width: 480px) {
           width: 300px;
@@ -172,6 +190,9 @@
         height    : auto;
         max-height: 485px;
         margin    : 0;
+      }
+      @media (min-width: 1200px) and (min-device-aspect-ratio: 5/4) and (max-device-aspect-ratio: 4/3) {
+        max-height: 690px;
       }
       @media (min-width: 1600px) {
         // height: 690px;
@@ -205,13 +226,19 @@
     }
 
     &--years {
-      flex         : 1 1 80px;
+      // flex         : 1 1 80px;
+      // min-width    : 80px;
+      width        : 80px;
       max-width    : 80px;
-      min-width    : 80px;
       position     : relative;
       margin-right : 10px;
       margin-bottom: 10px;
       outline      : none;
+      box-sizing: border-box;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
 
       &.is-active {
         outline: none;
@@ -254,6 +281,9 @@
 
     .text--normal {
       font-size: 12px;
+      @media (min-width: 1600px) {
+        font-size: 14px;
+      }
       @media (min-width: 1920px) {
         font-size: 16px;
       }
@@ -302,9 +332,18 @@
   &--years {
     display    : flex;
     flex-wrap  : wrap;
-    width      : 100%;
+    width: auto;
     margin-left: 2px;
-    max-width  : 300px;
+    margin-right: -10px;
+    // min-width: 255px;
+    @media (min-width: 1200px) {
+      max-width  : 280px;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    @media (min-width: 1600px) {
+      max-width: 300px;
+    }
     @media (min-width: 1920px) {
       max-width: none;
     }

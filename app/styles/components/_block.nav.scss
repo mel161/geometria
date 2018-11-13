@@ -291,7 +291,7 @@
     width           : auto;
     margin          : 0 -30px;
     background-color: $grey-dark;
-    padding         : 20px 15px;
+    padding         : 22px 15px 18px 15px;
     display         : none;
 
     @media (min-width: 1200px) {
@@ -333,10 +333,35 @@
       }
       @media (min-width: 1600px) {
         width: 85%;
+        margin-left: -15px;
       }
       @media (min-width: 1920px) {
         width: 447px;
         margin-top: 0;
+      }
+    }
+
+    .main--buy & {
+      @media (min-width: 1200px) {
+        margin-left: 0;
+      }
+      @media (min-width: 1600px) {
+        margin-left: -25px;
+      }
+      @media (min-width: 1920px) {
+        margin-left: -14px;
+      }
+    }
+
+    .main--about & {
+      @media (min-width: 1200px) {
+        margin-left: -5px;
+      }
+      @media (min-width: 1600px) {
+        margin-left: -30px;
+      }
+      @media (min-width: 1920px) {
+        margin-left: -19px;
       }
     }
   }
